@@ -1,0 +1,2 @@
+verilog work "../../Source/Top/top.v"
+verilog work "../../Source/Top/clocks.v"

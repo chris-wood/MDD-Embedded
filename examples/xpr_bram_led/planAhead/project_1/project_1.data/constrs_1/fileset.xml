@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<DARoots Version="1" Minor="7">
+	<FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+		<Filter Type="Constrs"/>
+		<File Path="$PDATADIR/constrs_1/designprops.xml">
+			<FileInfo SFType="CompatPartsDb"/>
+		</File>
+		<File Path="$PDATADIR/constrs_1/usercols.xml">
+			<FileInfo SFType="UserColsDb"/>
+		</File>
+		<File Path="C:/Users/Sam/Downloads/xpr_chris_project/xpr_bram_led/Source/UCF/top_ml605.ucf">
+		</File>
+		<Config>
+			<Option Name="TargetUCF" Val="C:/Users/Sam/Downloads/xpr_chris_project/xpr_bram_led/Source/UCF/top_ml605.ucf"/>
+			<Option Name="TargetPart" Val="xc6vlx240tff1156-1"/>
+		</Config>
+	</FileSet>
+</DARoots>
+

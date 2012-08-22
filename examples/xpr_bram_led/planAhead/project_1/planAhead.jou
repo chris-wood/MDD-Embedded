@@ -1,0 +1,9 @@
+#-----------------------------------------------------------
+# PlanAhead v13.1
+# Build 117799 by hdbuild on Thu Feb 17 11:38:00 PST 2011
+# Start of session at: Mon Feb 27 15:22:42 2012
+# Process ID: 3088
+# Log file: C:/Workspace/xpr_bram_led/planAhead/project_1/planAhead.log
+# Journal file: C:/Workspace/xpr_bram_led/planAhead/project_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui -project {C:\Workspace\xpr_bram_led\planAhead\project_1\project_1.ppr}

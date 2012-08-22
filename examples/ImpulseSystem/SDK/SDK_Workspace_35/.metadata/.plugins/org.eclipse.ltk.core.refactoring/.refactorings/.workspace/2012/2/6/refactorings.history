@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 5 resources" deleteContents="false" description="Delete 5 resources" element1="/xilkernel_posix_threads_demo_0/src/co_if_sim.h" element2="/xilkernel_posix_threads_demo_0/src/co_init.c" element3="/xilkernel_posix_threads_demo_0/src/co_math.h" element4="/xilkernel_posix_threads_demo_0/src/co_types.h" element5="/xilkernel_posix_threads_demo_0/src/co.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="5" stamp="1328757277703"/>
+</session>

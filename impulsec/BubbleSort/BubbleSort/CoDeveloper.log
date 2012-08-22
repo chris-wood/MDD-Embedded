@@ -1,0 +1,160 @@
+HW_SRC="BubbleSort_hw.c"; \
+	for i in $HW_SRC; do CPP_INCLUDES="$CPP_INCLUDES -include $i"; done; \
+	echo | "C:/Impulse/CoDeveloper3/MinGW/bin/gcc" -E -DIMPULSE_C_SYNTHESIS -DRC_INVOKED -DBYTE="unsigned char" -DWORD="unsigned short" -DDWORD="unsigned int" -Dsize_t="long unsigned int" -DNULL=0 -Dstdin=NULL "-IC:\Impulse\CoDeveloper3\Include" "-IC:/Impulse/CoDeveloper3/StageMaster/include" $CPP_INCLUDES - > BubbleSort.i
+"C:/Impulse/CoDeveloper3/bin/impulse_snoot" -Timpulse-c BubbleSort.i BubbleSort.snt
+"C:/Impulse/CoDeveloper3/bin/impulse_prep" BubbleSort.snt BubbleSort.pk0
+Impulse C Transformations
+Copyright 2002-2009, Impulse Accelerated Technologies, Inc.
+All rights reserved.
+Build Nov  5 2011.
+processing BubbleSort.snt...
+"C:/Impulse/CoDeveloper3/bin/impulse_porky" -iterate -fold -unused-syms -unused-types -Dmemcpys -const-prop  -scalarize  -loop-invariants  BubbleSort.pk0 BubbleSort.pk1
+"C:/Impulse/CoDeveloper3/bin/impulse_porky" -build-arefs BubbleSort.pk1 BubbleSort.pky
+"C:/Impulse/CoDeveloper3/bin/impulse_impc" BubbleSort.pky BubbleSort.sic
+Impulse C Preprocessor
+Copyright 2002-2009, Impulse Accelerated Technologies, Inc.
+All rights reserved.
+Build Nov  5 2011.
+---Software activated---
+processing BubbleSort.pky...
+analyzing co_initialize...
+found architecture definition: BubbleSort_arch/Generic
+analyzing config_BubbleSort...
+creating stream input ...
+creating stream output ...
+creating process producer_process ...
+creating process Sorter_process ...
+creating process consumer_process ...
+"C:/Impulse/CoDeveloper3/bin/impulse_s2xml"  BubbleSort.sic > BubbleSort.xic
+Impulse C to XML
+Copyright 2003-2007, Impulse Accelerated Technologies, Inc.
+All rights reserved.
+Build Nov  5 2011.
+"C:/Impulse/CoDeveloper3/StageMaster/bin/impulse_sm" -g "-aC:/Impulse/CoDeveloper3/Architectures/xilinx_v5_plb4.xml" -hhw  BubbleSort.xic BubbleSort.xhw
+Stage Master Version 4.4
+Copyright by Green Mountain Computing Systems, 2003-2011.
+All rights reserved.
+Build Jul 25 2011.
+
+Preprocessing
+Analyzing Sorter:
+................... done 19 blocks
+Generating pe0
+. done
+Results (pe0):
+
+|----------------------------------------
+| Sorter
+|----------------------------------------
+|  Block #0:
+|    Stages: 1
+|    Max. Unit Delay: 0
+|  Block #1 loop:
+|    Stages: 1
+|    Max. Unit Delay: 64
+|  Block #2 loop:
+|    Stages: 26
+|    Max. Unit Delay: 0
+|  Block #3 loop:
+|    Stages: 3
+|    Max. Unit Delay: 32
+|  Block #4:
+|    Stages: 1
+|    Max. Unit Delay: 0
+|  Block #5 loop:
+|    Stages: 17
+|    Max. Unit Delay: 32
+|  Block #6:
+|    Stages: 1
+|    Max. Unit Delay: 2
+|  Block #7 loop:
+|    Stages: 14
+|    Max. Unit Delay: 0
+|  Block #8:
+|    Stages: 2
+|    Max. Unit Delay: 32
+|  Block #9:
+|    Stages: 3
+|    Max. Unit Delay: 5
+|  Block #10:
+|    Stages: 2
+|    Max. Unit Delay: 32
+|  Block #11:
+|    Stages: 3
+|    Max. Unit Delay: 5
+|  Block #12:
+|    Stages: 1
+|    Max. Unit Delay: 64
+|  Block #13:
+|    Stages: 1
+|    Max. Unit Delay: 64
+|  Block #14:
+|    Stages: 1
+|    Max. Unit Delay: 64
+|  Block #15:
+|    Stages: 1
+|    Max. Unit Delay: 0
+|  Block #16 loop:
+|    Stages: 2
+|    Max. Unit Delay: 64
+|  Block #17:
+|    Stages: 1
+|    Max. Unit Delay: 0
+|  Block #18:
+|    Stages: 1
+|    Max. Unit Delay: 0
+|----------------------------------------
+| Operators:
+|  6 Adder(s)/Subtractor(s) (5 bit)
+|  6 Adder(s)/Subtractor(s) (32 bit)
+|  1 Comparator(s) (2 bit)
+|  9 Comparator(s) (32 bit)
+|----------------------------------------
+| Total Stages: 28
+| Max. Unit Delay: 64
+| Estimated DSPs: 0
+|----------------------------------------
+Writing output ... done
+"C:/Impulse/CoDeveloper3/bin/impulse_genvhdl.exe"  BubbleSort.xhw hw/BubbleSort_comp.vhd
+Impulse C RTL Component Generator
+Copyright 2002-2009, Impulse Accelerated Technologies, Inc.
+All rights reserved.
+Generating pe0/Sorter ...
+Component generation complete
+---Software activated---
+"C:/Impulse/CoDeveloper3/bin/impulse_arch" "-aC:/Impulse/CoDeveloper3/Architectures/xilinx_v5_plb4.xml" -no_port_bus_connect  -swdirsw -files "BubbleSort_comp.vhd BubbleSort_top.vhd " BubbleSort.xic hw/BubbleSort_top.vhd
+Impulse C HDL Design Generator
+Copyright 2002-2011, Impulse Accelerated Technologies, Inc.
+All rights reserved.
+Loading C:/Impulse/CoDeveloper3/Architectures/xilinx_v5_plb4.xml ...
+Loading C:/Impulse/CoDeveloper3/Architectures/VHDL/Xilinx/PLB/bus4_128.xml ...
+Loading C:/Impulse/CoDeveloper3/Architectures/VHDL/target.xml ...
+Loading C:/Impulse/CoDeveloper3/Architectures/VHDL/Xilinx/v4tech.xml ...
+Loading C:/Impulse/CoDeveloper3/Architectures/VHDL/Generic/Generic/system.xml ...
+Loading C:/Impulse/CoDeveloper3/Architectures/VHDL/Xilinx/PLB/bus_signals.xml ...
+Loading BubbleSort.xic ...
+DBG:adapt_width con=stream input {} 32 {p_Producer_input ppc0 sp} {p_Sorter_input pe0 hp} plb0 plb4
+DBG:adapt_width con=stream output {} 32 {p_Sorter_output pe0 hp} {p_Consumer_output ppc0 sp} plb0 plb4
+libCoreGenCommon.tcl::GenerateCoreGenFilesForEDK():Starting
+ngcString = 
+libCoreGenCommon.tcl::GenerateCoreGenFilesForEDK():Exiting
+Design generation complete
+chmod -R +rw hw
+"C:/Impulse/CoDeveloper3/bin/impulse_lib" "-aC:/Impulse/CoDeveloper3/Architectures/xilinx_v5_plb4.xml" -hwdirhw -files "BubbleSort_sw.c" BubbleSort.xic sw/co_init.c
+Impulse C Software Interface Generator
+Copyright 2002-2011, Impulse Accelerated Technologies, Inc.
+All rights reserved.
+Loading C:/Impulse/CoDeveloper3/Architectures/xilinx_v5_plb4.xml ...
+Loading C:/Impulse/CoDeveloper3/Architectures/Xilinx/PPC/PLB/cpu.xml ...
+Loading C:/Impulse/CoDeveloper3/Architectures/VHDL/Generic/Generic/system.xml ...
+Loading BubbleSort.xic ...
+for i in BubbleSort_sw.c; do cp $i sw; done
+for i in BubbleSort.h; do cp $i sw; done
+chmod -R +rw sw
+"C:/Impulse/CoDeveloper3/bin/impulse_export" -hardware -srcdirhw "-aC:/Impulse/CoDeveloper3/Architectures/xilinx_v5_plb4.xml" BubbleSort.xic "export"
+Impulse C Design Exporter
+Copyright 2002-2007, Impulse Accelerated Technologies, Inc.
+All rights reserved.
+Loading C:/Impulse/CoDeveloper3/Architectures/xilinx_v5_plb4.xml ...
+Loading C:/Impulse/CoDeveloper3/Architectures/Xilinx/PPC/PLB/cpu.xml ...
+Loading BubbleSort.xic ...

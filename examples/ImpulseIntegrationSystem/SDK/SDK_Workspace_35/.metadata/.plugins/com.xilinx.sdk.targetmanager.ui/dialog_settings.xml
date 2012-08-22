@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Workspace_35\hw_platform_0\system_bd.bmm" key="hw_platform_0-bmmFile"/>
+	<item value="bootloop" key="hw_platform_0-ppc440_0-initElf"/>
+	<item value="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Workspace_35\hw_platform_0\system.bit" key="hw_platform_0-bitFile"/>
+</section>

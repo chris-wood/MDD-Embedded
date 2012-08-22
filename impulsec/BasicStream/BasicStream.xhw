@@ -1,0 +1,101 @@
+<?xml version='1.0'?>
+<!DOCTYPE design>
+<design architecture="C:\Impulse\CoDeveloper3\Architectures\xilinx_v5_plb4.xml" pedirs="0">
+  <stagemaster version="4.4" build="Jul 25 2011"/>
+  <pe loc="pe0" lang="vhdl">
+    <header>
+-- TARGET: VHDL
+    </header>
+    <include>
+library impulse;
+use impulse.components.all;
+    </include>
+    <component name="HWproc">
+      <ports>
+        <port name="HWinput" type="stream" mode="in" size="1"/>
+        <port name="HWoutput" type="stream" mode="out" size="1"/>
+      </ports>
+      <variables>
+        <variable name="nSample" width="1" nets="i88 i89"/>
+        <variable name="suif_tmp" width="32" nets="i87"/>
+      </variables>
+      <control>
+        <state name="init">
+          <transition dst="b0s0"/>
+        </state>
+        <state name="b0s0">
+          <transition dst="b1s0"/>
+        </state>
+        <state name="b1s0" enable="HWinput.rd_accept">
+          <transition dst="b2s0" cond="!ni87_suif_tmp"/>
+          <transition dst="b1s1"/>
+        </state>
+        <state name="b1s1" enable="HWoutput.wr_accept">
+          <transition dst="b1s0"/>
+        </state>
+        <state name="b2s0" enable="HWoutput.wr_accept HWinput.eos">
+          <transition dst="b0s0"/>
+        </state>
+        <state name="b3s0">
+          <transition dst="finished"/>
+        </state>
+        <state name="finished"/>
+      </control>
+      <blocks>
+        <datapath block="b0" states="b0s0">
+          <exec op="open" name="HWinput" line="34" file="BasicStream_hw.c"/>
+          <exec op="open" name="HWoutput" line="35" file="BasicStream_hw.c"/>
+        </datapath>
+        <datapath block="b1" states="b1s0">
+          <read name="HWinput"/>
+          <eq dst="ni87_suif_tmp">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="eq" width="1">
+                <cat width="2">
+                  <const value="0" width="1"/>
+                  <var name="HWinput.eos"/>
+                </cat>
+                <const value="0" width="2"/>
+              </call>
+            </cat>
+          </eq>
+          <break cond="!ni87_suif_tmp"/>
+          <assign dst="r_suif_tmp" src="ni87_suif_tmp"/>
+        </datapath>
+        <datapath states="b1s1">
+          <eq dst="ni88_nSample">
+            <var name="r_HWinput"/>
+          </eq>
+          <eq dst="ni89_nSample">
+            <unop op="not" width="1">
+              <var name="ni88_nSample"/>
+            </unop>
+          </eq>
+          <write name="HWoutput" val="ni89_nSample" line="45" file="BasicStream_hw.c"/>
+          <assign dst="r_nSample" src="ni89_nSample" line="44" file="BasicStream_hw.c"/>
+        </datapath>
+        <datapath block="b2" states="b2s0">
+          <exec op="readclose" name="HWinput" line="48" file="BasicStream_hw.c"/>
+          <exec op="writeclose" name="HWoutput" line="49" file="BasicStream_hw.c"/>
+        </datapath>
+        <datapath block="b3" states="b3s0"/>
+        <datapath/>
+      </blocks>
+      <info>
+        <stream name="HWinput">
+          <open state="b0s0"/>
+          <read state="b1s0"/>
+          <readclose state="b2s0"/>
+        </stream>
+        <stream name="HWoutput">
+          <open state="b0s0"/>
+          <write state="b1s1" data="ni89_nSample"/>
+          <writeclose state="b2s0"/>
+        </stream>
+      </info>
+      <variables/>
+      <temps/>
+    </component>
+  </pe>
+</design>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="4">
+	<Run Id="config_1" Type="Ft2:EntireDesign" SrcSet="sources_1" Part="xc6vlx240tff1156-1" ConstrsSet="constrs_1" State="current" Dir="$PRUNDIR/config_1" LaunchTime="1330296326">
+		<File Type="PA-EDIF" Name="config_1.edf"/>
+		<File Type="BG-BGN" Name="config_1.bgn"/>
+		<File Type="PA-UCF" Name="config_1.ucf"/>
+		<File Type="TRCE-TWR" Name="config_1.twr"/>
+		<File Type="TRCE-TWX" Name="config_1.twx"/>
+		<File Type="XDL-XDL" Name="config_1_routed.xdl"/>
+		<File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+		<File Type="WBT-LOG" Name="webtalk.log"/>
+		<File Type="NGDB-NGD" Name="config_1.ngd"/>
+		<File Type="NGDB-BLD" Name="config_1.bld"/>
+		<File Type="MAP-NCD" Name="config_1.ncd"/>
+		<File Type="MAP-PCF" Name="config_1.pcf"/>
+		<File Type="MAP-MRP" Name="config_1.mrp"/>
+		<File Type="MAP-MAP" Name="config_1.map"/>
+		<File Type="MAP-PSR" Name="config_1.psr"/>
+		<File Type="PAR-NCD" Name="config_1_routed.ncd"/>
+		<File Type="PAR-PAD" Name="config_1_routed_pad.txt"/>
+		<File Type="PAR-PAR" Name="config_1_routed.par"/>
+		<File Type="PAR-UNR" Name="config_1_routed.unroutes"/>
+		<File Type="BG-BIT" Name="config_1.bit"/>
+		<File Type="BG-DRC" Name="config_1.drc"/>
+	</Run>
+</Runs>
+

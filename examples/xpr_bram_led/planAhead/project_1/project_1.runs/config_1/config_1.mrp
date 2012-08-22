@@ -1,0 +1,537 @@
+Release 12.3 Map M.70d (nt64)
+Xilinx Mapping Report File for Design 'top'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -w config_1.ngd 
+Target Device  : xc6vlx240t
+Target Package : ff1156
+Target Speed   : -1
+Mapper Version : virtex6 -- $Revision: 1.52 $
+Mapped Date    : Sun Feb 26 17:45:51 2012
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    2
+Slice Logic Utilization:
+  Number of Slice Registers:                    66 out of 301,440    1%
+    Number used as Flip Flops:                  65
+    Number used as Latches:                      1
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                         96 out of 150,720    1%
+    Number used as logic:                       94 out of 150,720    1%
+      Number using O6 output only:              36
+      Number using O5 output only:              56
+      Number using O5 and O6:                    2
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of  58,400    0%
+    Number used exclusively as route-thrus:      2
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         2
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                    37 out of  37,680    1%
+  Number of LUT Flip Flop pairs used:           99
+    Number with an unused Flip Flop:            33 out of      99   33%
+    Number with an unused LUT:                   3 out of      99    3%
+    Number of fully used LUT-FF pairs:          63 out of      99   63%
+    Number of unique control sets:               5
+    Number of slice register sites lost
+      to control set restrictions:              30 out of 301,440    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        16 out of     600    2%
+    Number of LOCed IOBs:                       16 out of      16  100%
+
+Specific Feature Utilization:
+  Number of RAMB36E1/FIFO36E1s:                  1 out of     416    1%
+    Number using RAMB36E1 only:                  1
+    Number using FIFO36E1 only:                  0
+  Number of RAMB18E1/FIFO18E1s:                  0 out of     832    0%
+  Number of BUFG/BUFGCTRLs:                      2 out of      32    6%
+    Number used as BUFGs:                        2
+    Number used as BUFGCTRLs:                    0
+  Number of ILOGICE1/ISERDESE1s:                 0 out of     720    0%
+  Number of OLOGICE1/OSERDESE1s:                 0 out of     720    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHCEs:                             0 out of     144    0%
+  Number of BUFOs:                               0 out of      36    0%
+  Number of BUFIODQSs:                           0 out of      72    0%
+  Number of BUFRs:                               0 out of      36    0%
+  Number of CAPTUREs:                            0 out of       1    0%
+  Number of DSP48E1s:                            0 out of     768    0%
+  Number of EFUSE_USRs:                          0 out of       1    0%
+  Number of FRAME_ECCs:                          0 out of       1    0%
+  Number of GTXE1s:                              0 out of      20    0%
+  Number of IBUFDS_GTXE1s:                       0 out of      12    0%
+  Number of ICAPs:                               0 out of       2    0%
+  Number of IDELAYCTRLs:                         0 out of      18    0%
+  Number of IODELAYE1s:                          0 out of     720    0%
+  Number of MMCM_ADVs:                           1 out of      12    8%
+  Number of PCIE_2_0s:                           0 out of       2    0%
+  Number of STARTUPs:                            1 out of       1  100%
+  Number of SYSMONs:                             0 out of       1    0%
+  Number of TEMAC_SINGLEs:                       0 out of       4    0%
+
+Average Fanout of Non-Clock Nets:                2.37
+
+Peak Memory Usage:  713 MB
+Total REAL time to MAP completion:  6 mins 8 secs 
+Total CPU time to MAP completion:   6 mins 1 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:PhysDesignRules - Component: test_count is LOC'd at site IOB_X1Y40.
+   This site is part of the private area group owned by Partition: pblock_U2_RP_Count.
+   This component belongs to Partition: Static.
+WARNING:PhysDesignRules - Component: out_bram[7] is LOC'd at site IOB_X1Y81.
+   This site is part of the private area group owned by Partition: pblock_U2_RP_Count.
+   This component belongs to Partition: Static.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network U1_RP_Bram/RAMB36_inst/CASCADEOUTLATA has no
+   load.
+INFO:LIT:395 - The above info message is repeated 67 more times for the
+   following (max. 5 shown):
+   U1_RP_Bram/RAMB36_inst/CASCADEOUTLATB,
+   U1_RP_Bram/RAMB36_inst/CASCADEOUTREGA,
+   U1_RP_Bram/RAMB36_inst/CASCADEOUTREGB,
+   U1_RP_Bram/RAMB36_inst/DOA<31>,
+   U1_RP_Bram/RAMB36_inst/DOA<30>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 0.950 Volts. (default - Range: 0.950 to
+   1.050 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   7 block(s) optimized away
+ 171 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "U1_RP_Bram/RAMB36_inst/ENB" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/SSRB" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/CLKB" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/REGCEB" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/CASCADEINLATA" is sourceless and has been
+removed.
+The signal "U1_RP_Bram/RAMB36_inst/CASCADEINLATB" is sourceless and has been
+removed.
+The signal "U1_RP_Bram/RAMB36_inst/CASCADEINREGA" is sourceless and has been
+removed.
+The signal "U1_RP_Bram/RAMB36_inst/CASCADEINREGB" is sourceless and has been
+removed.
+The signal "U1_RP_Bram/RAMB36_inst/CASCADEOUTLATA" is sourceless and has been
+removed.
+The signal "U1_RP_Bram/RAMB36_inst/CASCADEOUTLATB" is sourceless and has been
+removed.
+The signal "U1_RP_Bram/RAMB36_inst/CASCADEOUTREGA" is sourceless and has been
+removed.
+The signal "U1_RP_Bram/RAMB36_inst/CASCADEOUTREGB" is sourceless and has been
+removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<31>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<30>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<29>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<28>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<27>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<26>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<25>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<24>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<23>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<22>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<21>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<20>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<19>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<18>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<17>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<16>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<15>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<14>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<13>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<12>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<11>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<10>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<9>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<8>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<7>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<6>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<5>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<4>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<3>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<2>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<1>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIA<0>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIPA<3>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIPA<2>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIPA<1>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIPA<0>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<31>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<30>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<29>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<28>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<27>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<26>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<25>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<24>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<23>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<22>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<21>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<20>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<19>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<18>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<17>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<16>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<15>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<14>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<13>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<12>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<11>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<10>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<9>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<8>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<7>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<6>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<5>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<4>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<3>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<2>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<1>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIB<0>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIPB<3>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIPB<2>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIPB<1>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DIPB<0>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/ADDRB<14>" is sourceless and has been
+removed.
+The signal "U1_RP_Bram/RAMB36_inst/ADDRB<13>" is sourceless and has been
+removed.
+The signal "U1_RP_Bram/RAMB36_inst/ADDRB<12>" is sourceless and has been
+removed.
+The signal "U1_RP_Bram/RAMB36_inst/ADDRB<11>" is sourceless and has been
+removed.
+The signal "U1_RP_Bram/RAMB36_inst/ADDRB<10>" is sourceless and has been
+removed.
+The signal "U1_RP_Bram/RAMB36_inst/ADDRB<9>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/ADDRB<8>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/ADDRB<7>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/ADDRB<6>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/ADDRB<5>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/ADDRB<4>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/ADDRB<3>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/ADDRB<2>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/ADDRB<1>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/ADDRB<0>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/WEA<3>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/WEA<2>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/WEA<1>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/WEA<0>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/WEB<3>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/WEB<2>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/WEB<1>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/WEB<0>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<31>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<30>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<29>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<28>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<27>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<26>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<25>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<24>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<23>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<22>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<21>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<20>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<19>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<18>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<17>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<16>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<15>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<14>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<13>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<12>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<11>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<10>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<9>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOA<8>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOPA<3>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOPA<2>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOPA<1>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOPA<0>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<31>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<30>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<29>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<28>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<27>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<26>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<25>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<24>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<23>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<22>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<21>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<20>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<19>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<18>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<17>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<16>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<15>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<14>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<13>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<12>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<11>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<10>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<9>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<8>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<7>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<6>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<5>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<4>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<3>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<2>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<1>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOB<0>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOPB<3>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOPB<2>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOPB<1>" is sourceless and has been removed.
+The signal "U1_RP_Bram/RAMB36_inst/DOPB<0>" is sourceless and has been removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+GND 		U0_clocks/XST_GND
+VCC 		U0_clocks/XST_VCC
+GND 		U1_RP_Bram/XST_GND
+GND 		U2_RP_Count/XST_GND
+VCC 		U2_RP_Count/XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk_n                              | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| clk_p                              | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
+| out_bram[0]                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| out_bram[1]                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| out_bram[2]                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| out_bram[3]                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| out_bram[4]                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| out_bram[5]                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| out_bram[6]                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| out_bram[7]                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| out_counter[0]                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| out_counter[1]                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| out_counter[2]                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| out_counter[3]                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| rst_n                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| test_count                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  Preserved Partitions:
+
+
+  Implemented Partitions:
+
+    Partition "/top":
+Attribute STATE set to IMPLEMENT.
+
+    Partition "/top/U1_RP_Bram" (Reconfigurable Module "BramFirst"):
+Attribute STATE set to IMPLEMENT.
+
+    Partition "/top/U2_RP_Count" (Reconfigurable Module "CountCW"):
+Attribute STATE set to IMPLEMENT.
+
+-------------------------------
+
+Partition Resource Summary:
+---------------------------
+Resources are reported for each Partition followed in parenthesis by resources
+for the Partition plus all of its descendents.
+
+Partition "/top":
+  State=implement
+  Slice Logic Utilization:
+    Number of Slice Registers:              39 (66)
+    Number of Slice LUTs:                   36 (94)
+      Number used as logic:                 36 (94)
+  Slice Logic Distribution:
+    Number of occupied Slices:              13 (37)
+    Number of LUT Flip Flop pairs used:     40 (99)
+      Number with an unused Flip Flop:       1 out of     40    2%
+      Number with an unused LUT:             3 out of     40    7%
+      Number of fully used LUT-FF pairs:    36 out of     40   90%
+  IO Utilization:
+    Number of bonded IOBs:                  12 (16)
+  Number of MMCM_ADV:                        1 (1)
+  Number of STARTUP:                         1 (1)
+
+Partition "/top/U1_RP_Bram" (Reconfigurable Module "BramFirst") (Area Group "pblock_U1_RP_Bram"):
+  State=implement
+  Slice Logic Utilization:
+    Number of Slice LUTs:                   21 (21)
+      Number used as logic:                 21 (21)
+  Slice Logic Distribution:
+    Number of occupied Slices:               8 (8)
+    Number of LUT Flip Flop pairs used:     21 (21)
+      Number with an unused Flip Flop:      21 out of     21  100%
+      Number with an unused LUT:             0 out of     21    0%
+      Number of fully used LUT-FF pairs:     0 out of     21    0%
+
+Partition "/top/U2_RP_Count" (Reconfigurable Module "CountCW") (Area Group "pblock_U2_RP_Count"):
+  State=implement
+  Slice Logic Utilization:
+    Number of Slice Registers:              27 (27)
+    Number of Slice LUTs:                   37 (37)
+      Number used as logic:                 37 (37)
+  Slice Logic Distribution:
+    Number of occupied Slices:              16 (16)
+    Number of LUT Flip Flop pairs used:     38 (38)
+      Number with an unused Flip Flop:      11 out of     38   28%
+      Number with an unused LUT:             0 out of     38    0%
+      Number of fully used LUT-FF pairs:    27 out of     38   71%
+  IO Utilization:
+    Number of bonded IOBs:                   4 (4)
+
+
+Area Group Information
+----------------------
+
+Area Group "pblock_U1_RP_Bram"
+  No COMPRESSION specified for Area Group "pblock_U1_RP_Bram"
+  RANGE: DSP48_X5Y64:DSP48_X5Y79
+  RANGE: PMVBRAM_X5Y4:PMVBRAM_X5Y4
+  RANGE: RAMB18_X5Y64:RAMB18_X5Y79
+  RANGE: RAMB36_X5Y32:RAMB36_X5Y39
+  RANGE: SLICE_X106Y160:SLICE_X117Y199
+  Slice Logic Utilization:
+    Number of Slice LUTs:                   21 out of  1,920    1%
+      Number used as logic:                 21
+  Slice Logic Distribution:
+    Number of occupied Slices:               8 out of    480    1%
+    Number of LUT Flip Flop pairs used:     21
+      Number with an unused Flip Flop:      21 out of     21  100%
+      Number with an unused LUT:             0 out of     21    0%
+      Number of fully used LUT-FF pairs:     0 out of     21    0%
+
+Area Group "pblock_U2_RP_Count"
+  No COMPRESSION specified for Area Group "pblock_U2_RP_Count"
+  RANGE: BUFIODQS_X1Y4:BUFIODQS_X1Y7
+  RANGE: BUFO_X1Y2:BUFO_X1Y3
+  RANGE: BUFR_X1Y2:BUFR_X1Y3
+  RANGE: DCI_X1Y1:DCI_X1Y1
+  RANGE: DSP48_X3Y12:DSP48_X3Y31
+  RANGE: IDELAYCTRL_X1Y1:IDELAYCTRL_X1Y1
+  RANGE: ILOGIC_X1Y28:ILOGIC_X1Y81
+  RANGE: IOB_X1Y28:IOB_X1Y81
+  RANGE: IODELAY_X1Y28:IODELAY_X1Y81
+  RANGE: OLOGIC_X1Y28:OLOGIC_X1Y81
+  RANGE: PMVBRAM_X3Y1:PMVBRAM_X3Y1
+  RANGE: RAMB18_X3Y12:RAMB18_X3Y31
+  RANGE: RAMB36_X3Y6:RAMB36_X3Y15
+  RANGE: SLICE_X48Y80:SLICE_X75Y28
+  Slice Logic Utilization:
+    Number of Slice Registers:              27 out of 11,840    1%
+    Number of Slice LUTs:                   37 out of  5,920    1%
+      Number used as logic:                 37
+  Slice Logic Distribution:
+    Number of occupied Slices:              16 out of  1,480    1%
+    Number of LUT Flip Flop pairs used:     38
+      Number with an unused Flip Flop:      11 out of     38   28%
+      Number with an unused LUT:             0 out of     38    0%
+      Number of fully used LUT-FF pairs:    27 out of     38   71%
+  IO Utilization:
+    Number of bonded IOBs:                   4
+
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

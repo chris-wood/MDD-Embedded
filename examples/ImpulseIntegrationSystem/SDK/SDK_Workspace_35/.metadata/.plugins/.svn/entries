@@ -1,0 +1,64 @@
+10
+
+dir
+43
+svn+ssh://w463-01u3f@oldlinus.se.rit.edu/home/teams/463/w463-01u3f/.svnrepository/trunk/examples/ImpulseIntegrationSystem/SDK/SDK_Workspace_35/.metadata/.plugins
+svn+ssh://w463-01u3f@oldlinus.se.rit.edu/home/teams/463/w463-01u3f/.svnrepository
+
+
+
+2012-02-27T21:11:27.333053Z
+42
+w463-01u3f
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5c983b1a-d1d3-42d7-948f-1751c498430d
+
+org.eclipse.cdt.ui
+dir
+
+org.eclipse.ui.intro
+dir
+
+org.eclipse.core.runtime
+dir
+
+com.xilinx.sdk.targetmanager.ui
+dir
+
+org.eclipse.cdt.make.core
+dir
+
+org.eclipse.debug.core
+dir
+
+org.eclipse.ui.ide
+dir
+
+org.eclipse.ui.workbench
+dir
+
+org.eclipse.cdt.core
+dir
+
+org.eclipse.core.resources
+dir
+
+org.eclipse.debug.ui
+dir
+
+org.eclipse.cdt.managedbuilder.core
+dir
+

@@ -1,0 +1,16 @@
+vhdl impulse C:\Workspace\TestSystem\pcores\impulse/hdl/vhdl/divmod.vhd
+vhdl impulse C:\Workspace\TestSystem\pcores\impulse/hdl/vhdl/gmem.vhd
+vhdl impulse C:\Workspace\TestSystem\pcores\impulse/hdl/vhdl/fifo.vhd
+vhdl impulse C:\Workspace\TestSystem\pcores\impulse/hdl/vhdl/fifo_dc.vhd
+vhdl impulse C:\Workspace\TestSystem\pcores\impulse/hdl/vhdl/csignal.vhd
+vhdl impulse C:\Workspace\TestSystem\pcores\impulse/hdl/vhdl/cregister.vhd
+vhdl impulse C:\Workspace\TestSystem\pcores\impulse/hdl/vhdl/stream.vhd
+vhdl impulse C:\Workspace\TestSystem\pcores\impulse/hdl/vhdl/stream_dc.vhd
+vhdl impulse C:\Workspace\TestSystem\pcores\impulse/hdl/vhdl/impack.vhd
+vhdl impulse C:\Workspace\TestSystem\pcores\impulse/hdl/vhdl/mem_if.vhd
+vhdl impulse C:\Workspace\TestSystem\pcores\impulse/hdl/vhdl/plbdma4.vhd
+vhdl impulse C:\Workspace\TestSystem\pcores\impulse/hdl/vhdl/plb4_if.vhd
+vhdl plb_BubbleSort_arch_v1_00_a C:\Workspace\TestSystem\pcores\plb_BubbleSort_arch_v1_00_a/hdl/vhdl/BubbleSort_comp.vhd
+vhdl plb_BubbleSort_arch_v1_00_a C:\Workspace\TestSystem\pcores\plb_BubbleSort_arch_v1_00_a/hdl/vhdl/BubbleSort_top.vhd
+vhdl plb_BubbleSort_arch_v1_00_a C:\Workspace\TestSystem\pcores\plb_BubbleSort_arch_v1_00_a/hdl/vhdl/plb_BubbleSort_arch.vhd
+vhdl work ../hdl/plb_bubblesort_arch_1_wrapper.vhd

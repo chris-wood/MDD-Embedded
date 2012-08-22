@@ -1,0 +1,96 @@
+<?xml version='1.0'?>
+<!DOCTYPE design>
+<design architecture="C:\Impulse\CoDeveloper3\Architectures\xilinx_v5_plb4.xml" pedirs="0">
+  <stagemaster version="4.4" build="Jul 25 2011"/>
+  <pe loc="pe0" lang="vhdl">
+    <header>
+-- TARGET: VHDL
+    </header>
+    <include>
+library impulse;
+use impulse.components.all;
+    </include>
+    <component name="DoText">
+      <ports>
+        <port name="input_stream" type="stream" mode="in" size="8"/>
+        <port name="output_stream" type="stream" mode="out" size="8"/>
+      </ports>
+      <variables>
+        <variable name="c" width="8" nets="i84"/>
+        <variable name="suif_tmp" width="32" nets="i83"/>
+      </variables>
+      <control>
+        <state name="init">
+          <transition dst="b0s0"/>
+        </state>
+        <state name="b0s0">
+          <transition dst="b1s0"/>
+        </state>
+        <state name="b1s0" enable="input_stream.rd_accept">
+          <transition dst="b2s0" cond="!ni83_suif_tmp"/>
+          <transition dst="b1s1"/>
+        </state>
+        <state name="b1s1" enable="output_stream.wr_accept">
+          <transition dst="b1s0"/>
+        </state>
+        <state name="b2s0" enable="output_stream.wr_accept input_stream.eos">
+          <transition dst="b0s0"/>
+        </state>
+        <state name="b3s0">
+          <transition dst="finished"/>
+        </state>
+        <state name="finished"/>
+      </control>
+      <blocks>
+        <datapath block="b0" states="b0s0">
+          <exec op="open" name="input_stream" line="36" file="HelloWorld_hw.c"/>
+          <exec op="open" name="output_stream" line="38" file="HelloWorld_hw.c"/>
+        </datapath>
+        <datapath block="b1" states="b1s0">
+          <read name="input_stream"/>
+          <eq dst="ni83_suif_tmp">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="eq" width="1">
+                <cat width="2">
+                  <const value="0" width="1"/>
+                  <var name="input_stream.eos"/>
+                </cat>
+                <const value="0" width="2"/>
+              </call>
+            </cat>
+          </eq>
+          <break cond="!ni83_suif_tmp"/>
+          <assign dst="r_suif_tmp" src="ni83_suif_tmp"/>
+        </datapath>
+        <datapath states="b1s1">
+          <eq dst="ni84_c">
+            <var name="r_input_stream"/>
+          </eq>
+          <write name="output_stream" val="ni84_c" line="45" file="HelloWorld_hw.c"/>
+          <assign dst="r_c" src="ni84_c"/>
+        </datapath>
+        <datapath block="b2" states="b2s0">
+          <exec op="readclose" name="input_stream" line="48" file="HelloWorld_hw.c"/>
+          <exec op="writeclose" name="output_stream" line="49" file="HelloWorld_hw.c"/>
+        </datapath>
+        <datapath block="b3" states="b3s0"/>
+        <datapath/>
+      </blocks>
+      <info>
+        <stream name="input_stream">
+          <open state="b0s0"/>
+          <read state="b1s0"/>
+          <readclose state="b2s0"/>
+        </stream>
+        <stream name="output_stream">
+          <open state="b0s0"/>
+          <write state="b1s1" data="ni84_c"/>
+          <writeclose state="b2s0"/>
+        </stream>
+      </info>
+      <variables/>
+      <temps/>
+    </component>
+  </pe>
+</design>

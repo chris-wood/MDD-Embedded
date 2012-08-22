@@ -1,0 +1,120 @@
+<?xml version='1.0'?>
+<!DOCTYPE project>
+<project>
+<smoptions>
+  <architecture file="C:/Impulse/CoDeveloper3/Architectures/xilinx_v5_plb4.xml"/>
+  <config file="C:\Impulse\CoDeveloper3\StageMaster\smconfig.xml"/>
+  <narrow value="1"/>
+  <sharing value="0"/>
+  <fpopt value="0"/>
+  <fpacc value="0"/>
+  <fpaccx value="0"/>
+</smoptions>
+  <procset pe="pe0">
+    <proc name="HWproc" type="void">
+      <io name="HWinput" type="stream" mode="in" ctype="signed" size="1"/>
+      <io name="HWoutput" type="stream" mode="out" ctype="signed" size="1"/>
+      <variable name="nSample" width="1" signed="true"/>
+      <variable name="suif_tmp" width="32" signed="true" usedwidth="1"/>
+      <loop>
+        <body>
+          <exec op="open" iid="i4" line="34" file="BasicStream_hw.c">
+            <var name="HWinput"/>
+          </exec>
+          <exec op="open" iid="i16" line="35" file="BasicStream_hw.c">
+            <var name="HWoutput"/>
+          </exec>
+          <loop line="38" file="BasicStream_hw.c">
+            <body>
+              <assign name="suif_tmp" iid="i87">
+                <binop op="==" signed="false" float="0" iid="i30" signedop="1" argwidth="2" extend="32" w1="2" w2="2" width="1">
+                  <cast signed="false" tosigned="true" width="2" float="0" fromfloat="0" iid="i31" w1="2">
+                    <cast signed="false" tosigned="false" width="2" float="0" fromfloat="0" iid="i32" argwidth="-1" w1="-1">
+                      <read signed="true" iid="i33" width="2">
+                        <var name="HWinput"/>
+                        <assign name="nSample" iid="i88">
+                          <var name="HWinput"/>
+                        </assign>
+                      </read>
+                    </cast>
+                  </cast>
+                  <const value="0" width="2" signed="true" iid="i1243944"/>
+                </binop>
+              </assign>
+              <break iid="i85" cond="!suif_tmp"/>
+              <assign name="nSample" iid="i89" line="44" file="BasicStream_hw.c">
+                <cast signed="false" tosigned="true" width="1" float="0" fromfloat="0" iid="i44" w1="1">
+                  <unop op="~" signed="false" float="0" iid="i45" signedop="0" w1="1" width="1">
+                    <cast signed="true" tosigned="false" width="1" float="0" fromfloat="0" iid="i46" w1="1">
+                      <var name="nSample"/>
+                    </cast>
+                  </unop>
+                </cast>
+              </assign>
+              <store target="io" iid="i48" line="45" file="BasicStream_hw.c" src="ni89_nSample">
+                <var name="HWoutput" lhs="1"/>
+                <var name="nSample"/>
+              </store>
+            </body>
+            <cond>
+              <true iid="i53">
+                <const value="1" width="32" signed="true" iid="i1244528"/>
+              </true>
+            </cond>
+          </loop>
+          <exec op="readclose" iid="i66" line="48" file="BasicStream_hw.c">
+            <var name="HWinput"/>
+          </exec>
+          <exec op="writeclose" iid="i69" line="49" file="BasicStream_hw.c">
+            <var name="HWoutput"/>
+          </exec>
+        </body>
+        <cond>
+          <true iid="i71">
+            <const value="1" signed="false" iid="i71"/>
+          </true>
+        </cond>
+      </loop>
+      <return iid="i77" line="56" file="BasicStream_hw.c">
+      </return>
+      <debug version="4.4">
+        <blocks>
+          <block>
+            <state name="b0s0" ids="i16 i4"/>
+          </block>
+          <block>
+            <state name="b1s0" waits="HWinput.rd_accept" ids="i85 i87 i30 i31 i32 i33"/>
+            <state name="b1s1" waits="HWoutput.wr_accept" ids="i48 i89 i44 i45 i46 i88"/>
+          </block>
+          <block>
+            <state name="b2s0" waits="HWoutput.wr_accept HWinput.eos" ids="i69 i66"/>
+          </block>
+          <block>
+            <state name="b3s0" ids="i77"/>
+          </block>
+        </blocks>
+      </debug>
+    </proc>
+    
+  </procset>
+  <config name="BasicStream_arch" arch="Generic">
+      <signature name="Producer">
+        <io name="HWinput" type="stream" mode="out" ctype="signed" size="1"/>
+      </signature>
+      <signature name="HWproc">
+        <io name="HWinput" type="stream" mode="in" ctype="signed" size="1"/>
+        <io name="HWoutput" type="stream" mode="out" ctype="signed" size="1"/>
+      </signature>
+      <signature name="Consumer">
+        <io name="HWoutput" type="stream" mode="in" ctype="signed" size="1"/>
+      </signature>
+      <process name="Producer" fun="Producer" type="sp" loc="" argc="1">
+      </process>
+      <process name="HWproc" fun="HWproc" type="hp" loc="pe0" argc="2">
+      </process>
+      <process name="Consumer" fun="Consumer" type="sp" loc="" argc="1">
+      </process>
+      <connect src="Producer.HWinput" dst="HWproc.HWinput" size="2" type="stream" name="HWinput" inst="-1" kind=""/>
+      <connect src="HWproc.HWoutput" dst="Consumer.HWoutput" size="2" type="stream" name="HWoutput" inst="-1" kind=""/>
+    </config>
+</project>

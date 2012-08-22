@@ -1,0 +1,52 @@
+
+# Impulse project file saved 09-30-2005 14:49:19
+$Version "2.01.e.13"
+$Option "GenerateMakefile=1"
+$Option "MakeDebug=1"
+$Option "DefaultMakeFile=AcceleratorTemplate.mak"
+$Option "DefaultMakeGenerateTarget=build"
+$Option "DefaultMakeCleanTarget=clean"
+$Option "DefaultMakeExportHWTarget=export_hardware"
+$Option "DefaultMakeExportSWTarget=export_software"
+$Option "HWBuildSrcFiles=AcceleratorTemplate_hw.c"
+$Option "HWBuildIncFiles=AcceleratorTemplate.h"
+$Option "SWBuildSrcFiles=AcceleratorTemplate_sw.c"
+$Option "SWBuildIncFiles=AcceleratorTemplate.h"
+$Option "ExeBuildSrcFiles=AcceleratorTemplate_hw.c AcceleratorTemplate_sw.c"
+$Option "ExeBuildIncFiles=AcceleratorTemplate.h"
+$Option "ExeBuildLibFiles="
+$Option "ExeBuildCCOpts="
+$Option "LaunchUpdateExe=1"
+$Option "LaunchUpdateHwExe=1"
+$Option "LaunchMonitor=0"
+$Option "SimulateExe=AcceleratorTemplate.exe"
+$Option "SimulateHwExe="
+$Option "SimulateArgs="
+$Option "SimulateDir="
+$Option "GenCodeConstProp=1"
+$Option "GenCodeScalarize=1"
+$Option "GenCodeDualClocks=0"
+$Option "GenCodeLoopInvariants=1"
+$Option "GenCodeFamily=Generic (VHDL)"
+$Option "GenCodeArchID=generic"
+$Option "GenCodeHWExportDir=export"
+$Option "GenCodeHWTargetDir=hw"
+$Option "GenCodeSWExportDir=export"
+$Option "GenCodeSWTargetDir=sw"
+$Option "GenCodePFlagsOpt="
+$Option "UseExternalMakeWin=0"
+$Files
+($Application "AcceleratorTemplate"
+ ($Sourcefiles
+  ($Module ".\AcceleratorTemplate_hw.c" ""
+  $Module ".\AcceleratorTemplate_sw.c" ""
+  )
+ $Headerfiles
+  ($Module ".\AcceleratorTemplate.h" ""
+  )
+ $Projectfiles
+ $Docfiles
+ $Otherfiles
+ )
+)
+

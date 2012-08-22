@@ -1,0 +1,442 @@
+Release 13.1 - xst O.40b (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top_xst.prj"
+Input Format                       : mixed
+
+---- Target Parameters
+Output File Name                   : "Top"
+Output Format                      : NGC
+Target Device                      : xc6vlx240t-1-ff1156
+
+---- Source Options
+Top Module Name                    : top
+
+---- Target Options
+Add IO Buffers                     : YES
+
+---- General Options
+Keep Hierarchy                     : YES
+Netlist Hierarchy                  : as_optimized
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+
+=========================================================================
+
+WARNING:Xst:29 - Optimization Effort not specified
+The following parameters have been added:
+Optimization Goal                  : SPEED
+
+=========================================================================
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file \"/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/top.v\" into library work
+Parsing module <recon_block_bram>.
+Parsing module <recon_block_count>.
+Parsing module <top>.
+Analyzing Verilog file \"/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/clocks.v\" into library work
+Parsing module <clocks>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top>.
+
+Elaborating module <clocks>.
+
+Elaborating module <IBUFGDS>.
+
+Elaborating module <MMCM_ADV(BANDWIDTH="OPTIMIZED",CLKOUT4_CASCADE="FALSE",CLOCK_HOLD="FALSE",COMPENSATION="ZHOLD",STARTUP_WAIT="FALSE",DIVCLK_DIVIDE=1,CLKFBOUT_MULT_F=6.0,CLKFBOUT_PHASE=0.0,CLKFBOUT_USE_FINE_PS="FALSE",CLKOUT0_DIVIDE_F=12.0,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT0_USE_FINE_PS="FALSE",CLKIN1_PERIOD=5.0,REF_JITTER1=0.01)>.
+WARNING:HDLCompiler:1127 - "/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/clocks.v" Line 77: Assignment to clkfboutb_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/clocks.v" Line 79: Assignment to clkout0b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/clocks.v" Line 80: Assignment to clkout1_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/clocks.v" Line 81: Assignment to clkout1b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/clocks.v" Line 82: Assignment to clkout2_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/clocks.v" Line 83: Assignment to clkout2b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/clocks.v" Line 84: Assignment to clkout3_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/clocks.v" Line 85: Assignment to clkout3b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/clocks.v" Line 86: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/clocks.v" Line 87: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/clocks.v" Line 88: Assignment to clkout6_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/clocks.v" Line 100: Assignment to do_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/clocks.v" Line 101: Assignment to drdy_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/clocks.v" Line 107: Assignment to psdone_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/clocks.v" Line 109: Assignment to LOCKED ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/clocks.v" Line 110: Assignment to clkinstopped_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/clocks.v" Line 111: Assignment to clkfbstopped_unused ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+WARNING:HDLCompiler:634 - "/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/clocks.v" Line 113: Net <RESET> does not have a driver.
+
+Elaborating module <recon_block_bram>.
+
+Elaborating module <recon_block_count>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/top.v".
+    Set property "buffer_type = none" for signal <out_counter>.
+    Found 1-bit register for signal <test_count>.
+    Found 35-bit register for signal <count>.
+    Found 35-bit adder for signal <count[34]_GND_1_o_add_1_OUT> created at line 101.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  36 D-type flip-flop(s).
+Unit <top> synthesized.
+
+Synthesizing Unit <clocks>.
+    Related source file is "/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Source/Top/clocks.v".
+WARNING:Xst:653 - Signal <RESET> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <clocks> synthesized.
+RTL-Simplification CPUSTAT: 0.00 
+RTL-BasicInf CPUSTAT: 0.13 
+RTL-BasicOpt CPUSTAT: 0.00 
+RTL-Remain-Bus CPUSTAT: 0.00 
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 35-bit adder                                          : 1
+# Registers                                            : 2
+ 1-bit register                                        : 1
+ 35-bit register                                       : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <top>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <top> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 35-bit up counter                                     : 1
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <top> ...
+
+Optimizing unit <clocks> ...
+
+Mapping all equations...
+WARNING:Xst:2036 - Inserting OBUF on port <out_bram<7>> driven by black box <recon_block_bram>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <out_bram<6>> driven by black box <recon_block_bram>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <out_bram<5>> driven by black box <recon_block_bram>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <out_bram<4>> driven by black box <recon_block_bram>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <out_bram<3>> driven by black box <recon_block_bram>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <out_bram<2>> driven by black box <recon_block_bram>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <out_bram<1>> driven by black box <recon_block_bram>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <out_bram<0>> driven by black box <recon_block_bram>. Possible simulation mismatch.
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block top, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 36
+ Flip-Flops                                            : 36
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 108
+#      GND                         : 2
+#      INV                         : 1
+#      LUT1                        : 34
+#      MUXCY                       : 34
+#      VCC                         : 2
+#      XORCY                       : 35
+# FlipFlops/Latches                : 36
+#      FDR                         : 36
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 11
+#      IBUF                        : 1
+#      IBUFGDS                     : 1
+#      OBUF                        : 9
+# Others                           : 3
+#      MMCM_ADV                    : 1
+#      recon_block_bram            : 1
+#      recon_block_count           : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vlx240tff1156-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              36  out of  301440     0%  
+ Number of Slice LUTs:                   35  out of  150720     0%  
+    Number used as Logic:                35  out of  150720     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     36
+   Number with an unused Flip Flop:       0  out of     36     0%  
+   Number with an unused LUT:             1  out of     36     2%  
+   Number of fully used LUT-FF pairs:    35  out of     36    97%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                          16
+ Number of bonded IOBs:                  10  out of    600     1%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_p                              | mmcm_adv_inst:CLKOUT0  | 36    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 1.022ns (Maximum Frequency: 978.713MHz)
+   Minimum input arrival time before clock: 0.989ns
+   Maximum output required time after clock: 0.780ns
+   Maximum combinational path delay: 0.555ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_p'
+  Clock period: 1.022ns (frequency: 978.713MHz)
+  Total number of paths / destination ports: 631 / 36
+-------------------------------------------------------------------------
+Delay:               2.044ns (Levels of Logic = 36)
+  Source:            count_0 (FF)
+  Destination:       count_34 (FF)
+  Source Clock:      clk_p rising 0.5X
+  Destination Clock: clk_p rising 0.5X
+
+  Data Path: count_0 to count_34
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.375   0.399  count_0 (count_0)
+     INV:I->O              1   0.086   0.000  Mcount_count_lut<0>_INV_0 (Mcount_count_lut<0>)
+     MUXCY:S->O            1   0.290   0.000  Mcount_count_cy<0> (Mcount_count_cy<0>)
+     MUXCY:CI->O           1   0.020   0.000  Mcount_count_cy<1> (Mcount_count_cy<1>)
+     MUXCY:CI->O           1   0.020   0.000  Mcount_count_cy<2> (Mcount_count_cy<2>)
+     MUXCY:CI->O           1   0.020   0.000  Mcount_count_cy<3> (Mcount_count_cy<3>)
+     MUXCY:CI->O           1   0.020   0.000  Mcount_count_cy<4> (Mcount_count_cy<4>)
+     MUXCY:CI->O           1   0.020   0.000  Mcount_count_cy<5> (Mcount_count_cy<5>)
+     MUXCY:CI->O           1   0.020   0.000  Mcount_count_cy<6> (Mcount_count_cy<6>)
+     MUXCY:CI->O           1   0.020   0.000  Mcount_count_cy<7> (Mcount_count_cy<7>)
+     MUXCY:CI->O           1   0.020   0.000  Mcount_count_cy<8> (Mcount_count_cy<8>)
+     MUXCY:CI->O           1   0.020   0.000  Mcount_count_cy<9> (Mcount_count_cy<9>)
+     MUXCY:CI->O           1   0.020   0.000  Mcount_count_cy<10> (Mcount_count_cy<10>)
+     MUXCY:CI->O           1   0.020   0.000  Mcount_count_cy<11> (Mcount_count_cy<11>)
+     MUXCY:CI->O           1   0.020   0.000  Mcount_count_cy<12> (Mcount_count_cy<12>)
+     MUXCY:CI->O           1   0.020   0.000  Mcount_count_cy<13> (Mcount_count_cy<13>)
+     MUXCY:CI->O           1   0.020   0.000  Mcount_count_cy<14> (Mcount_count_cy<14>)
+     MUXCY:CI->O           1   0.020   0.000  Mcount_count_cy<15> (Mcount_count_cy<15>)
+     MUXCY:CI->O           1   0.020   0.000  Mcount_count_cy<16> (Mcount_count_cy<16>)
+     MUXCY:CI->O           1   0.020   0.000  Mcount_count_cy<17> (Mcount_count_cy<17>)
+     MUXCY:CI->O           1   0.020   0.000  Mcount_count_cy<18> (Mcount_count_cy<18>)
+     MUXCY:CI->O           1   0.020   0.000  Mcount_count_cy<19> (Mcount_count_cy<19>)
+     MUXCY:CI->O           1   0.020   0.000  Mcount_count_cy<20> (Mcount_count_cy<20>)
+     MUXCY:CI->O           1   0.020   0.000  Mcount_count_cy<21> (Mcount_count_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_count_cy<22> (Mcount_count_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_count_cy<23> (Mcount_count_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_count_cy<24> (Mcount_count_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_count_cy<25> (Mcount_count_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_count_cy<26> (Mcount_count_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_count_cy<27> (Mcount_count_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_count_cy<28> (Mcount_count_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_count_cy<29> (Mcount_count_cy<29>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_count_cy<30> (Mcount_count_cy<30>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_count_cy<31> (Mcount_count_cy<31>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_count_cy<32> (Mcount_count_cy<32>)
+     MUXCY:CI->O           0   0.019   0.000  Mcount_count_cy<33> (Mcount_count_cy<33>)
+     XORCY:CI->O           1   0.239   0.000  Mcount_count_xor<34> (Result<34>)
+     FDR:D                     0.011          count_34
+    ----------------------------------------
+    Total                      2.044ns (1.645ns logic, 0.399ns route)
+                                       (80.5% logic, 19.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_p'
+  Total number of paths / destination ports: 36 / 36
+-------------------------------------------------------------------------
+Offset:              0.989ns (Levels of Logic = 1)
+  Source:            rst_n (PAD)
+  Destination:       test_count_r (FF)
+  Destination Clock: clk_p rising 0.5X
+
+  Data Path: rst_n to test_count_r
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            36   0.003   0.552  rst_n_IBUF (rst_n_IBUF)
+     FDR:R                     0.434          test_count_r
+    ----------------------------------------
+    Total                      0.989ns (0.437ns logic, 0.552ns route)
+                                       (44.2% logic, 55.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_p'
+  Total number of paths / destination ports: 13 / 13
+-------------------------------------------------------------------------
+Offset:              0.780ns (Levels of Logic = 0)
+  Source:            count_24 (FF)
+  Destination:       U1_RP_Bram:addr<1> (PAD)
+  Source Clock:      clk_p rising 0.5X
+
+  Data Path: count_24 to U1_RP_Bram:addr<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.375   0.405  count_24 (count_24)
+    recon_block_bram:addr<1>        0.000          U1_RP_Bram
+    ----------------------------------------
+    Total                      0.780ns (0.375ns logic, 0.405ns route)
+                                       (48.1% logic, 51.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Delay:               0.555ns (Levels of Logic = 1)
+  Source:            rst_n (PAD)
+  Destination:       U1_RP_Bram:en (PAD)
+
+  Data Path: rst_n to U1_RP_Bram:en
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            36   0.003   0.552  rst_n_IBUF (rst_n_IBUF)
+    recon_block_bram:en        0.000          U1_RP_Bram
+    ----------------------------------------
+    Total                      0.555ns (0.003ns logic, 0.552ns route)
+                                       (0.5% logic, 99.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_p
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_p          |    2.044|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.43 secs
+ 
+--> 
+
+
+Total memory usage is 347516 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   28 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

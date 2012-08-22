@@ -1,0 +1,7 @@
+INFILE=C:\Workspace\ImpulseSystem\implementation\system.ncd
+OUTFILE=C:\Workspace\ImpulseSystem\implementation\system.bit
+FAMILY=Virtex5
+PART=xc5vfx70t-1ff1136
+WORKINGDIR=C:\Workspace\ImpulseSystem\implementation
+LICENSE=ISE
+USER_INFO=174167273_174167274_174423194

@@ -1,0 +1,32 @@
+
+<RENDERBATCH>
+
+  <RENDERIMG RASNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\ppc440_0.jpg" SVGNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\ppc440_0.svg" TMPSVGFN="C:\Workspace\ImpulseIntegrationSystem\__xps\.dswkshop\ppc440_0.svg"/>
+
+  <RENDERIMG RASNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\plb_v46_0.jpg" SVGNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\plb_v46_0.svg" TMPSVGFN="C:\Workspace\ImpulseIntegrationSystem\__xps\.dswkshop\plb_v46_0.svg"/>
+
+  <RENDERIMG RASNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\xps_bram_if_cntlr_1.jpg" SVGNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\xps_bram_if_cntlr_1.svg" TMPSVGFN="C:\Workspace\ImpulseIntegrationSystem\__xps\.dswkshop\xps_bram_if_cntlr_1.svg"/>
+
+  <RENDERIMG RASNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\xps_bram_if_cntlr_1_bram.jpg" SVGNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\xps_bram_if_cntlr_1_bram.svg" TMPSVGFN="C:\Workspace\ImpulseIntegrationSystem\__xps\.dswkshop\xps_bram_if_cntlr_1_bram.svg"/>
+
+  <RENDERIMG RASNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\RS232_Uart_1.jpg" SVGNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\RS232_Uart_1.svg" TMPSVGFN="C:\Workspace\ImpulseIntegrationSystem\__xps\.dswkshop\RS232_Uart_1.svg"/>
+
+  <RENDERIMG RASNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\Ethernet_MAC.jpg" SVGNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\Ethernet_MAC.svg" TMPSVGFN="C:\Workspace\ImpulseIntegrationSystem\__xps\.dswkshop\Ethernet_MAC.svg"/>
+
+  <RENDERIMG RASNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\DDR2_SDRAM.jpg" SVGNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\DDR2_SDRAM.svg" TMPSVGFN="C:\Workspace\ImpulseIntegrationSystem\__xps\.dswkshop\DDR2_SDRAM.svg"/>
+
+  <RENDERIMG RASNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\xps_timer_0.jpg" SVGNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\xps_timer_0.svg" TMPSVGFN="C:\Workspace\ImpulseIntegrationSystem\__xps\.dswkshop\xps_timer_0.svg"/>
+
+  <RENDERIMG RASNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\clock_generator_0.jpg" SVGNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\clock_generator_0.svg" TMPSVGFN="C:\Workspace\ImpulseIntegrationSystem\__xps\.dswkshop\clock_generator_0.svg"/>
+
+  <RENDERIMG RASNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\jtagppc_cntlr_inst.jpg" SVGNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\jtagppc_cntlr_inst.svg" TMPSVGFN="C:\Workspace\ImpulseIntegrationSystem\__xps\.dswkshop\jtagppc_cntlr_inst.svg"/>
+
+  <RENDERIMG RASNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\proc_sys_reset_0.jpg" SVGNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\proc_sys_reset_0.svg" TMPSVGFN="C:\Workspace\ImpulseIntegrationSystem\__xps\.dswkshop\proc_sys_reset_0.svg"/>
+
+  <RENDERIMG RASNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\xps_intc_0.jpg" SVGNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\xps_intc_0.svg" TMPSVGFN="C:\Workspace\ImpulseIntegrationSystem\__xps\.dswkshop\xps_intc_0.svg"/>
+
+  <RENDERIMG RASNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\plb_helloworldarch_0.jpg" SVGNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\plb_helloworldarch_0.svg" TMPSVGFN="C:\Workspace\ImpulseIntegrationSystem\__xps\.dswkshop\plb_helloworldarch_0.svg"/>
+
+  <RENDERIMG RASNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\system_blkd.jpg" SVGNAME="C:\Workspace\ImpulseIntegrationSystem\SDK\SDK_Export\hw\imgs\system_blkd.svg" TMPSVGFN="C:\Workspace\ImpulseIntegrationSystem\__xps\.dswkshop\system_blkd.svg"/>
+
+</RENDERBATCH>

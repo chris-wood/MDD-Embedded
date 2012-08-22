@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<PartialReconfig Version="1" Minor="5">
+	<PRInst Name="top" Top="TRUE" Reconfigurable="FALSE">
+	</PRInst>
+	<PRInst Name="U1_RP_Bram" CurrPRModule="BramFirst" Reconfigurable="TRUE">
+		<PRModule Name="BramFirst" Source="recon_block_bram.edf" Netlist="D:\Real_Time_Systems\UG743_design_files\xpr_bram_led\Synth\BramFirst\recon_block_bram.ngc">
+		</PRModule>
+		<PRModule Name="BramSecond" Source="recon_block_bram.edf" Netlist="D:\Real_Time_Systems\UG743_design_files\xpr_bram_led\Synth\BramSecond\recon_block_bram.ngc">
+		</PRModule>
+	</PRInst>
+	<PRInst Name="U2_RP_Count" CurrPRModule="CountCW" Reconfigurable="TRUE">
+		<PRModule Name="CountCW" Source="recon_block_count.edf" Netlist="D:\Real_Time_Systems\UG743_design_files\xpr_bram_led\Synth\CountCW\recon_block_count.ngc">
+		</PRModule>
+		<PRModule Name="CountCCW" Source="recon_block_count.edf" Netlist="D:\Real_Time_Systems\UG743_design_files\xpr_bram_led\Synth\CountCCW\recon_block_count.ngc">
+		</PRModule>
+	</PRInst>
+	<PRConfig Name="config_1" State="IMPLEMENTED">
+		<PRConfigInst PRInst="top" State="IMPLEMENT">
+		</PRConfigInst>
+		<PRConfigInst PRInst="U1_RP_Bram" PRModule="BramFirst" State="IMPLEMENT">
+		</PRConfigInst>
+		<PRConfigInst PRInst="U2_RP_Count" PRModule="CountCW" State="IMPLEMENT">
+		</PRConfigInst>
+	</PRConfig>
+</PartialReconfig>
+

@@ -1,0 +1,62 @@
+# Impulse project file saved 02-16-2012 17:30:58
+$Version "3.70.c.5"
+$Option "GenerateMakefile=1"
+$Option "MakeDebug=1"
+$Option "DefaultMakeFile=BubbleSort.mak"
+$Option "DefaultMakeGenerateTarget=build"
+$Option "DefaultMakeCleanTarget=clean"
+$Option "DefaultMakeExportHWTarget=export_hardware"
+$Option "DefaultMakeExportSWTarget=export_software"
+$Option "HWBuildSrcFiles=BubbleSort_hw.c"
+$Option "HWBuildIncFiles=BubbleSort.h"
+$Option "SWBuildSrcFiles=BubbleSort_sw.c"
+$Option "SWBuildIncFiles=BubbleSort.h"
+$Option "ExeBuildSrcFiles=BubbleSort_hw.c BubbleSort_sw.c"
+$Option "ExeBuildIncFiles=BubbleSort.h"
+$Option "ExeBuildLibFiles="
+$Option "ExeBuildCCOpts="
+$Option "LaunchUpdateExe=1"
+$Option "LaunchUpdateHwExe=1"
+$Option "LaunchMonitor=0"
+$Option "SimulateExe=BubbleSort.exe"
+$Option "SimulateHwExe=BubbleSort.exe"
+$Option "SimulateArgs="
+$Option "SimulateDir="
+$Option "SimulateGenTestbench=0"
+$Option "GenCodeConstProp=1"
+$Option "GenCodeScalarize=1"
+$Option "GenCodeDualClocks=0"
+$Option "GenCodeActiveLowReset=0"
+$Option "GenCodeStdLogic=0"
+$Option "GenCodeCoPort=1"
+$Option "GenCodeMath=0"
+$Option "GenCodeFloat=0"
+$Option "GenCodeFloatOptimization=0"
+$Option "GenCodeFloatAccum=0"
+$Option "GenCodeFloatAccumEx=0"
+$Option "GenCodeFloatFast=0"
+$Option "GenCodeFloatDouble=0"
+$Option "GenCodeLibOpts="
+$Option "GenCodeLoopInvariants=1"
+$Option "GenCodeFamily=Xilinx Virtex-5 PLB v4.6 (VHDL)"
+$Option "GenCodeArchID=xilinx_v5_plb4"
+$Option "GenCodeHWExportDir=export"
+$Option "GenCodeHWTargetDir=hw"
+$Option "GenCodeSWExportDir=export"
+$Option "GenCodeSWTargetDir=sw"
+$Option "GenCodePFlagsOpt="
+$Option "UseExternalMakeWin=0"
+$Files
+($Application "BubbleSort"
+ ($Sourcefiles
+  ($Module ".\BubbleSort_hw.c" ""
+  $Module ".\BubbleSort_sw.c" ""
+  )
+ $Headerfiles
+  ($Module ".\BubbleSort.h" ""
+  )
+ $Projectfiles
+ $Docfiles
+ $Otherfiles
+ )
+)

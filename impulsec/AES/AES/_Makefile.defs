@@ -1,0 +1,23 @@
+# _Makefile.defs - created by CoDeveloper version 3.70.c.5
+CO_INC=C:\Impulse\CoDeveloper3\Include
+LIB_DIR=C:\Impulse\CoDeveloper3\Libraries
+IMPULSE_LIB=ImpulseC
+HW_EXPORT_DIR=export
+HW_TARGET_DIR=hw
+SW_EXPORT_DIR=export
+SW_TARGET_DIR=sw
+HW_SRC=AES_hw.c
+HW_INC=AES.h
+SW_SRC=AES_sw.c
+SW_INC=AES.h
+EXE_SRC=AES_sw.c AES_hw.c
+EXE_INC=AES.h
+EXE=AES.exe
+SMD_EXE=AES.exe
+ARCH_ID=xilinx_v5_plb4
+GENRTL_EXE=impulse_genvhdl.exe
+HDL_FILE_EXT=vhd
+P_FLAGS_OPT= -const-prop  -scalarize  -loop-invariants
+A_FLAGS_OPT= -dc -no_port_bus_connect 
+SM_FLAGS_OPT= 
+DEBUG=-g

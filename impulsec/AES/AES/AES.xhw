@@ -1,0 +1,3250 @@
+<?xml version='1.0'?>
+<!DOCTYPE design>
+<design architecture="C:\Impulse\CoDeveloper3\Architectures\xilinx_v5_plb4.xml" pedirs="0">
+  <stagemaster version="4.4" build="Jul 25 2011"/>
+  <pe loc="pe0" lang="vhdl">
+    <header>
+-- TARGET: VHDL
+    </header>
+    <include>
+library impulse;
+use impulse.components.all;
+    </include>
+    <global name="SBox" width="8" depth="256" rports="1" wports="0" rwports="0" res="dualsync" res-ports="2" res-addresses="1">
+      <init>99 124 119 123 242 107 111 197 48 1 103 43 254 215 171 118 202 130 201 125 250 89 71 240 173 212 162 175 156 164 114 192 183 253 147 38 54 63 247 204 52 165 229 241 113 216 49 21 4 199 35 195 24 150 5 154 7 18 128 226 235 39 178 117 9 131 44 26 27 110 90 160 82 59 214 179 41 227 47 132 83 209 0 237 32 252 177 91 106 203 190 57 74 76 88 207 208 239 170 251 67 77 51 133 69 249 2 127 80 60 159 168 81 163 64 143 146 157 56 245 188 182 218 33 16 255 243 210 205 12 19 236 95 151 68 23 196 167 126 61 100 93 25 115 96 129 79 220 34 42 144 136 70 238 184 20 222 94 11 219 224 50 58 10 73 6 36 92 194 211 172 98 145 149 228 121 231 200 55 109 141 213 78 169 108 86 244 234 101 122 174 8 186 120 37 46 28 166 180 198 232 221 116 31 75 189 139 138 112 62 181 102 72 3 246 14 97 53 87 185 134 193 29 158 225 248 152 17 105 217 142 148 155 30 135 233 206 85 40 223 140 161 137 13 191 230 66 104 65 153 45 15 176 84 187 22
+      </init>
+    </global>
+    <component name="AESproc">
+      <ports>
+        <port name="AESinputSignal" type="signal" mode="in" size="32"/>
+        <port name="AESdataStream" type="stream" mode="in" size="8"/>
+        <port name="AESoutputStream" type="stream" mode="out" size="8"/>
+        <port name="SBox" type="global_mem" mode="in" size="8" depth="256" nets="i266 i286 i306 i326 i341 i361 i381 i401 i425 i445 i469 i489 i513 i533 i553 i573"/>
+      </ports>
+      <variables>
+        <variable name="trigger" width="32" nets="i1466 i1477"/>
+        <variable name="i" width="32" nets="i1468 i1475 i1480 i1490 i1492 i1502 i1504 i1516 i1604 i1662 i1663 i1673 i1674 i1687 i1691 i1700"/>
+        <variable name="j" width="32" nets="i1467 i1472 i1476 i1479 i1487 i1491 i1494 i1500 i1506 i1514 i1517 i1689 i1693 i1698"/>
+        <variable name="k" width="32" nets="i1478 i1484 i1488 i1665 i1671 i1677 i1685"/>
+        <variable name="x" width="32" nets="i1565 i1578 i1585 i1592"/>
+        <variable name="streamByte" width="8" nets="i1470 i1482"/>
+        <memory name="state" width="8" depth="16" nets="i41 i225 i1245 i1251 i259 i1257 i279 i1263 i299 i1269 i319 i1272 i1278 i354 i1284 i374 i1290 i394 i414 i1296 i1302 i438 i458 i1308 i1314 i482 i502 i1320 i1326 i526 i1332 i546 i1338 i566 i586 i614 i632 i665 i680 i692 i702 i712 i727 i745 i775 i788 i803 i815 i825 i840 i858 i888 i898 i911 i926 i938 i953 i971 i1004 i1016 i1026 i1036 i1049 i1075 i1119 i1347 i1186"/>
+        <memory name="stateTemp" width="8" depth="16" nets="i642 i755 i868 i981 i1082"/>
+        <memory name="expandedKey" width="8" depth="176" nets="i115 i181 i1131"/>
+        <memory name="key" width="32" depth="16" nets="i172 i233"/>
+        <variable name="suif_tmp" width="32" nets="i1519"/>
+        <variable name="suif_tmp0" width="32" nets="i1520"/>
+        <variable name="suif_tmp1" width="32" nets="i1521"/>
+        <variable name="suif_tmp2" width="32" nets="i1522"/>
+        <variable name="suif_tmp3" width="32" nets="i1523"/>
+        <variable name="suif_tmp4" width="32" nets="i1524"/>
+        <variable name="suif_tmp5" width="32" nets="i1525"/>
+        <variable name="suif_tmp6" width="32" nets="i1526"/>
+        <variable name="suif_tmp7" width="32" nets="i1527"/>
+        <variable name="suif_tmp8" width="32" nets="i1528"/>
+        <variable name="suif_tmp9" width="32" nets="i1529"/>
+        <variable name="suif_tmp10" width="32" nets="i1530"/>
+        <variable name="suif_tmp11" width="32" nets="i1531"/>
+        <variable name="suif_tmp12" width="32" nets="i1532"/>
+        <variable name="suif_tmp13" width="32" nets="i1533"/>
+        <variable name="suif_tmp14" width="32" nets="i1534"/>
+        <variable name="suif_tmp15" width="32" nets="i1535"/>
+        <variable name="suif_tmp16" width="32" nets="i1536"/>
+        <variable name="suif_tmp17" width="32" nets="i1537"/>
+        <variable name="suif_tmp18" width="32" nets="i1538"/>
+        <variable name="suif_tmp19" width="32" nets="i1539"/>
+        <variable name="suif_tmp20" width="32" nets="i1540"/>
+        <variable name="suif_tmp21" width="32" nets="i1541"/>
+        <variable name="suif_tmp22" width="32" nets="i1542"/>
+        <variable name="suif_tmp23" width="32" nets="i1543"/>
+        <variable name="suif_tmp24" width="32" nets="i1544"/>
+        <variable name="suif_tmp25" width="32" nets="i1545"/>
+        <variable name="suif_tmp26" width="32" nets="i1546"/>
+        <variable name="suif_tmp27" width="32" nets="i1547"/>
+        <variable name="suif_tmp28" width="32" nets="i1548"/>
+        <variable name="suif_tmp29" width="32" nets="i1549"/>
+        <variable name="suif_tmp30" width="32" nets="i1550"/>
+        <variable name="suif_tmp31" width="32" nets="i1469"/>
+        <variable name="suif_tmp32" width="32" nets="i1474"/>
+        <variable name="suif_tmp_0" width="32" nets="i1471"/>
+        <variable name="suif_tmp33" width="32" nets="i1481"/>
+        <variable name="suif_tmp34" width="32" nets="i1486"/>
+        <variable name="suif_tmp35" width="32" nets="i1489"/>
+        <variable name="suif_tmp_1" width="32" nets="i1483"/>
+        <variable name="suif_tmp36" width="32" nets="i1503"/>
+        <variable name="suif_tmp37" width="32" nets="i1493"/>
+        <variable name="suif_tmp38" width="32" nets="i1495"/>
+        <variable name="suif_tmp39" width="32" nets="i1501"/>
+        <variable name="suif_tmp_2" width="32" nets="i1496"/>
+        <variable name="suif_tmp0_0" width="32" nets="i1497"/>
+        <variable name="suif_tmp40" width="32" nets="i1505"/>
+        <variable name="suif_tmp41" width="32" nets="i1507"/>
+        <variable name="suif_tmp42" width="32" nets="i1515"/>
+        <variable name="suif_tmp_3" width="32" nets="i1508"/>
+        <variable name="suif_tmp0_1" width="32" nets="i1509"/>
+        <variable name="suif_tmp_4" width="32" nets="i1510"/>
+        <variable name="suif_tmp43" width="32" nets="i1518"/>
+        <variable name="suif_tmp44" width="32" nets="i1690"/>
+        <variable name="suif_tmp45" width="32" nets="i1551"/>
+        <variable name="suif_tmp46" width="32" nets="i1554"/>
+        <variable name="suif_tmp47" width="32" nets="i1557"/>
+        <variable name="suif_tmp48" width="32" nets="i1560"/>
+        <variable name="suif_tmp49" width="32" nets="i1563"/>
+        <variable name="suif_tmp50" width="32" nets="i1566"/>
+        <variable name="suif_tmp51" width="32" nets="i1569"/>
+        <variable name="suif_tmp52" width="32" nets="i1572"/>
+        <variable name="suif_tmp53" width="32" nets="i1576"/>
+        <variable name="suif_tmp54" width="32" nets="i1579"/>
+        <variable name="suif_tmp55" width="32" nets="i1583"/>
+        <variable name="suif_tmp56" width="32" nets="i1586"/>
+        <variable name="suif_tmp57" width="32" nets="i1590"/>
+        <variable name="suif_tmp58" width="32" nets="i1593"/>
+        <variable name="suif_tmp59" width="32" nets="i1596"/>
+        <variable name="suif_tmp60" width="32" nets="i1599"/>
+        <variable name="suif_tmp61" width="32" nets="i1603"/>
+        <variable name="suif_tmp62" width="32" nets="i1605"/>
+        <variable name="suif_tmp63" width="32" nets="i1606"/>
+        <variable name="suif_tmp64" width="32" nets="i1610"/>
+        <variable name="suif_tmp65" width="32" nets="i1620"/>
+        <variable name="suif_tmp66" width="32" nets="i1624"/>
+        <variable name="suif_tmp67" width="32" nets="i1634"/>
+        <variable name="suif_tmp68" width="32" nets="i1638"/>
+        <variable name="suif_tmp69" width="32" nets="i1648"/>
+        <variable name="suif_tmp70" width="32" nets="i1652"/>
+        <variable name="suif_tmp71" width="32" nets="i1664"/>
+        <variable name="suif_tmp72" width="32" nets="i1666"/>
+        <variable name="suif_tmp73" width="32" nets="i1672"/>
+        <variable name="suif_tmp74" width="32" nets="i1675"/>
+        <variable name="suif_tmp75" width="32" nets="i1688"/>
+        <variable name="suif_tmp76" width="32" nets="i1678"/>
+        <variable name="suif_tmp77" width="32" nets="i1686"/>
+        <variable name="suif_tmp_5" width="32" nets="i1676"/>
+        <variable name="suif_tmp_6" width="32" nets="i1608 i1609"/>
+        <variable name="suif_tmp0_2" width="32" nets="i1612 i1613"/>
+        <variable name="suif_tmp2_0" width="32" nets="i1622 i1623"/>
+        <variable name="suif_tmp3_0" width="32" nets="i1626 i1627"/>
+        <variable name="suif_tmp5_0" width="32" nets="i1636 i1637"/>
+        <variable name="suif_tmp6_0" width="32" nets="i1640 i1641"/>
+        <variable name="suif_tmp8_0" width="32" nets="i1650 i1651"/>
+        <variable name="suif_tmp9_0" width="32" nets="i1654 i1655"/>
+        <variable name="suif_tmp_7" width="32" nets="i1667"/>
+        <variable name="suif_tmp0_3" width="32" nets="i1668"/>
+        <variable name="suif_tmp_8" width="32" nets="i1679"/>
+        <variable name="suif_tmp0_4" width="32" nets="i1680"/>
+        <variable name="suif_tmp_9" width="32" nets="i1681"/>
+        <variable name="suif_tmp78" width="32" nets="i1692"/>
+        <variable name="suif_tmp79" width="32" nets="i1694"/>
+        <variable name="suif_tmp80" width="32" nets="i1699"/>
+        <variable name="suif_tmp81" width="8" nets="i1696"/>
+        <variable name="suif_tmp_10" width="32" nets="i1695"/>
+        <variable name="r_e_g_0" width="4" nets="i1473 i1498 i1512 i1552 i1553 i1555 i1556 i1558 i1559 i1561 i1562 i1564 i1568 i1570 i1571 i1573 i1574 i1575 i1577 i1581 i1582 i1584 i1588 i1589 i1591 i1595 i1597 i1598 i1600 i1601 i1602 i1607 i1611 i1615 i1617 i1619 i1625 i1629 i1631 i1633 i1639 i1643 i1645 i1647 i1653 i1657 i1659 i1661 i1670 i1683 i1697"/>
+        <variable name="r_e_g_1" width="8" nets="i1485 i1499 i665 i775 i888 i1004 i1684"/>
+        <variable name="r_e_g_2" width="4" nets="i1513 i1567 i1580 i1587 i1594 i1616 i1618 i1614 i1630 i1632 i1628 i1644 i1646 i1642 i1658 i1660 i1656 i1669 i1682"/>
+        <variable name="r_e_g_3" width="4" nets="i1511 i1621 i1635 i1649 i1029"/>
+        <variable name="r_e_g_4" width="8" nets="i680 i788 i898 i1016"/>
+        <variable name="r_e_g_5" width="8" nets="i692 i803 i911 i1026"/>
+        <variable name="r_e_g_6" width="8" nets="i702 i815 i926 i1036"/>
+        <variable name="r_e_g_7" width="4" nets="i1039"/>
+        <variable name="r_e_g_8" width="4" nets="i1052"/>
+        <variable name="r_e_g_9" width="4" nets="i985"/>
+      </variables>
+      <control>
+        <state name="init">
+          <transition dst="b0s0"/>
+        </state>
+        <state name="b0s0" enable="AESinputSignal.rd_accept">
+          <transition dst="b1s0"/>
+        </state>
+        <state name="b1s0" enable="AESdataStream.rd_accept">
+          <transition dst="b3s0" cond="!ni1469_suif_tmp31"/>
+          <transition dst="b1s1"/>
+        </state>
+        <state name="b1s1">
+          <transition dst="b1s2"/>
+        </state>
+        <state name="b1s2">
+          <transition dst="b2s0" cond="r_suif_tmp32"/>
+          <transition dst="b1s0" cond="!r_suif_tmp32"/>
+        </state>
+        <state name="b2s0">
+          <transition dst="b1s0"/>
+        </state>
+        <state name="b3s0" enable="AESinputSignal.rd_accept AESdataStream.eos">
+          <transition dst="b3s1"/>
+        </state>
+        <state name="b3s1">
+          <transition dst="b4s0"/>
+        </state>
+        <state name="b4s0" enable="AESdataStream.rd_accept">
+          <transition dst="b8s0" cond="!ni1481_suif_tmp33"/>
+          <transition dst="b4s1"/>
+        </state>
+        <state name="b4s1">
+          <transition dst="b4s2"/>
+        </state>
+        <state name="b4s2">
+          <transition dst="b5s0" cond="r_suif_tmp34"/>
+          <transition dst="b6s0" cond="!r_suif_tmp34"/>
+        </state>
+        <state name="b5s0">
+          <transition dst="b6s0"/>
+        </state>
+        <state name="b6s0">
+          <transition dst="b7s0" cond="ni1489_suif_tmp35"/>
+          <transition dst="b4s0" cond="!ni1489_suif_tmp35"/>
+        </state>
+        <state name="b7s0">
+          <transition dst="b4s0"/>
+        </state>
+        <state name="b8s0" enable="AESdataStream.eos">
+          <transition dst="b9s0"/>
+        </state>
+        <state name="b9s0">
+          <transition dst="b10s0" cond="ni1495_suif_tmp38"/>
+          <transition dst="b12s0" cond="!ni1495_suif_tmp38"/>
+        </state>
+        <state name="b10s0">
+          <transition dst="b11s0"/>
+        </state>
+        <state name="b11s0">
+          <transition dst="b11s1"/>
+        </state>
+        <state name="b11s1">
+          <transition dst="b11s0" cond="r_suif_tmp39"/>
+          <transition dst="b12s0" cond="!r_suif_tmp39"/>
+        </state>
+        <state name="b12s0">
+          <transition dst="b9s0" cond="ni1493_suif_tmp37"/>
+          <transition dst="b13s0" cond="!ni1493_suif_tmp37"/>
+        </state>
+        <state name="b13s0" enable="AESinputSignal.rd_accept">
+          <transition dst="b14s0"/>
+        </state>
+        <state name="b14s0">
+          <transition dst="b15s0" cond="ni1507_suif_tmp41"/>
+          <transition dst="b17s0" cond="!ni1507_suif_tmp41"/>
+        </state>
+        <state name="b15s0">
+          <transition dst="b16s0"/>
+        </state>
+        <state name="b16s0">
+          <transition dst="b16s1"/>
+        </state>
+        <state name="b16s1">
+          <transition dst="b16s0" cond="r_suif_tmp42"/>
+          <transition dst="b17s0" cond="!r_suif_tmp42"/>
+        </state>
+        <state name="b17s0">
+          <transition dst="b14s0" cond="ni1505_suif_tmp40"/>
+          <transition dst="b18s0" cond="!ni1505_suif_tmp40"/>
+        </state>
+        <state name="b18s0">
+          <transition dst="b19s0" cond="ni1518_suif_tmp43"/>
+          <transition dst="b59s0" cond="!ni1518_suif_tmp43"/>
+        </state>
+        <state name="b19s0">
+          <transition dst="b20s0"/>
+        </state>
+        <state name="b20s0">
+          <transition dst="b20s1"/>
+        </state>
+        <state name="b20s1">
+          <transition dst="b20s2"/>
+        </state>
+        <state name="b20s2">
+          <transition dst="b20s3"/>
+        </state>
+        <state name="b20s3">
+          <transition dst="b20s4"/>
+        </state>
+        <state name="b20s4">
+          <transition dst="b20s5"/>
+        </state>
+        <state name="b20s5">
+          <transition dst="b20s6"/>
+        </state>
+        <state name="b20s6">
+          <transition dst="b20s7"/>
+        </state>
+        <state name="b20s7">
+          <transition dst="b20s8"/>
+        </state>
+        <state name="b20s8">
+          <transition dst="b20s9"/>
+        </state>
+        <state name="b20s9">
+          <transition dst="b20s10"/>
+        </state>
+        <state name="b20s10">
+          <transition dst="b20s11"/>
+        </state>
+        <state name="b20s11">
+          <transition dst="b20s12"/>
+        </state>
+        <state name="b20s12">
+          <transition dst="b20s13"/>
+        </state>
+        <state name="b20s13">
+          <transition dst="b20s14"/>
+        </state>
+        <state name="b20s14">
+          <transition dst="b20s15"/>
+        </state>
+        <state name="b20s15">
+          <transition dst="b20s16"/>
+        </state>
+        <state name="b20s16">
+          <transition dst="b20s17"/>
+        </state>
+        <state name="b20s17">
+          <transition dst="b20s18"/>
+        </state>
+        <state name="b20s18">
+          <transition dst="b20s19"/>
+        </state>
+        <state name="b20s19">
+          <transition dst="b20s20"/>
+        </state>
+        <state name="b20s20">
+          <transition dst="b20s21"/>
+        </state>
+        <state name="b20s21">
+          <transition dst="b20s22"/>
+        </state>
+        <state name="b20s22">
+          <transition dst="b20s23"/>
+        </state>
+        <state name="b20s23">
+          <transition dst="b20s24"/>
+        </state>
+        <state name="b20s24">
+          <transition dst="b20s25"/>
+        </state>
+        <state name="b20s25">
+          <transition dst="b20s26"/>
+        </state>
+        <state name="b20s26">
+          <transition dst="b20s27"/>
+        </state>
+        <state name="b20s27">
+          <transition dst="b20s28"/>
+        </state>
+        <state name="b20s28">
+          <transition dst="b20s29"/>
+        </state>
+        <state name="b20s29">
+          <transition dst="b20s30"/>
+        </state>
+        <state name="b20s30">
+          <transition dst="b20s31"/>
+        </state>
+        <state name="b20s31">
+          <transition dst="b20s32"/>
+        </state>
+        <state name="b20s32">
+          <transition dst="b20s33"/>
+        </state>
+        <state name="b20s33">
+          <transition dst="b20s34"/>
+        </state>
+        <state name="b20s34">
+          <transition dst="b20s35"/>
+        </state>
+        <state name="b20s35">
+          <transition dst="b20s36"/>
+        </state>
+        <state name="b20s36">
+          <transition dst="b20s37"/>
+        </state>
+        <state name="b20s37">
+          <transition dst="b20s38"/>
+        </state>
+        <state name="b20s38">
+          <transition dst="b20s39"/>
+        </state>
+        <state name="b20s39">
+          <transition dst="b20s40"/>
+        </state>
+        <state name="b20s40">
+          <transition dst="b20s41"/>
+        </state>
+        <state name="b20s41">
+          <transition dst="b20s42"/>
+        </state>
+        <state name="b20s42">
+          <transition dst="b20s43"/>
+        </state>
+        <state name="b20s43">
+          <transition dst="b21s0" cond="r_suif_tmp61"/>
+          <transition dst="b52s0" cond="!r_suif_tmp61"/>
+        </state>
+        <state name="b21s0">
+          <transition dst="b22s0"/>
+        </state>
+        <state name="b22s0">
+          <transition dst="b22s1"/>
+        </state>
+        <state name="b22s1">
+          <transition dst="b23s0" cond="ni1606_suif_tmp63"/>
+          <transition dst="b24s0" cond="!ni1606_suif_tmp63"/>
+        </state>
+        <state name="b23s0">
+          <transition dst="b25s0"/>
+        </state>
+        <state name="b24s0">
+          <transition dst="b25s0"/>
+        </state>
+        <state name="b25s0">
+          <transition dst="b25s1"/>
+        </state>
+        <state name="b25s1">
+          <transition dst="b26s0" cond="ni1610_suif_tmp64"/>
+          <transition dst="b27s0" cond="!ni1610_suif_tmp64"/>
+        </state>
+        <state name="b26s0">
+          <transition dst="b28s0"/>
+        </state>
+        <state name="b27s0">
+          <transition dst="b28s0"/>
+        </state>
+        <state name="b28s0">
+          <transition dst="b28s1"/>
+        </state>
+        <state name="b28s1">
+          <transition dst="b28s2"/>
+        </state>
+        <state name="b28s2">
+          <transition dst="b28s3"/>
+        </state>
+        <state name="b28s3">
+          <transition dst="b29s0" cond="ni1620_suif_tmp65"/>
+          <transition dst="b30s0" cond="!ni1620_suif_tmp65"/>
+        </state>
+        <state name="b29s0">
+          <transition dst="b31s0"/>
+        </state>
+        <state name="b30s0">
+          <transition dst="b31s0"/>
+        </state>
+        <state name="b31s0">
+          <transition dst="b31s1"/>
+        </state>
+        <state name="b31s1">
+          <transition dst="b32s0" cond="ni1624_suif_tmp66"/>
+          <transition dst="b33s0" cond="!ni1624_suif_tmp66"/>
+        </state>
+        <state name="b32s0">
+          <transition dst="b34s0"/>
+        </state>
+        <state name="b33s0">
+          <transition dst="b34s0"/>
+        </state>
+        <state name="b34s0">
+          <transition dst="b34s1"/>
+        </state>
+        <state name="b34s1">
+          <transition dst="b34s2"/>
+        </state>
+        <state name="b34s2">
+          <transition dst="b34s3"/>
+        </state>
+        <state name="b34s3">
+          <transition dst="b35s0" cond="ni1634_suif_tmp67"/>
+          <transition dst="b36s0" cond="!ni1634_suif_tmp67"/>
+        </state>
+        <state name="b35s0">
+          <transition dst="b37s0"/>
+        </state>
+        <state name="b36s0">
+          <transition dst="b37s0"/>
+        </state>
+        <state name="b37s0">
+          <transition dst="b37s1"/>
+        </state>
+        <state name="b37s1">
+          <transition dst="b38s0" cond="ni1638_suif_tmp68"/>
+          <transition dst="b39s0" cond="!ni1638_suif_tmp68"/>
+        </state>
+        <state name="b38s0">
+          <transition dst="b40s0"/>
+        </state>
+        <state name="b39s0">
+          <transition dst="b40s0"/>
+        </state>
+        <state name="b40s0">
+          <transition dst="b40s1"/>
+        </state>
+        <state name="b40s1">
+          <transition dst="b40s2"/>
+        </state>
+        <state name="b40s2">
+          <transition dst="b40s3"/>
+        </state>
+        <state name="b40s3">
+          <transition dst="b41s0" cond="ni1648_suif_tmp69"/>
+          <transition dst="b42s0" cond="!ni1648_suif_tmp69"/>
+        </state>
+        <state name="b41s0">
+          <transition dst="b43s0"/>
+        </state>
+        <state name="b42s0">
+          <transition dst="b43s0"/>
+        </state>
+        <state name="b43s0">
+          <transition dst="b43s1"/>
+        </state>
+        <state name="b43s1">
+          <transition dst="b44s0" cond="ni1652_suif_tmp70"/>
+          <transition dst="b45s0" cond="!ni1652_suif_tmp70"/>
+        </state>
+        <state name="b44s0">
+          <transition dst="b46s0"/>
+        </state>
+        <state name="b45s0">
+          <transition dst="b46s0"/>
+        </state>
+        <state name="b46s0">
+          <transition dst="b46s1"/>
+        </state>
+        <state name="b46s1">
+          <transition dst="b46s2"/>
+        </state>
+        <state name="b46s2">
+          <transition dst="b46s3"/>
+        </state>
+        <state name="b46s3">
+          <transition dst="b22s0" cond="r_suif_tmp62"/>
+          <transition dst="b47s0" cond="!r_suif_tmp62"/>
+        </state>
+        <state name="b47s0">
+          <transition dst="b48s0"/>
+        </state>
+        <state name="b48s0">
+          <transition dst="b49s0" cond="ni1666_suif_tmp72"/>
+          <transition dst="b51s0" cond="!ni1666_suif_tmp72"/>
+        </state>
+        <state name="b49s0">
+          <transition dst="b50s0"/>
+        </state>
+        <state name="b50s0">
+          <transition dst="b50s1"/>
+        </state>
+        <state name="b50s1">
+          <transition dst="b50s0" cond="r_suif_tmp73"/>
+          <transition dst="b51s0" cond="!r_suif_tmp73"/>
+        </state>
+        <state name="b51s0">
+          <transition dst="b48s0" cond="ni1664_suif_tmp71"/>
+          <transition dst="b52s0" cond="!ni1664_suif_tmp71"/>
+        </state>
+        <state name="b52s0">
+          <transition dst="b53s0" cond="ni1675_suif_tmp74"/>
+          <transition dst="b58s0" cond="!ni1675_suif_tmp74"/>
+        </state>
+        <state name="b53s0">
+          <transition dst="b54s0"/>
+        </state>
+        <state name="b54s0">
+          <transition dst="b55s0" cond="ni1678_suif_tmp76"/>
+          <transition dst="b57s0" cond="!ni1678_suif_tmp76"/>
+        </state>
+        <state name="b55s0">
+          <transition dst="b56s0"/>
+        </state>
+        <state name="b56s0">
+          <transition dst="b56s1"/>
+        </state>
+        <state name="b56s1">
+          <transition dst="b56s0" cond="r_suif_tmp77"/>
+          <transition dst="b57s0" cond="!r_suif_tmp77"/>
+        </state>
+        <state name="b57s0">
+          <transition dst="b54s0" cond="ni1688_suif_tmp75"/>
+          <transition dst="b58s0" cond="!ni1688_suif_tmp75"/>
+        </state>
+        <state name="b58s0">
+          <transition dst="b20s0" cond="ni1690_suif_tmp44"/>
+          <transition dst="b59s0" cond="!ni1690_suif_tmp44"/>
+        </state>
+        <state name="b59s0">
+          <transition dst="b60s0"/>
+        </state>
+        <state name="b60s0">
+          <transition dst="b61s0" cond="ni1694_suif_tmp79"/>
+          <transition dst="b63s0" cond="!ni1694_suif_tmp79"/>
+        </state>
+        <state name="b61s0">
+          <transition dst="b62s0"/>
+        </state>
+        <state name="b62s0">
+          <transition dst="b62s1"/>
+        </state>
+        <state name="b62s1" enable="AESoutputStream.wr_accept">
+          <transition dst="b62s0" cond="r_suif_tmp80"/>
+          <transition dst="b63s0" cond="!r_suif_tmp80"/>
+        </state>
+        <state name="b63s0">
+          <transition dst="b60s0" cond="ni1692_suif_tmp78"/>
+          <transition dst="b64s0" cond="!ni1692_suif_tmp78"/>
+        </state>
+        <state name="b64s0" enable="AESoutputStream.wr_accept">
+          <transition dst="finished"/>
+        </state>
+        <state name="finished"/>
+      </control>
+      <blocks>
+        <datapath block="b0" states="b0s0">
+          <eq dst="ni1466_trigger">
+            <var name="r_AESinputSignal"/>
+          </eq>
+          <read name="AESinputSignal" line="56" file="AES_hw.c"/>
+          <exec op="open" name="AESdataStream" line="57" file="AES_hw.c"/>
+          <eq dst="ni1467_j">
+            <const value="0" width="32"/>
+          </eq>
+          <eq dst="ni1468_i">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_trigger" src="ni1466_trigger" line="56" file="AES_hw.c"/>
+          <assign dst="r_j" src="ni1467_j" line="58" file="AES_hw.c"/>
+          <assign dst="r_i" src="ni1468_i"/>
+        </datapath>
+        <datapath block="b1" states="b1s0">
+          <read name="AESdataStream"/>
+          <eq dst="ni1469_suif_tmp31">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="eq" width="1">
+                <cat width="2">
+                  <const value="0" width="1"/>
+                  <var name="AESdataStream.eos"/>
+                </cat>
+                <const value="0" width="2"/>
+              </call>
+            </cat>
+          </eq>
+          <break cond="!ni1469_suif_tmp31"/>
+          <assign dst="r_suif_tmp31" src="ni1469_suif_tmp31"/>
+        </datapath>
+        <datapath states="b1s1">
+          <eq dst="ni1470_streamByte">
+            <var name="r_AESdataStream"/>
+          </eq>
+          <eq dst="ni1471_suif_tmp_0">
+            <var name="r_j"/>
+          </eq>
+          <eq dst="ni1472_j">
+            <call name="add" width="32">
+              <var name="ni1471_suif_tmp_0"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni1474_suif_tmp32">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="eq" width="1">
+                <var name="ni1472_j"/>
+                <const value="4" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_streamByte" src="ni1470_streamByte"/>
+          <assign dst="r_suif_tmp_0" src="ni1471_suif_tmp_0" line="60" file="AES_hw.c"/>
+          <assign dst="r_j" src="ni1472_j"/>
+          <assign dst="r_suif_tmp32" src="ni1474_suif_tmp32" line="61" file="AES_hw.c"/>
+          <assign dst="r_r_e_g_0" src="ni1473_r_e_g_0"/>
+          <eq dst="ni1473_r_e_g_0">
+            <call name="add" width="4">
+              <call name="shl" width="4" param="2">
+                <slice start="0" width="4">
+                  <var name="r_i"/>
+                </slice>
+              </call>
+              <slice start="0" width="4">
+                <var name="ni1471_suif_tmp_0"/>
+              </slice>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b1s2">
+          <eq dst="ni41_state">
+            <var name="r_streamByte"/>
+          </eq>
+          <store src="r_streamByte" mem="state" port="0" index="r_r_e_g_0"/>
+        </datapath>
+        <datapath block="b2" states="b2s0">
+          <eq dst="ni1475_i">
+            <call name="add" width="32">
+              <var name="r_i"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni1476_j">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_i" src="ni1475_i" line="63" file="AES_hw.c"/>
+          <assign dst="r_j" src="ni1476_j" line="64" file="AES_hw.c"/>
+        </datapath>
+        <datapath block="b3" states="b3s0">
+          <exec op="readclose" name="AESdataStream" line="67" file="AES_hw.c"/>
+          <eq dst="ni1477_trigger">
+            <var name="r_AESinputSignal"/>
+          </eq>
+          <read name="AESinputSignal" line="70" file="AES_hw.c"/>
+          <eq dst="ni1478_k">
+            <const value="0" width="32"/>
+          </eq>
+          <eq dst="ni1479_j">
+            <const value="0" width="32"/>
+          </eq>
+          <eq dst="ni1480_i">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_trigger" src="ni1477_trigger" line="70" file="AES_hw.c"/>
+          <assign dst="r_k" src="ni1478_k" line="72" file="AES_hw.c"/>
+          <assign dst="r_j" src="ni1479_j"/>
+          <assign dst="r_i" src="ni1480_i"/>
+        </datapath>
+        <datapath states="b3s1">
+          <exec op="open" name="AESdataStream" line="71" file="AES_hw.c"/>
+        </datapath>
+        <datapath block="b4" states="b4s0">
+          <read name="AESdataStream"/>
+          <eq dst="ni1481_suif_tmp33">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="eq" width="1">
+                <cat width="2">
+                  <const value="0" width="1"/>
+                  <var name="AESdataStream.eos"/>
+                </cat>
+                <const value="0" width="2"/>
+              </call>
+            </cat>
+          </eq>
+          <break cond="!ni1481_suif_tmp33"/>
+          <assign dst="r_suif_tmp33" src="ni1481_suif_tmp33"/>
+        </datapath>
+        <datapath states="b4s1">
+          <eq dst="ni1482_streamByte">
+            <var name="r_AESdataStream"/>
+          </eq>
+          <eq dst="ni1483_suif_tmp_1">
+            <var name="r_k"/>
+          </eq>
+          <eq dst="ni1484_k">
+            <call name="add" width="32">
+              <var name="ni1483_suif_tmp_1"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni1486_suif_tmp34">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="eq" width="1">
+                <var name="ni1484_k"/>
+                <const value="4" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_streamByte" src="ni1482_streamByte"/>
+          <assign dst="r_suif_tmp_1" src="ni1483_suif_tmp_1" line="74" file="AES_hw.c"/>
+          <assign dst="r_k" src="ni1484_k"/>
+          <assign dst="r_suif_tmp34" src="ni1486_suif_tmp34" line="75" file="AES_hw.c"/>
+          <assign dst="r_r_e_g_1" src="ni1485_r_e_g_1"/>
+          <eq dst="ni1485_r_e_g_1">
+            <call name="add" width="8">
+              <call name="shl" width="8" param="2">
+                <call name="add" width="8">
+                  <call name="shl" width="8" param="2">
+                    <slice start="0" width="8">
+                      <var name="r_i"/>
+                    </slice>
+                  </call>
+                  <slice start="0" width="8">
+                    <var name="r_j"/>
+                  </slice>
+                </call>
+              </call>
+              <slice start="0" width="8">
+                <var name="ni1483_suif_tmp_1"/>
+              </slice>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b4s2">
+          <eq dst="ni115_expandedKey">
+            <var name="r_streamByte"/>
+          </eq>
+          <store src="r_streamByte" mem="expandedKey" port="0" index="r_r_e_g_1"/>
+        </datapath>
+        <datapath block="b5" states="b5s0">
+          <eq dst="ni1487_j">
+            <call name="add" width="32">
+              <var name="r_j"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni1488_k">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_j" src="ni1487_j" line="77" file="AES_hw.c"/>
+          <assign dst="r_k" src="ni1488_k" line="78" file="AES_hw.c"/>
+        </datapath>
+        <datapath block="b6" states="b6s0">
+          <eq dst="ni1489_suif_tmp35">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="eq" width="1">
+                <var name="r_j"/>
+                <const value="4" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp35" src="ni1489_suif_tmp35" line="80" file="AES_hw.c"/>
+        </datapath>
+        <datapath block="b7" states="b7s0">
+          <eq dst="ni1490_i">
+            <call name="add" width="32">
+              <var name="r_i"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni1491_j">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_i" src="ni1490_i" line="82" file="AES_hw.c"/>
+          <assign dst="r_j" src="ni1491_j" line="83" file="AES_hw.c"/>
+        </datapath>
+        <datapath block="b8" states="b8s0">
+          <exec op="readclose" name="AESdataStream" line="86" file="AES_hw.c"/>
+          <eq dst="ni1492_i">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_i" src="ni1492_i" line="89" file="AES_hw.c"/>
+        </datapath>
+        <datapath block="b9" states="b9s0">
+          <eq dst="ni1494_j">
+            <const value="0" width="32"/>
+          </eq>
+          <eq dst="ni1495_suif_tmp38">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_u" width="1">
+                <var name="ni1494_j"/>
+                <const value="4" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_j" src="ni1494_j" line="91" file="AES_hw.c"/>
+          <assign dst="r_suif_tmp38" src="ni1495_suif_tmp38"/>
+        </datapath>
+        <datapath block="b10" states="b10s0">
+          <eq dst="ni1496_suif_tmp_2">
+            <var name="r_i"/>
+          </eq>
+          <eq dst="ni1497_suif_tmp0_0">
+            <var name="r_i"/>
+          </eq>
+          <assign dst="r_suif_tmp_2" src="ni1496_suif_tmp_2"/>
+          <assign dst="r_suif_tmp0_0" src="ni1497_suif_tmp0_0"/>
+        </datapath>
+        <datapath block="b11" states="b11s0">
+          <eq dst="ni1500_j">
+            <call name="add" width="32">
+              <var name="r_j"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni1501_suif_tmp39">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_u" width="1">
+                <var name="ni1500_j"/>
+                <const value="4" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_j" src="ni1500_j"/>
+          <assign dst="r_suif_tmp39" src="ni1501_suif_tmp39"/>
+          <assign dst="r_r_e_g_1" src="ni1499_r_e_g_1"/>
+          <eq dst="ni1499_r_e_g_1">
+            <call name="add" width="8">
+              <call name="shl" width="8" param="2">
+                <call name="add" width="8">
+                  <const value="0" width="8"/>
+                  <slice start="0" width="8">
+                    <var name="r_suif_tmp0_0"/>
+                  </slice>
+                </call>
+              </call>
+              <slice start="0" width="8">
+                <var name="r_j"/>
+              </slice>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_0" src="ni1498_r_e_g_0"/>
+          <eq dst="ni1498_r_e_g_0">
+            <call name="add" width="4">
+              <call name="shl" width="4" param="2">
+                <slice start="0" width="4">
+                  <var name="r_suif_tmp_2"/>
+                </slice>
+              </call>
+              <slice start="0" width="4">
+                <var name="r_j"/>
+              </slice>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b11s1">
+          <load mem="expandedKey" port="1" index="r_r_e_g_1" net="ni181_expandedKey"/>
+          <eq dst="ni172_key">
+            <cat width="32">
+              <const value="0" width="24"/>
+              <var name="ni181_expandedKey"/>
+            </cat>
+          </eq>
+          <store src="ni172_key" mem="key" port="0" index="r_r_e_g_0" line="93" file="AES_hw.c"/>
+        </datapath>
+        <datapath block="b12" states="b12s0">
+          <eq dst="ni1502_i">
+            <call name="add" width="32">
+              <var name="r_i"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni1493_suif_tmp37">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_u" width="1">
+                <var name="ni1502_i"/>
+                <const value="4" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_i" src="ni1502_i" line="91" file="AES_hw.c"/>
+          <assign dst="r_suif_tmp37" src="ni1493_suif_tmp37"/>
+        </datapath>
+        <datapath block="b13" states="b13s0">
+          <eq dst="ni1503_suif_tmp36">
+            <var name="r_AESinputSignal"/>
+          </eq>
+          <read name="AESinputSignal" line="98" file="AES_hw.c"/>
+          <eq dst="ni1504_i">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_suif_tmp36" src="ni1503_suif_tmp36" line="98" file="AES_hw.c"/>
+          <assign dst="r_i" src="ni1504_i" line="101" file="AES_hw.c"/>
+        </datapath>
+        <datapath block="b14" states="b14s0">
+          <eq dst="ni1506_j">
+            <const value="0" width="32"/>
+          </eq>
+          <eq dst="ni1507_suif_tmp41">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_u" width="1">
+                <var name="ni1506_j"/>
+                <const value="4" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_j" src="ni1506_j" line="102" file="AES_hw.c"/>
+          <assign dst="r_suif_tmp41" src="ni1507_suif_tmp41"/>
+        </datapath>
+        <datapath block="b15" states="b15s0">
+          <eq dst="ni1508_suif_tmp_3">
+            <var name="r_i"/>
+          </eq>
+          <eq dst="ni1509_suif_tmp0_1">
+            <var name="r_i"/>
+          </eq>
+          <assign dst="r_suif_tmp_3" src="ni1508_suif_tmp_3"/>
+          <assign dst="r_suif_tmp0_1" src="ni1509_suif_tmp0_1"/>
+        </datapath>
+        <datapath block="b16" states="b16s0">
+          <eq dst="ni1510_suif_tmp_4">
+            <call name="add" width="32">
+              <call name="shl" width="32" param="2">
+                <var name="r_suif_tmp_3"/>
+              </call>
+              <var name="r_j"/>
+            </call>
+          </eq>
+          <eq dst="ni1514_j">
+            <call name="add" width="32">
+              <var name="r_j"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni1515_suif_tmp42">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_u" width="1">
+                <var name="ni1514_j"/>
+                <const value="4" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp_4" src="ni1510_suif_tmp_4" line="103" file="AES_hw.c"/>
+          <assign dst="r_j" src="ni1514_j"/>
+          <assign dst="r_suif_tmp42" src="ni1515_suif_tmp42"/>
+          <assign dst="r_r_e_g_0" src="ni1512_r_e_g_0"/>
+          <eq dst="ni1512_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="ni1510_suif_tmp_4"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_2" src="ni1513_r_e_g_2"/>
+          <eq dst="ni1513_r_e_g_2">
+            <call name="add" width="4">
+              <call name="shl" width="4" param="2">
+                <slice start="0" width="4">
+                  <var name="r_suif_tmp0_1"/>
+                </slice>
+              </call>
+              <slice start="0" width="4">
+                <var name="r_j"/>
+              </slice>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_3" src="ni1511_r_e_g_3"/>
+          <eq dst="ni1511_r_e_g_3">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="ni1510_suif_tmp_4"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b16s1">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni1245_state"/>
+          <load mem="key" port="1" index="r_r_e_g_2" net="ni233_key"/>
+          <eq dst="ni225_state">
+            <binop op="xor" width="8">
+              <var name="ni1245_state"/>
+              <slice start="0" width="8">
+                <var name="ni233_key"/>
+              </slice>
+            </binop>
+          </eq>
+          <store src="ni225_state" mem="state" port="0" index="r_r_e_g_3"/>
+        </datapath>
+        <datapath block="b17" states="b17s0">
+          <eq dst="ni1516_i">
+            <call name="add" width="32">
+              <var name="r_i"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni1505_suif_tmp40">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_u" width="1">
+                <var name="ni1516_i"/>
+                <const value="4" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_i" src="ni1516_i" line="102" file="AES_hw.c"/>
+          <assign dst="r_suif_tmp40" src="ni1505_suif_tmp40"/>
+        </datapath>
+        <datapath block="b18" states="b18s0">
+          <eq dst="ni1517_j">
+            <const value="1" width="32"/>
+          </eq>
+          <eq dst="ni1518_suif_tmp43">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_equal_u" width="1">
+                <var name="ni1517_j"/>
+                <const value="10" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_j" src="ni1517_j" line="107" file="AES_hw.c"/>
+          <assign dst="r_suif_tmp43" src="ni1518_suif_tmp43"/>
+        </datapath>
+        <datapath block="b19" states="b19s0">
+          <eq dst="ni1519_suif_tmp">
+            <const value="0" width="32"/>
+          </eq>
+          <eq dst="ni1520_suif_tmp0">
+            <const value="0" width="32"/>
+          </eq>
+          <eq dst="ni1521_suif_tmp1">
+            <const value="1" width="32"/>
+          </eq>
+          <eq dst="ni1522_suif_tmp2">
+            <const value="1" width="32"/>
+          </eq>
+          <eq dst="ni1523_suif_tmp3">
+            <const value="2" width="32"/>
+          </eq>
+          <eq dst="ni1524_suif_tmp4">
+            <const value="2" width="32"/>
+          </eq>
+          <eq dst="ni1525_suif_tmp5">
+            <const value="3" width="32"/>
+          </eq>
+          <eq dst="ni1526_suif_tmp6">
+            <const value="3" width="32"/>
+          </eq>
+          <eq dst="ni1527_suif_tmp7">
+            <const value="4" width="32"/>
+          </eq>
+          <eq dst="ni1528_suif_tmp8">
+            <const value="4" width="32"/>
+          </eq>
+          <eq dst="ni1529_suif_tmp9">
+            <const value="5" width="32"/>
+          </eq>
+          <eq dst="ni1530_suif_tmp10">
+            <const value="5" width="32"/>
+          </eq>
+          <eq dst="ni1531_suif_tmp11">
+            <const value="6" width="32"/>
+          </eq>
+          <eq dst="ni1532_suif_tmp12">
+            <const value="6" width="32"/>
+          </eq>
+          <eq dst="ni1533_suif_tmp13">
+            <const value="7" width="32"/>
+          </eq>
+          <eq dst="ni1534_suif_tmp14">
+            <const value="7" width="32"/>
+          </eq>
+          <eq dst="ni1535_suif_tmp15">
+            <const value="8" width="32"/>
+          </eq>
+          <eq dst="ni1536_suif_tmp16">
+            <const value="8" width="32"/>
+          </eq>
+          <eq dst="ni1537_suif_tmp17">
+            <const value="10" width="32"/>
+          </eq>
+          <eq dst="ni1538_suif_tmp18">
+            <const value="10" width="32"/>
+          </eq>
+          <eq dst="ni1539_suif_tmp19">
+            <const value="9" width="32"/>
+          </eq>
+          <eq dst="ni1540_suif_tmp20">
+            <const value="9" width="32"/>
+          </eq>
+          <eq dst="ni1541_suif_tmp21">
+            <const value="11" width="32"/>
+          </eq>
+          <eq dst="ni1542_suif_tmp22">
+            <const value="11" width="32"/>
+          </eq>
+          <eq dst="ni1543_suif_tmp23">
+            <const value="15" width="32"/>
+          </eq>
+          <eq dst="ni1544_suif_tmp24">
+            <const value="15" width="32"/>
+          </eq>
+          <eq dst="ni1545_suif_tmp25">
+            <const value="14" width="32"/>
+          </eq>
+          <eq dst="ni1546_suif_tmp26">
+            <const value="14" width="32"/>
+          </eq>
+          <eq dst="ni1547_suif_tmp27">
+            <const value="13" width="32"/>
+          </eq>
+          <eq dst="ni1548_suif_tmp28">
+            <const value="13" width="32"/>
+          </eq>
+          <eq dst="ni1549_suif_tmp29">
+            <const value="12" width="32"/>
+          </eq>
+          <eq dst="ni1550_suif_tmp30">
+            <const value="12" width="32"/>
+          </eq>
+          <assign dst="r_suif_tmp" src="ni1519_suif_tmp"/>
+          <assign dst="r_suif_tmp0" src="ni1520_suif_tmp0"/>
+          <assign dst="r_suif_tmp1" src="ni1521_suif_tmp1"/>
+          <assign dst="r_suif_tmp2" src="ni1522_suif_tmp2"/>
+          <assign dst="r_suif_tmp3" src="ni1523_suif_tmp3"/>
+          <assign dst="r_suif_tmp4" src="ni1524_suif_tmp4"/>
+          <assign dst="r_suif_tmp5" src="ni1525_suif_tmp5"/>
+          <assign dst="r_suif_tmp6" src="ni1526_suif_tmp6"/>
+          <assign dst="r_suif_tmp7" src="ni1527_suif_tmp7"/>
+          <assign dst="r_suif_tmp8" src="ni1528_suif_tmp8"/>
+          <assign dst="r_suif_tmp9" src="ni1529_suif_tmp9"/>
+          <assign dst="r_suif_tmp10" src="ni1530_suif_tmp10"/>
+          <assign dst="r_suif_tmp11" src="ni1531_suif_tmp11"/>
+          <assign dst="r_suif_tmp12" src="ni1532_suif_tmp12"/>
+          <assign dst="r_suif_tmp13" src="ni1533_suif_tmp13"/>
+          <assign dst="r_suif_tmp14" src="ni1534_suif_tmp14"/>
+          <assign dst="r_suif_tmp15" src="ni1535_suif_tmp15"/>
+          <assign dst="r_suif_tmp16" src="ni1536_suif_tmp16"/>
+          <assign dst="r_suif_tmp17" src="ni1537_suif_tmp17"/>
+          <assign dst="r_suif_tmp18" src="ni1538_suif_tmp18"/>
+          <assign dst="r_suif_tmp19" src="ni1539_suif_tmp19"/>
+          <assign dst="r_suif_tmp20" src="ni1540_suif_tmp20"/>
+          <assign dst="r_suif_tmp21" src="ni1541_suif_tmp21"/>
+          <assign dst="r_suif_tmp22" src="ni1542_suif_tmp22"/>
+          <assign dst="r_suif_tmp23" src="ni1543_suif_tmp23"/>
+          <assign dst="r_suif_tmp24" src="ni1544_suif_tmp24"/>
+          <assign dst="r_suif_tmp25" src="ni1545_suif_tmp25"/>
+          <assign dst="r_suif_tmp26" src="ni1546_suif_tmp26"/>
+          <assign dst="r_suif_tmp27" src="ni1547_suif_tmp27"/>
+          <assign dst="r_suif_tmp28" src="ni1548_suif_tmp28"/>
+          <assign dst="r_suif_tmp29" src="ni1549_suif_tmp29"/>
+          <assign dst="r_suif_tmp30" src="ni1550_suif_tmp30"/>
+        </datapath>
+        <datapath block="b20" states="b20s0">
+          <eq dst="ni1603_suif_tmp61">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="neq" width="1">
+                <var name="r_j"/>
+                <const value="10" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp61" src="ni1603_suif_tmp61" line="138" file="AES_hw.c"/>
+          <assign dst="r_r_e_g_0" src="ni1552_r_e_g_0"/>
+          <eq dst="ni1552_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp0"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s1">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni1251_state"/>
+          <eq dst="ni1551_suif_tmp45">
+            <cat width="32">
+              <const value="0" width="24"/>
+              <var name="ni1251_state"/>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp45" src="ni1551_suif_tmp45" line="111" file="AES_hw.c"/>
+          <assign dst="r_r_e_g_0" src="ni1553_r_e_g_0"/>
+          <eq dst="ni1553_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s2">
+          <eq dst="ti266_SBox">
+            <slice start="0" width="8">
+              <var name="r_suif_tmp45"/>
+            </slice>
+          </eq>
+          <load mem="SBox" port="0" index="ti266_SBox" net="ni266_SBox"/>
+          <eq dst="ni259_state">
+            <var name="ni266_SBox"/>
+          </eq>
+          <store src="ni266_SBox" mem="state" port="0" index="r_r_e_g_0"/>
+        </datapath>
+        <datapath states="b20s3">
+          <assign dst="r_r_e_g_0" src="ni1555_r_e_g_0"/>
+          <eq dst="ni1555_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp2"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s4">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni1257_state"/>
+          <eq dst="ni1554_suif_tmp46">
+            <cat width="32">
+              <const value="0" width="24"/>
+              <var name="ni1257_state"/>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp46" src="ni1554_suif_tmp46" line="112" file="AES_hw.c"/>
+          <assign dst="r_r_e_g_0" src="ni1556_r_e_g_0"/>
+          <eq dst="ni1556_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp1"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s5">
+          <eq dst="ti286_SBox">
+            <slice start="0" width="8">
+              <var name="r_suif_tmp46"/>
+            </slice>
+          </eq>
+          <load mem="SBox" port="0" index="ti286_SBox" net="ni286_SBox"/>
+          <eq dst="ni279_state">
+            <var name="ni286_SBox"/>
+          </eq>
+          <store src="ni286_SBox" mem="state" port="0" index="r_r_e_g_0"/>
+        </datapath>
+        <datapath states="b20s6">
+          <assign dst="r_r_e_g_0" src="ni1558_r_e_g_0"/>
+          <eq dst="ni1558_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp4"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s7">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni1263_state"/>
+          <eq dst="ni1557_suif_tmp47">
+            <cat width="32">
+              <const value="0" width="24"/>
+              <var name="ni1263_state"/>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp47" src="ni1557_suif_tmp47" line="113" file="AES_hw.c"/>
+          <assign dst="r_r_e_g_0" src="ni1559_r_e_g_0"/>
+          <eq dst="ni1559_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp3"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s8">
+          <eq dst="ti306_SBox">
+            <slice start="0" width="8">
+              <var name="r_suif_tmp47"/>
+            </slice>
+          </eq>
+          <load mem="SBox" port="0" index="ti306_SBox" net="ni306_SBox"/>
+          <eq dst="ni299_state">
+            <var name="ni306_SBox"/>
+          </eq>
+          <store src="ni306_SBox" mem="state" port="0" index="r_r_e_g_0"/>
+        </datapath>
+        <datapath states="b20s9">
+          <assign dst="r_r_e_g_0" src="ni1561_r_e_g_0"/>
+          <eq dst="ni1561_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp6"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s10">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni1269_state"/>
+          <eq dst="ni1560_suif_tmp48">
+            <cat width="32">
+              <const value="0" width="24"/>
+              <var name="ni1269_state"/>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp48" src="ni1560_suif_tmp48" line="114" file="AES_hw.c"/>
+          <assign dst="r_r_e_g_0" src="ni1562_r_e_g_0"/>
+          <eq dst="ni1562_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp5"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s11">
+          <eq dst="ti326_SBox">
+            <slice start="0" width="8">
+              <var name="r_suif_tmp48"/>
+            </slice>
+          </eq>
+          <load mem="SBox" port="0" index="ti326_SBox" net="ni326_SBox"/>
+          <eq dst="ni319_state">
+            <var name="ni326_SBox"/>
+          </eq>
+          <store src="ni326_SBox" mem="state" port="0" index="r_r_e_g_0"/>
+        </datapath>
+        <datapath states="b20s12">
+          <assign dst="r_r_e_g_0" src="ni1564_r_e_g_0"/>
+          <eq dst="ni1564_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp7"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_2" src="ni1567_r_e_g_2"/>
+          <eq dst="ni1567_r_e_g_2">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp9"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s13">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni1272_state"/>
+          <eq dst="ni1563_suif_tmp49">
+            <cat width="32">
+              <const value="0" width="24"/>
+              <var name="ni1272_state"/>
+            </cat>
+          </eq>
+          <load mem="state" port="0" index="r_r_e_g_2" net="ni1278_state"/>
+          <eq dst="ni1566_suif_tmp50">
+            <cat width="32">
+              <const value="0" width="24"/>
+              <var name="ni1278_state"/>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp49" src="ni1563_suif_tmp49" line="117" file="AES_hw.c"/>
+          <assign dst="r_suif_tmp50" src="ni1566_suif_tmp50" line="118" file="AES_hw.c"/>
+        </datapath>
+        <datapath states="b20s14">
+          <eq dst="ti341_SBox">
+            <slice start="0" width="8">
+              <var name="r_suif_tmp49"/>
+            </slice>
+          </eq>
+          <load mem="SBox" port="0" index="ti341_SBox" net="ni341_SBox"/>
+          <eq dst="ni1565_x">
+            <cat width="32">
+              <const value="0" width="24"/>
+              <var name="ni341_SBox"/>
+            </cat>
+          </eq>
+          <assign dst="r_x" src="ni1565_x"/>
+          <assign dst="r_r_e_g_0" src="ni1568_r_e_g_0"/>
+          <eq dst="ni1568_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp8"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s15">
+          <eq dst="ti361_SBox">
+            <slice start="0" width="8">
+              <var name="r_suif_tmp50"/>
+            </slice>
+          </eq>
+          <load mem="SBox" port="0" index="ti361_SBox" net="ni361_SBox"/>
+          <eq dst="ni354_state">
+            <var name="ni361_SBox"/>
+          </eq>
+          <store src="ni361_SBox" mem="state" port="0" index="r_r_e_g_0"/>
+        </datapath>
+        <datapath states="b20s16">
+          <assign dst="r_r_e_g_0" src="ni1570_r_e_g_0"/>
+          <eq dst="ni1570_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp11"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s17">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni1284_state"/>
+          <eq dst="ni1569_suif_tmp51">
+            <cat width="32">
+              <const value="0" width="24"/>
+              <var name="ni1284_state"/>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp51" src="ni1569_suif_tmp51" line="119" file="AES_hw.c"/>
+          <assign dst="r_r_e_g_0" src="ni1571_r_e_g_0"/>
+          <eq dst="ni1571_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp10"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s18">
+          <eq dst="ti381_SBox">
+            <slice start="0" width="8">
+              <var name="r_suif_tmp51"/>
+            </slice>
+          </eq>
+          <load mem="SBox" port="0" index="ti381_SBox" net="ni381_SBox"/>
+          <eq dst="ni374_state">
+            <var name="ni381_SBox"/>
+          </eq>
+          <store src="ni381_SBox" mem="state" port="0" index="r_r_e_g_0"/>
+        </datapath>
+        <datapath states="b20s19">
+          <assign dst="r_r_e_g_0" src="ni1573_r_e_g_0"/>
+          <eq dst="ni1573_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp13"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s20">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni1290_state"/>
+          <eq dst="ni1572_suif_tmp52">
+            <cat width="32">
+              <const value="0" width="24"/>
+              <var name="ni1290_state"/>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp52" src="ni1572_suif_tmp52" line="120" file="AES_hw.c"/>
+          <assign dst="r_r_e_g_0" src="ni1574_r_e_g_0"/>
+          <eq dst="ni1574_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp12"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s21">
+          <eq dst="ti401_SBox">
+            <slice start="0" width="8">
+              <var name="r_suif_tmp52"/>
+            </slice>
+          </eq>
+          <load mem="SBox" port="0" index="ti401_SBox" net="ni401_SBox"/>
+          <eq dst="ni394_state">
+            <var name="ni401_SBox"/>
+          </eq>
+          <store src="ni401_SBox" mem="state" port="0" index="r_r_e_g_0"/>
+          <assign dst="r_r_e_g_0" src="ni1575_r_e_g_0"/>
+          <eq dst="ni1575_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp14"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s22">
+          <eq dst="ni414_state">
+            <slice start="0" width="8">
+              <var name="r_x"/>
+            </slice>
+          </eq>
+          <store src="ni414_state" mem="state" port="0" index="r_r_e_g_0" line="121" file="AES_hw.c"/>
+        </datapath>
+        <datapath states="b20s23">
+          <assign dst="r_r_e_g_0" src="ni1577_r_e_g_0"/>
+          <eq dst="ni1577_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp15"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_2" src="ni1580_r_e_g_2"/>
+          <eq dst="ni1580_r_e_g_2">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp17"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s24">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni1296_state"/>
+          <eq dst="ni1576_suif_tmp53">
+            <cat width="32">
+              <const value="0" width="24"/>
+              <var name="ni1296_state"/>
+            </cat>
+          </eq>
+          <load mem="state" port="0" index="r_r_e_g_2" net="ni1302_state"/>
+          <eq dst="ni1579_suif_tmp54">
+            <cat width="32">
+              <const value="0" width="24"/>
+              <var name="ni1302_state"/>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp53" src="ni1576_suif_tmp53" line="124" file="AES_hw.c"/>
+          <assign dst="r_suif_tmp54" src="ni1579_suif_tmp54" line="125" file="AES_hw.c"/>
+        </datapath>
+        <datapath states="b20s25">
+          <eq dst="ti425_SBox">
+            <slice start="0" width="8">
+              <var name="r_suif_tmp53"/>
+            </slice>
+          </eq>
+          <load mem="SBox" port="0" index="ti425_SBox" net="ni425_SBox"/>
+          <eq dst="ni1578_x">
+            <cat width="32">
+              <const value="0" width="24"/>
+              <var name="ni425_SBox"/>
+            </cat>
+          </eq>
+          <assign dst="r_x" src="ni1578_x"/>
+          <assign dst="r_r_e_g_0" src="ni1581_r_e_g_0"/>
+          <eq dst="ni1581_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp16"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s26">
+          <eq dst="ti445_SBox">
+            <slice start="0" width="8">
+              <var name="r_suif_tmp54"/>
+            </slice>
+          </eq>
+          <load mem="SBox" port="0" index="ti445_SBox" net="ni445_SBox"/>
+          <eq dst="ni438_state">
+            <var name="ni445_SBox"/>
+          </eq>
+          <store src="ni445_SBox" mem="state" port="0" index="r_r_e_g_0"/>
+          <assign dst="r_r_e_g_0" src="ni1582_r_e_g_0"/>
+          <eq dst="ni1582_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp18"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s27">
+          <eq dst="ni458_state">
+            <slice start="0" width="8">
+              <var name="r_x"/>
+            </slice>
+          </eq>
+          <store src="ni458_state" mem="state" port="0" index="r_r_e_g_0" line="126" file="AES_hw.c"/>
+        </datapath>
+        <datapath states="b20s28">
+          <assign dst="r_r_e_g_0" src="ni1584_r_e_g_0"/>
+          <eq dst="ni1584_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp19"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_2" src="ni1587_r_e_g_2"/>
+          <eq dst="ni1587_r_e_g_2">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp21"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s29">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni1308_state"/>
+          <eq dst="ni1583_suif_tmp55">
+            <cat width="32">
+              <const value="0" width="24"/>
+              <var name="ni1308_state"/>
+            </cat>
+          </eq>
+          <load mem="state" port="0" index="r_r_e_g_2" net="ni1314_state"/>
+          <eq dst="ni1586_suif_tmp56">
+            <cat width="32">
+              <const value="0" width="24"/>
+              <var name="ni1314_state"/>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp55" src="ni1583_suif_tmp55" line="127" file="AES_hw.c"/>
+          <assign dst="r_suif_tmp56" src="ni1586_suif_tmp56" line="128" file="AES_hw.c"/>
+        </datapath>
+        <datapath states="b20s30">
+          <eq dst="ti469_SBox">
+            <slice start="0" width="8">
+              <var name="r_suif_tmp55"/>
+            </slice>
+          </eq>
+          <load mem="SBox" port="0" index="ti469_SBox" net="ni469_SBox"/>
+          <eq dst="ni1585_x">
+            <cat width="32">
+              <const value="0" width="24"/>
+              <var name="ni469_SBox"/>
+            </cat>
+          </eq>
+          <assign dst="r_x" src="ni1585_x"/>
+          <assign dst="r_r_e_g_0" src="ni1588_r_e_g_0"/>
+          <eq dst="ni1588_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp20"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s31">
+          <eq dst="ti489_SBox">
+            <slice start="0" width="8">
+              <var name="r_suif_tmp56"/>
+            </slice>
+          </eq>
+          <load mem="SBox" port="0" index="ti489_SBox" net="ni489_SBox"/>
+          <eq dst="ni482_state">
+            <var name="ni489_SBox"/>
+          </eq>
+          <store src="ni489_SBox" mem="state" port="0" index="r_r_e_g_0"/>
+          <assign dst="r_r_e_g_0" src="ni1589_r_e_g_0"/>
+          <eq dst="ni1589_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp22"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s32">
+          <eq dst="ni502_state">
+            <slice start="0" width="8">
+              <var name="r_x"/>
+            </slice>
+          </eq>
+          <store src="ni502_state" mem="state" port="0" index="r_r_e_g_0" line="129" file="AES_hw.c"/>
+        </datapath>
+        <datapath states="b20s33">
+          <assign dst="r_r_e_g_0" src="ni1591_r_e_g_0"/>
+          <eq dst="ni1591_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp23"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_2" src="ni1594_r_e_g_2"/>
+          <eq dst="ni1594_r_e_g_2">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp25"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s34">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni1320_state"/>
+          <eq dst="ni1590_suif_tmp57">
+            <cat width="32">
+              <const value="0" width="24"/>
+              <var name="ni1320_state"/>
+            </cat>
+          </eq>
+          <load mem="state" port="0" index="r_r_e_g_2" net="ni1326_state"/>
+          <eq dst="ni1593_suif_tmp58">
+            <cat width="32">
+              <const value="0" width="24"/>
+              <var name="ni1326_state"/>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp57" src="ni1590_suif_tmp57" line="132" file="AES_hw.c"/>
+          <assign dst="r_suif_tmp58" src="ni1593_suif_tmp58" line="133" file="AES_hw.c"/>
+        </datapath>
+        <datapath states="b20s35">
+          <eq dst="ti513_SBox">
+            <slice start="0" width="8">
+              <var name="r_suif_tmp57"/>
+            </slice>
+          </eq>
+          <load mem="SBox" port="0" index="ti513_SBox" net="ni513_SBox"/>
+          <eq dst="ni1592_x">
+            <cat width="32">
+              <const value="0" width="24"/>
+              <var name="ni513_SBox"/>
+            </cat>
+          </eq>
+          <assign dst="r_x" src="ni1592_x"/>
+          <assign dst="r_r_e_g_0" src="ni1595_r_e_g_0"/>
+          <eq dst="ni1595_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp24"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s36">
+          <eq dst="ti533_SBox">
+            <slice start="0" width="8">
+              <var name="r_suif_tmp58"/>
+            </slice>
+          </eq>
+          <load mem="SBox" port="0" index="ti533_SBox" net="ni533_SBox"/>
+          <eq dst="ni526_state">
+            <var name="ni533_SBox"/>
+          </eq>
+          <store src="ni533_SBox" mem="state" port="0" index="r_r_e_g_0"/>
+        </datapath>
+        <datapath states="b20s37">
+          <assign dst="r_r_e_g_0" src="ni1597_r_e_g_0"/>
+          <eq dst="ni1597_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp27"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s38">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni1332_state"/>
+          <eq dst="ni1596_suif_tmp59">
+            <cat width="32">
+              <const value="0" width="24"/>
+              <var name="ni1332_state"/>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp59" src="ni1596_suif_tmp59" line="134" file="AES_hw.c"/>
+          <assign dst="r_r_e_g_0" src="ni1598_r_e_g_0"/>
+          <eq dst="ni1598_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp26"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s39">
+          <eq dst="ti553_SBox">
+            <slice start="0" width="8">
+              <var name="r_suif_tmp59"/>
+            </slice>
+          </eq>
+          <load mem="SBox" port="0" index="ti553_SBox" net="ni553_SBox"/>
+          <eq dst="ni546_state">
+            <var name="ni553_SBox"/>
+          </eq>
+          <store src="ni553_SBox" mem="state" port="0" index="r_r_e_g_0"/>
+        </datapath>
+        <datapath states="b20s40">
+          <assign dst="r_r_e_g_0" src="ni1600_r_e_g_0"/>
+          <eq dst="ni1600_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp29"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s41">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni1338_state"/>
+          <eq dst="ni1599_suif_tmp60">
+            <cat width="32">
+              <const value="0" width="24"/>
+              <var name="ni1338_state"/>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp60" src="ni1599_suif_tmp60" line="135" file="AES_hw.c"/>
+          <assign dst="r_r_e_g_0" src="ni1601_r_e_g_0"/>
+          <eq dst="ni1601_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp28"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s42">
+          <eq dst="ti573_SBox">
+            <slice start="0" width="8">
+              <var name="r_suif_tmp60"/>
+            </slice>
+          </eq>
+          <load mem="SBox" port="0" index="ti573_SBox" net="ni573_SBox"/>
+          <eq dst="ni566_state">
+            <var name="ni573_SBox"/>
+          </eq>
+          <store src="ni573_SBox" mem="state" port="0" index="r_r_e_g_0"/>
+          <assign dst="r_r_e_g_0" src="ni1602_r_e_g_0"/>
+          <eq dst="ni1602_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="r_suif_tmp30"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b20s43">
+          <eq dst="ni586_state">
+            <slice start="0" width="8">
+              <var name="r_x"/>
+            </slice>
+          </eq>
+          <store src="ni586_state" mem="state" port="0" index="r_r_e_g_0" line="136" file="AES_hw.c"/>
+        </datapath>
+        <datapath block="b21" states="b21s0">
+          <eq dst="ni1604_i">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_i" src="ni1604_i" line="141" file="AES_hw.c"/>
+        </datapath>
+        <datapath block="b22" states="b22s0">
+          <assign dst="r_r_e_g_0" src="ni1607_r_e_g_0"/>
+          <eq dst="ni1607_r_e_g_0">
+            <call name="add" width="4">
+              <const value="0" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b22s1">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni614_state"/>
+          <eq dst="ni1606_suif_tmp63">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="neq" width="1">
+                <binop op="and" width="32">
+                  <cat width="32">
+                    <const value="0" width="24"/>
+                    <var name="ni614_state"/>
+                  </cat>
+                  <const value="128" width="32"/>
+                </binop>
+                <const value="0" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp63" src="ni1606_suif_tmp63" line="143" file="AES_hw.c"/>
+        </datapath>
+        <datapath block="b23" states="b23s0">
+          <eq dst="ni1608_suif_tmp_6">
+            <const value="27" width="32"/>
+          </eq>
+          <assign dst="r_suif_tmp_6" src="ni1608_suif_tmp_6"/>
+        </datapath>
+        <datapath block="b24" states="b24s0">
+          <eq dst="ni1609_suif_tmp_6">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_suif_tmp_6" src="ni1609_suif_tmp_6"/>
+        </datapath>
+        <datapath block="b25" states="b25s0">
+          <assign dst="r_r_e_g_0" src="ni1611_r_e_g_0"/>
+          <eq dst="ni1611_r_e_g_0">
+            <call name="add" width="4">
+              <const value="4" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b25s1">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni632_state"/>
+          <eq dst="ni1610_suif_tmp64">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="neq" width="1">
+                <binop op="and" width="32">
+                  <cat width="32">
+                    <const value="0" width="24"/>
+                    <var name="ni632_state"/>
+                  </cat>
+                  <const value="128" width="32"/>
+                </binop>
+                <const value="0" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp64" src="ni1610_suif_tmp64"/>
+        </datapath>
+        <datapath block="b26" states="b26s0">
+          <eq dst="ni1612_suif_tmp0_2">
+            <const value="27" width="32"/>
+          </eq>
+          <assign dst="r_suif_tmp0_2" src="ni1612_suif_tmp0_2"/>
+        </datapath>
+        <datapath block="b27" states="b27s0">
+          <eq dst="ni1613_suif_tmp0_2">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_suif_tmp0_2" src="ni1613_suif_tmp0_2"/>
+        </datapath>
+        <datapath block="b28" states="b28s0">
+          <assign dst="r_r_e_g_0" src="ni1615_r_e_g_0"/>
+          <eq dst="ni1615_r_e_g_0">
+            <call name="add" width="4">
+              <const value="0" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_2" src="ni1616_r_e_g_2"/>
+          <eq dst="ni1616_r_e_g_2">
+            <call name="add" width="4">
+              <const value="4" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b28s1">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni665_state"/>
+          <load mem="state" port="0" index="r_r_e_g_2" net="ni680_state"/>
+          <assign dst="r_r_e_g_1" src="ni665_state"/>
+          <assign dst="r_r_e_g_4" src="ni680_state"/>
+          <assign dst="r_r_e_g_0" src="ni1617_r_e_g_0"/>
+          <eq dst="ni1617_r_e_g_0">
+            <call name="add" width="4">
+              <const value="4" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_2" src="ni1618_r_e_g_2"/>
+          <eq dst="ni1618_r_e_g_2">
+            <call name="add" width="4">
+              <const value="8" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b28s2">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni692_state"/>
+          <load mem="state" port="0" index="r_r_e_g_2" net="ni702_state"/>
+          <assign dst="r_r_e_g_5" src="ni692_state"/>
+          <assign dst="r_r_e_g_6" src="ni702_state"/>
+          <assign dst="r_r_e_g_0" src="ni1619_r_e_g_0"/>
+          <eq dst="ni1619_r_e_g_0">
+            <call name="add" width="4">
+              <const value="12" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_2" src="ni1614_r_e_g_2"/>
+          <eq dst="ni1614_r_e_g_2">
+            <call name="add" width="4">
+              <const value="0" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_3" src="ni1621_r_e_g_3"/>
+          <eq dst="ni1621_r_e_g_3">
+            <call name="add" width="4">
+              <const value="4" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b28s3">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni712_state"/>
+          <eq dst="ni642_stateTemp">
+            <binop op="xor" width="8">
+              <binop op="xor" width="8">
+                <binop op="xor" width="8">
+                  <binop op="xor" width="8">
+                    <binop op="xor" width="8">
+                      <call name="shl" width="8" param="1">
+                        <var name="r_r_e_g_1"/>
+                      </call>
+                      <slice start="0" width="8">
+                        <var name="r_suif_tmp_6"/>
+                      </slice>
+                    </binop>
+                    <binop op="xor" width="8">
+                      <call name="shl" width="8" param="1">
+                        <var name="r_r_e_g_4"/>
+                      </call>
+                      <slice start="0" width="8">
+                        <var name="r_suif_tmp0_2"/>
+                      </slice>
+                    </binop>
+                  </binop>
+                  <var name="r_r_e_g_5"/>
+                </binop>
+                <var name="r_r_e_g_6"/>
+              </binop>
+              <var name="ni712_state"/>
+            </binop>
+          </eq>
+          <store src="ni642_stateTemp" mem="stateTemp" port="0" index="r_r_e_g_2"/>
+          <load mem="state" port="0" index="r_r_e_g_3" net="ni727_state"/>
+          <eq dst="ni1620_suif_tmp65">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="neq" width="1">
+                <binop op="and" width="32">
+                  <cat width="32">
+                    <const value="0" width="24"/>
+                    <var name="ni727_state"/>
+                  </cat>
+                  <const value="128" width="32"/>
+                </binop>
+                <const value="0" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp65" src="ni1620_suif_tmp65" line="145" file="AES_hw.c"/>
+        </datapath>
+        <datapath block="b29" states="b29s0">
+          <eq dst="ni1622_suif_tmp2_0">
+            <const value="27" width="32"/>
+          </eq>
+          <assign dst="r_suif_tmp2_0" src="ni1622_suif_tmp2_0"/>
+        </datapath>
+        <datapath block="b30" states="b30s0">
+          <eq dst="ni1623_suif_tmp2_0">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_suif_tmp2_0" src="ni1623_suif_tmp2_0"/>
+        </datapath>
+        <datapath block="b31" states="b31s0">
+          <assign dst="r_r_e_g_0" src="ni1625_r_e_g_0"/>
+          <eq dst="ni1625_r_e_g_0">
+            <call name="add" width="4">
+              <const value="8" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b31s1">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni745_state"/>
+          <eq dst="ni1624_suif_tmp66">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="neq" width="1">
+                <binop op="and" width="32">
+                  <cat width="32">
+                    <const value="0" width="24"/>
+                    <var name="ni745_state"/>
+                  </cat>
+                  <const value="128" width="32"/>
+                </binop>
+                <const value="0" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp66" src="ni1624_suif_tmp66"/>
+        </datapath>
+        <datapath block="b32" states="b32s0">
+          <eq dst="ni1626_suif_tmp3_0">
+            <const value="27" width="32"/>
+          </eq>
+          <assign dst="r_suif_tmp3_0" src="ni1626_suif_tmp3_0"/>
+        </datapath>
+        <datapath block="b33" states="b33s0">
+          <eq dst="ni1627_suif_tmp3_0">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_suif_tmp3_0" src="ni1627_suif_tmp3_0"/>
+        </datapath>
+        <datapath block="b34" states="b34s0">
+          <assign dst="r_r_e_g_0" src="ni1629_r_e_g_0"/>
+          <eq dst="ni1629_r_e_g_0">
+            <call name="add" width="4">
+              <const value="0" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_2" src="ni1630_r_e_g_2"/>
+          <eq dst="ni1630_r_e_g_2">
+            <call name="add" width="4">
+              <const value="4" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b34s1">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni775_state"/>
+          <load mem="state" port="0" index="r_r_e_g_2" net="ni788_state"/>
+          <assign dst="r_r_e_g_1" src="ni775_state"/>
+          <assign dst="r_r_e_g_4" src="ni788_state"/>
+          <assign dst="r_r_e_g_0" src="ni1631_r_e_g_0"/>
+          <eq dst="ni1631_r_e_g_0">
+            <call name="add" width="4">
+              <const value="8" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_2" src="ni1632_r_e_g_2"/>
+          <eq dst="ni1632_r_e_g_2">
+            <call name="add" width="4">
+              <const value="8" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b34s2">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni803_state"/>
+          <load mem="state" port="0" index="r_r_e_g_2" net="ni815_state"/>
+          <assign dst="r_r_e_g_5" src="ni803_state"/>
+          <assign dst="r_r_e_g_6" src="ni815_state"/>
+          <assign dst="r_r_e_g_0" src="ni1633_r_e_g_0"/>
+          <eq dst="ni1633_r_e_g_0">
+            <call name="add" width="4">
+              <const value="12" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_2" src="ni1628_r_e_g_2"/>
+          <eq dst="ni1628_r_e_g_2">
+            <call name="add" width="4">
+              <const value="4" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_3" src="ni1635_r_e_g_3"/>
+          <eq dst="ni1635_r_e_g_3">
+            <call name="add" width="4">
+              <const value="8" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b34s3">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni825_state"/>
+          <eq dst="ni755_stateTemp">
+            <binop op="xor" width="8">
+              <binop op="xor" width="8">
+                <binop op="xor" width="8">
+                  <binop op="xor" width="8">
+                    <var name="r_r_e_g_1"/>
+                    <binop op="xor" width="8">
+                      <call name="shl" width="8" param="1">
+                        <var name="r_r_e_g_4"/>
+                      </call>
+                      <slice start="0" width="8">
+                        <var name="r_suif_tmp2_0"/>
+                      </slice>
+                    </binop>
+                  </binop>
+                  <binop op="xor" width="8">
+                    <call name="shl" width="8" param="1">
+                      <var name="r_r_e_g_5"/>
+                    </call>
+                    <slice start="0" width="8">
+                      <var name="r_suif_tmp3_0"/>
+                    </slice>
+                  </binop>
+                </binop>
+                <var name="r_r_e_g_6"/>
+              </binop>
+              <var name="ni825_state"/>
+            </binop>
+          </eq>
+          <store src="ni755_stateTemp" mem="stateTemp" port="0" index="r_r_e_g_2"/>
+          <load mem="state" port="0" index="r_r_e_g_3" net="ni840_state"/>
+          <eq dst="ni1634_suif_tmp67">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="neq" width="1">
+                <binop op="and" width="32">
+                  <cat width="32">
+                    <const value="0" width="24"/>
+                    <var name="ni840_state"/>
+                  </cat>
+                  <const value="128" width="32"/>
+                </binop>
+                <const value="0" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp67" src="ni1634_suif_tmp67" line="147" file="AES_hw.c"/>
+        </datapath>
+        <datapath block="b35" states="b35s0">
+          <eq dst="ni1636_suif_tmp5_0">
+            <const value="27" width="32"/>
+          </eq>
+          <assign dst="r_suif_tmp5_0" src="ni1636_suif_tmp5_0"/>
+        </datapath>
+        <datapath block="b36" states="b36s0">
+          <eq dst="ni1637_suif_tmp5_0">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_suif_tmp5_0" src="ni1637_suif_tmp5_0"/>
+        </datapath>
+        <datapath block="b37" states="b37s0">
+          <assign dst="r_r_e_g_0" src="ni1639_r_e_g_0"/>
+          <eq dst="ni1639_r_e_g_0">
+            <call name="add" width="4">
+              <const value="12" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b37s1">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni858_state"/>
+          <eq dst="ni1638_suif_tmp68">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="neq" width="1">
+                <binop op="and" width="32">
+                  <cat width="32">
+                    <const value="0" width="24"/>
+                    <var name="ni858_state"/>
+                  </cat>
+                  <const value="128" width="32"/>
+                </binop>
+                <const value="0" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp68" src="ni1638_suif_tmp68"/>
+        </datapath>
+        <datapath block="b38" states="b38s0">
+          <eq dst="ni1640_suif_tmp6_0">
+            <const value="27" width="32"/>
+          </eq>
+          <assign dst="r_suif_tmp6_0" src="ni1640_suif_tmp6_0"/>
+        </datapath>
+        <datapath block="b39" states="b39s0">
+          <eq dst="ni1641_suif_tmp6_0">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_suif_tmp6_0" src="ni1641_suif_tmp6_0"/>
+        </datapath>
+        <datapath block="b40" states="b40s0">
+          <assign dst="r_r_e_g_0" src="ni1643_r_e_g_0"/>
+          <eq dst="ni1643_r_e_g_0">
+            <call name="add" width="4">
+              <const value="0" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_2" src="ni1644_r_e_g_2"/>
+          <eq dst="ni1644_r_e_g_2">
+            <call name="add" width="4">
+              <const value="4" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b40s1">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni888_state"/>
+          <load mem="state" port="0" index="r_r_e_g_2" net="ni898_state"/>
+          <assign dst="r_r_e_g_1" src="ni888_state"/>
+          <assign dst="r_r_e_g_4" src="ni898_state"/>
+          <assign dst="r_r_e_g_0" src="ni1645_r_e_g_0"/>
+          <eq dst="ni1645_r_e_g_0">
+            <call name="add" width="4">
+              <const value="8" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_2" src="ni1646_r_e_g_2"/>
+          <eq dst="ni1646_r_e_g_2">
+            <call name="add" width="4">
+              <const value="12" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b40s2">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni911_state"/>
+          <load mem="state" port="0" index="r_r_e_g_2" net="ni926_state"/>
+          <assign dst="r_r_e_g_5" src="ni911_state"/>
+          <assign dst="r_r_e_g_6" src="ni926_state"/>
+          <assign dst="r_r_e_g_0" src="ni1647_r_e_g_0"/>
+          <eq dst="ni1647_r_e_g_0">
+            <call name="add" width="4">
+              <const value="12" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_2" src="ni1642_r_e_g_2"/>
+          <eq dst="ni1642_r_e_g_2">
+            <call name="add" width="4">
+              <const value="8" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_3" src="ni1649_r_e_g_3"/>
+          <eq dst="ni1649_r_e_g_3">
+            <call name="add" width="4">
+              <const value="0" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b40s3">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni938_state"/>
+          <eq dst="ni868_stateTemp">
+            <binop op="xor" width="8">
+              <binop op="xor" width="8">
+                <binop op="xor" width="8">
+                  <binop op="xor" width="8">
+                    <var name="r_r_e_g_1"/>
+                    <var name="r_r_e_g_4"/>
+                  </binop>
+                  <binop op="xor" width="8">
+                    <call name="shl" width="8" param="1">
+                      <var name="r_r_e_g_5"/>
+                    </call>
+                    <slice start="0" width="8">
+                      <var name="r_suif_tmp5_0"/>
+                    </slice>
+                  </binop>
+                </binop>
+                <binop op="xor" width="8">
+                  <call name="shl" width="8" param="1">
+                    <var name="r_r_e_g_6"/>
+                  </call>
+                  <slice start="0" width="8">
+                    <var name="r_suif_tmp6_0"/>
+                  </slice>
+                </binop>
+              </binop>
+              <var name="ni938_state"/>
+            </binop>
+          </eq>
+          <store src="ni868_stateTemp" mem="stateTemp" port="0" index="r_r_e_g_2"/>
+          <load mem="state" port="0" index="r_r_e_g_3" net="ni953_state"/>
+          <eq dst="ni1648_suif_tmp69">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="neq" width="1">
+                <binop op="and" width="32">
+                  <cat width="32">
+                    <const value="0" width="24"/>
+                    <var name="ni953_state"/>
+                  </cat>
+                  <const value="128" width="32"/>
+                </binop>
+                <const value="0" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp69" src="ni1648_suif_tmp69" line="149" file="AES_hw.c"/>
+        </datapath>
+        <datapath block="b41" states="b41s0">
+          <eq dst="ni1650_suif_tmp8_0">
+            <const value="27" width="32"/>
+          </eq>
+          <assign dst="r_suif_tmp8_0" src="ni1650_suif_tmp8_0"/>
+        </datapath>
+        <datapath block="b42" states="b42s0">
+          <eq dst="ni1651_suif_tmp8_0">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_suif_tmp8_0" src="ni1651_suif_tmp8_0"/>
+        </datapath>
+        <datapath block="b43" states="b43s0">
+          <assign dst="r_r_e_g_0" src="ni1653_r_e_g_0"/>
+          <eq dst="ni1653_r_e_g_0">
+            <call name="add" width="4">
+              <const value="12" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b43s1">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni971_state"/>
+          <eq dst="ni1652_suif_tmp70">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="neq" width="1">
+                <binop op="and" width="32">
+                  <cat width="32">
+                    <const value="0" width="24"/>
+                    <var name="ni971_state"/>
+                  </cat>
+                  <const value="128" width="32"/>
+                </binop>
+                <const value="0" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp70" src="ni1652_suif_tmp70"/>
+        </datapath>
+        <datapath block="b44" states="b44s0">
+          <eq dst="ni1654_suif_tmp9_0">
+            <const value="27" width="32"/>
+          </eq>
+          <assign dst="r_suif_tmp9_0" src="ni1654_suif_tmp9_0"/>
+        </datapath>
+        <datapath block="b45" states="b45s0">
+          <eq dst="ni1655_suif_tmp9_0">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_suif_tmp9_0" src="ni1655_suif_tmp9_0"/>
+        </datapath>
+        <datapath block="b46" states="b46s0">
+          <eq dst="ni1662_i">
+            <call name="add" width="32">
+              <var name="r_i"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni1605_suif_tmp62">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_u" width="1">
+                <var name="ni1662_i"/>
+                <const value="4" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_i" src="ni1662_i"/>
+          <assign dst="r_suif_tmp62" src="ni1605_suif_tmp62"/>
+          <assign dst="r_r_e_g_0" src="ni1657_r_e_g_0"/>
+          <eq dst="ni1657_r_e_g_0">
+            <call name="add" width="4">
+              <const value="0" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_2" src="ni1658_r_e_g_2"/>
+          <eq dst="ni1658_r_e_g_2">
+            <call name="add" width="4">
+              <const value="0" width="4"/>
+              <slice start="0" width="4">
+                <var name="r_i"/>
+              </slice>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_3" src="ni1029_r_e_g_3"/>
+          <eq dst="ni1029_r_e_g_3">
+            <slice start="0" width="4">
+              <var name="r_i"/>
+            </slice>
+          </eq>
+          <assign dst="r_r_e_g_7" src="ni1039_r_e_g_7"/>
+          <eq dst="ni1039_r_e_g_7">
+            <slice start="0" width="4">
+              <var name="r_i"/>
+            </slice>
+          </eq>
+          <assign dst="r_r_e_g_8" src="ni1052_r_e_g_8"/>
+          <eq dst="ni1052_r_e_g_8">
+            <slice start="0" width="4">
+              <var name="r_i"/>
+            </slice>
+          </eq>
+          <assign dst="r_r_e_g_9" src="ni985_r_e_g_9"/>
+          <eq dst="ni985_r_e_g_9">
+            <slice start="0" width="4">
+              <var name="r_i"/>
+            </slice>
+          </eq>
+        </datapath>
+        <datapath states="b46s1">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni1004_state"/>
+          <load mem="state" port="0" index="r_r_e_g_2" net="ni1016_state"/>
+          <assign dst="r_r_e_g_1" src="ni1004_state"/>
+          <assign dst="r_r_e_g_4" src="ni1016_state"/>
+          <assign dst="r_r_e_g_0" src="ni1659_r_e_g_0"/>
+          <eq dst="ni1659_r_e_g_0">
+            <call name="add" width="4">
+              <const value="4" width="4"/>
+              <var name="r_r_e_g_3"/>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_2" src="ni1660_r_e_g_2"/>
+          <eq dst="ni1660_r_e_g_2">
+            <call name="add" width="4">
+              <const value="8" width="4"/>
+              <var name="r_r_e_g_7"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b46s2">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni1026_state"/>
+          <load mem="state" port="0" index="r_r_e_g_2" net="ni1036_state"/>
+          <assign dst="r_r_e_g_5" src="ni1026_state"/>
+          <assign dst="r_r_e_g_6" src="ni1036_state"/>
+          <assign dst="r_r_e_g_0" src="ni1661_r_e_g_0"/>
+          <eq dst="ni1661_r_e_g_0">
+            <call name="add" width="4">
+              <const value="12" width="4"/>
+              <var name="r_r_e_g_8"/>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_2" src="ni1656_r_e_g_2"/>
+          <eq dst="ni1656_r_e_g_2">
+            <call name="add" width="4">
+              <const value="12" width="4"/>
+              <var name="r_r_e_g_9"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b46s3">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni1049_state"/>
+          <eq dst="ni981_stateTemp">
+            <binop op="xor" width="8">
+              <binop op="xor" width="8">
+                <binop op="xor" width="8">
+                  <binop op="xor" width="8">
+                    <binop op="xor" width="8">
+                      <call name="shl" width="8" param="1">
+                        <var name="r_r_e_g_1"/>
+                      </call>
+                      <slice start="0" width="8">
+                        <var name="r_suif_tmp8_0"/>
+                      </slice>
+                    </binop>
+                    <var name="r_r_e_g_4"/>
+                  </binop>
+                  <var name="r_r_e_g_5"/>
+                </binop>
+                <var name="r_r_e_g_6"/>
+              </binop>
+              <binop op="xor" width="8">
+                <call name="shl" width="8" param="1">
+                  <var name="ni1049_state"/>
+                </call>
+                <slice start="0" width="8">
+                  <var name="r_suif_tmp9_0"/>
+                </slice>
+              </binop>
+            </binop>
+          </eq>
+          <store src="ni981_stateTemp" mem="stateTemp" port="0" index="r_r_e_g_2"/>
+        </datapath>
+        <datapath block="b47" states="b47s0">
+          <eq dst="ni1663_i">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_i" src="ni1663_i" line="154" file="AES_hw.c"/>
+        </datapath>
+        <datapath block="b48" states="b48s0">
+          <eq dst="ni1665_k">
+            <const value="0" width="32"/>
+          </eq>
+          <eq dst="ni1666_suif_tmp72">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_u" width="1">
+                <var name="ni1665_k"/>
+                <const value="4" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_k" src="ni1665_k" line="156" file="AES_hw.c"/>
+          <assign dst="r_suif_tmp72" src="ni1666_suif_tmp72"/>
+        </datapath>
+        <datapath block="b49" states="b49s0">
+          <eq dst="ni1667_suif_tmp_7">
+            <var name="r_i"/>
+          </eq>
+          <eq dst="ni1668_suif_tmp0_3">
+            <var name="r_i"/>
+          </eq>
+          <assign dst="r_suif_tmp_7" src="ni1667_suif_tmp_7"/>
+          <assign dst="r_suif_tmp0_3" src="ni1668_suif_tmp0_3"/>
+        </datapath>
+        <datapath block="b50" states="b50s0">
+          <eq dst="ni1671_k">
+            <call name="add" width="32">
+              <var name="r_k"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni1672_suif_tmp73">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_u" width="1">
+                <var name="ni1671_k"/>
+                <const value="4" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_k" src="ni1671_k"/>
+          <assign dst="r_suif_tmp73" src="ni1672_suif_tmp73"/>
+          <assign dst="r_r_e_g_0" src="ni1670_r_e_g_0"/>
+          <eq dst="ni1670_r_e_g_0">
+            <call name="add" width="4">
+              <call name="shl" width="4" param="2">
+                <slice start="0" width="4">
+                  <var name="r_suif_tmp0_3"/>
+                </slice>
+              </call>
+              <slice start="0" width="4">
+                <var name="r_k"/>
+              </slice>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_2" src="ni1669_r_e_g_2"/>
+          <eq dst="ni1669_r_e_g_2">
+            <call name="add" width="4">
+              <call name="shl" width="4" param="2">
+                <slice start="0" width="4">
+                  <var name="r_suif_tmp_7"/>
+                </slice>
+              </call>
+              <slice start="0" width="4">
+                <var name="r_k"/>
+              </slice>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b50s1">
+          <load mem="stateTemp" port="1" index="r_r_e_g_0" net="ni1082_stateTemp"/>
+          <eq dst="ni1075_state">
+            <var name="ni1082_stateTemp"/>
+          </eq>
+          <store src="ni1082_stateTemp" mem="state" port="0" index="r_r_e_g_2" line="158" file="AES_hw.c"/>
+        </datapath>
+        <datapath block="b51" states="b51s0">
+          <eq dst="ni1673_i">
+            <call name="add" width="32">
+              <var name="r_i"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni1664_suif_tmp71">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_u" width="1">
+                <var name="ni1673_i"/>
+                <const value="4" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_i" src="ni1673_i" line="156" file="AES_hw.c"/>
+          <assign dst="r_suif_tmp71" src="ni1664_suif_tmp71"/>
+        </datapath>
+        <datapath block="b52" states="b52s0">
+          <eq dst="ni1674_i">
+            <const value="0" width="32"/>
+          </eq>
+          <eq dst="ni1675_suif_tmp74">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_u" width="1">
+                <var name="ni1674_i"/>
+                <const value="4" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_i" src="ni1674_i" line="164" file="AES_hw.c"/>
+          <assign dst="r_suif_tmp74" src="ni1675_suif_tmp74"/>
+        </datapath>
+        <datapath block="b53" states="b53s0">
+          <eq dst="ni1676_suif_tmp_5">
+            <var name="r_j"/>
+          </eq>
+          <assign dst="r_suif_tmp_5" src="ni1676_suif_tmp_5"/>
+        </datapath>
+        <datapath block="b54" states="b54s0">
+          <eq dst="ni1677_k">
+            <const value="0" width="32"/>
+          </eq>
+          <eq dst="ni1678_suif_tmp76">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_u" width="1">
+                <var name="ni1677_k"/>
+                <const value="4" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_k" src="ni1677_k" line="165" file="AES_hw.c"/>
+          <assign dst="r_suif_tmp76" src="ni1678_suif_tmp76"/>
+        </datapath>
+        <datapath block="b55" states="b55s0">
+          <eq dst="ni1679_suif_tmp_8">
+            <var name="r_i"/>
+          </eq>
+          <eq dst="ni1680_suif_tmp0_4">
+            <var name="r_i"/>
+          </eq>
+          <assign dst="r_suif_tmp_8" src="ni1679_suif_tmp_8"/>
+          <assign dst="r_suif_tmp0_4" src="ni1680_suif_tmp0_4"/>
+        </datapath>
+        <datapath block="b56" states="b56s0">
+          <eq dst="ni1681_suif_tmp_9">
+            <call name="add" width="32">
+              <call name="shl" width="32" param="2">
+                <var name="r_suif_tmp_8"/>
+              </call>
+              <var name="r_k"/>
+            </call>
+          </eq>
+          <eq dst="ni1685_k">
+            <call name="add" width="32">
+              <var name="r_k"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni1686_suif_tmp77">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_u" width="1">
+                <var name="ni1685_k"/>
+                <const value="4" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp_9" src="ni1681_suif_tmp_9" line="166" file="AES_hw.c"/>
+          <assign dst="r_k" src="ni1685_k"/>
+          <assign dst="r_suif_tmp77" src="ni1686_suif_tmp77"/>
+          <assign dst="r_r_e_g_0" src="ni1683_r_e_g_0"/>
+          <eq dst="ni1683_r_e_g_0">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="ni1681_suif_tmp_9"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_1" src="ni1684_r_e_g_1"/>
+          <eq dst="ni1684_r_e_g_1">
+            <call name="add" width="8">
+              <call name="shl" width="8" param="2">
+                <call name="add" width="8">
+                  <call name="shl" width="8" param="2">
+                    <slice start="0" width="8">
+                      <var name="r_suif_tmp_5"/>
+                    </slice>
+                  </call>
+                  <slice start="0" width="8">
+                    <var name="r_suif_tmp0_4"/>
+                  </slice>
+                </call>
+              </call>
+              <slice start="0" width="8">
+                <var name="r_k"/>
+              </slice>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_2" src="ni1682_r_e_g_2"/>
+          <eq dst="ni1682_r_e_g_2">
+            <call name="add" width="4">
+              <slice start="0" width="4">
+                <var name="ni1681_suif_tmp_9"/>
+              </slice>
+              <const value="0" width="4"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b56s1">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni1347_state"/>
+          <load mem="expandedKey" port="1" index="r_r_e_g_1" net="ni1131_expandedKey"/>
+          <eq dst="ni1119_state">
+            <binop op="xor" width="8">
+              <var name="ni1347_state"/>
+              <var name="ni1131_expandedKey"/>
+            </binop>
+          </eq>
+          <store src="ni1119_state" mem="state" port="0" index="r_r_e_g_2"/>
+        </datapath>
+        <datapath block="b57" states="b57s0">
+          <eq dst="ni1687_i">
+            <call name="add" width="32">
+              <var name="r_i"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni1688_suif_tmp75">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_u" width="1">
+                <var name="ni1687_i"/>
+                <const value="4" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_i" src="ni1687_i" line="165" file="AES_hw.c"/>
+          <assign dst="r_suif_tmp75" src="ni1688_suif_tmp75"/>
+        </datapath>
+        <datapath block="b58" states="b58s0">
+          <eq dst="ni1689_j">
+            <call name="add" width="32">
+              <var name="r_j"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni1690_suif_tmp44">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_equal_u" width="1">
+                <var name="ni1689_j"/>
+                <const value="10" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_j" src="ni1689_j" line="164" file="AES_hw.c"/>
+          <assign dst="r_suif_tmp44" src="ni1690_suif_tmp44"/>
+        </datapath>
+        <datapath block="b59" states="b59s0">
+          <exec op="open" name="AESoutputStream" line="172" file="AES_hw.c"/>
+          <eq dst="ni1691_i">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_i" src="ni1691_i" line="173" file="AES_hw.c"/>
+        </datapath>
+        <datapath block="b60" states="b60s0">
+          <eq dst="ni1693_j">
+            <const value="0" width="32"/>
+          </eq>
+          <eq dst="ni1694_suif_tmp79">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_u" width="1">
+                <var name="ni1693_j"/>
+                <const value="4" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_j" src="ni1693_j" line="175" file="AES_hw.c"/>
+          <assign dst="r_suif_tmp79" src="ni1694_suif_tmp79"/>
+        </datapath>
+        <datapath block="b61" states="b61s0">
+          <eq dst="ni1695_suif_tmp_10">
+            <var name="r_i"/>
+          </eq>
+          <assign dst="r_suif_tmp_10" src="ni1695_suif_tmp_10"/>
+        </datapath>
+        <datapath block="b62" states="b62s0">
+          <eq dst="ni1698_j">
+            <call name="add" width="32">
+              <var name="r_j"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni1699_suif_tmp80">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_u" width="1">
+                <var name="ni1698_j"/>
+                <const value="4" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_j" src="ni1698_j"/>
+          <assign dst="r_suif_tmp80" src="ni1699_suif_tmp80"/>
+          <assign dst="r_r_e_g_0" src="ni1697_r_e_g_0"/>
+          <eq dst="ni1697_r_e_g_0">
+            <call name="add" width="4">
+              <call name="shl" width="4" param="2">
+                <slice start="0" width="4">
+                  <var name="r_suif_tmp_10"/>
+                </slice>
+              </call>
+              <slice start="0" width="4">
+                <var name="r_j"/>
+              </slice>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b62s1">
+          <load mem="state" port="1" index="r_r_e_g_0" net="ni1186_state"/>
+          <eq dst="ni1696_suif_tmp81">
+            <var name="ni1186_state"/>
+          </eq>
+          <write name="AESoutputStream" val="ni1696_suif_tmp81"/>
+          <assign dst="r_suif_tmp81" src="ni1696_suif_tmp81" line="177" file="AES_hw.c"/>
+        </datapath>
+        <datapath block="b63" states="b63s0">
+          <eq dst="ni1700_i">
+            <call name="add" width="32">
+              <var name="r_i"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni1692_suif_tmp78">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_u" width="1">
+                <var name="ni1700_i"/>
+                <const value="4" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_i" src="ni1700_i" line="175" file="AES_hw.c"/>
+          <assign dst="r_suif_tmp78" src="ni1692_suif_tmp78"/>
+        </datapath>
+        <datapath block="b64" states="b64s0">
+          <exec op="writeclose" name="AESoutputStream" line="180" file="AES_hw.c"/>
+        </datapath>
+        <datapath/>
+      </blocks>
+      <info>
+        <signal name="AESinputSignal">
+          <read state="b0s0"/>
+          <read state="b3s0"/>
+          <read state="b13s0"/>
+        </signal>
+        <stream name="AESdataStream">
+          <open state="b0s0"/>
+          <read state="b1s0"/>
+          <readclose state="b3s0"/>
+          <open state="b3s1"/>
+          <read state="b4s0"/>
+          <readclose state="b8s0"/>
+        </stream>
+        <stream name="AESoutputStream">
+          <open state="b59s0"/>
+          <write state="b62s1" data="ni1696_suif_tmp81"/>
+          <writeclose state="b64s0"/>
+        </stream>
+        <memory name="state" res="dualsync" synchronous="1" ports="2" addresses="1" maystall="1" readonly="0">
+          <write port="0" state="b1s2" addr="r_r_e_g_0" data="r_streamByte"/>
+          <address port="1" state="b16s1" from="b16s0" addr="ni1512_r_e_g_0" noconflict="1"/>
+          <read port="1" state="b16s1"/>
+          <write port="0" state="b16s1" addr="r_r_e_g_3" data="ni225_state"/>
+          <address port="1" state="b20s1" from="b20s0" addr="ni1552_r_e_g_0" noconflict="1"/>
+          <read port="1" state="b20s1"/>
+          <write port="0" state="b20s2" addr="r_r_e_g_0" data="ni266_SBox"/>
+          <address port="1" state="b20s4" from="b20s3" addr="ni1555_r_e_g_0" noconflict="1"/>
+          <read port="1" state="b20s4"/>
+          <write port="0" state="b20s5" addr="r_r_e_g_0" data="ni286_SBox"/>
+          <address port="1" state="b20s7" from="b20s6" addr="ni1558_r_e_g_0" noconflict="1"/>
+          <read port="1" state="b20s7"/>
+          <write port="0" state="b20s8" addr="r_r_e_g_0" data="ni306_SBox"/>
+          <address port="1" state="b20s10" from="b20s9" addr="ni1561_r_e_g_0" noconflict="1"/>
+          <read port="1" state="b20s10"/>
+          <write port="0" state="b20s11" addr="r_r_e_g_0" data="ni326_SBox"/>
+          <address port="1" state="b20s13" from="b20s12" addr="ni1564_r_e_g_0" noconflict="1"/>
+          <address port="0" state="b20s13" from="b20s12" addr="ni1567_r_e_g_2" noconflict="1"/>
+          <read port="1" state="b20s13"/>
+          <read port="0" state="b20s13"/>
+          <write port="0" state="b20s15" addr="r_r_e_g_0" data="ni361_SBox"/>
+          <address port="1" state="b20s17" from="b20s16" addr="ni1570_r_e_g_0" noconflict="1"/>
+          <read port="1" state="b20s17"/>
+          <write port="0" state="b20s18" addr="r_r_e_g_0" data="ni381_SBox"/>
+          <address port="1" state="b20s20" from="b20s19" addr="ni1573_r_e_g_0" noconflict="1"/>
+          <read port="1" state="b20s20"/>
+          <write port="0" state="b20s21" addr="r_r_e_g_0" data="ni401_SBox"/>
+          <write port="0" state="b20s22" addr="r_r_e_g_0" data="ni414_state"/>
+          <address port="1" state="b20s24" from="b20s23" addr="ni1577_r_e_g_0" noconflict="1"/>
+          <address port="0" state="b20s24" from="b20s23" addr="ni1580_r_e_g_2" noconflict="1"/>
+          <read port="1" state="b20s24"/>
+          <read port="0" state="b20s24"/>
+          <write port="0" state="b20s26" addr="r_r_e_g_0" data="ni445_SBox"/>
+          <write port="0" state="b20s27" addr="r_r_e_g_0" data="ni458_state"/>
+          <address port="1" state="b20s29" from="b20s28" addr="ni1584_r_e_g_0" noconflict="1"/>
+          <address port="0" state="b20s29" from="b20s28" addr="ni1587_r_e_g_2" noconflict="1"/>
+          <read port="1" state="b20s29"/>
+          <read port="0" state="b20s29"/>
+          <write port="0" state="b20s31" addr="r_r_e_g_0" data="ni489_SBox"/>
+          <write port="0" state="b20s32" addr="r_r_e_g_0" data="ni502_state"/>
+          <address port="1" state="b20s34" from="b20s33" addr="ni1591_r_e_g_0" noconflict="1"/>
+          <address port="0" state="b20s34" from="b20s33" addr="ni1594_r_e_g_2" noconflict="1"/>
+          <read port="1" state="b20s34"/>
+          <read port="0" state="b20s34"/>
+          <write port="0" state="b20s36" addr="r_r_e_g_0" data="ni533_SBox"/>
+          <address port="1" state="b20s38" from="b20s37" addr="ni1597_r_e_g_0" noconflict="1"/>
+          <read port="1" state="b20s38"/>
+          <write port="0" state="b20s39" addr="r_r_e_g_0" data="ni553_SBox"/>
+          <address port="1" state="b20s41" from="b20s40" addr="ni1600_r_e_g_0" noconflict="1"/>
+          <read port="1" state="b20s41"/>
+          <write port="0" state="b20s42" addr="r_r_e_g_0" data="ni573_SBox"/>
+          <write port="0" state="b20s43" addr="r_r_e_g_0" data="ni586_state"/>
+          <address port="1" state="b22s1" from="b22s0" addr="ni1607_r_e_g_0" noconflict="1"/>
+          <read port="1" state="b22s1"/>
+          <address port="1" state="b25s1" from="b25s0" addr="ni1611_r_e_g_0" noconflict="1"/>
+          <read port="1" state="b25s1"/>
+          <address port="1" state="b28s1" from="b28s0" addr="ni1615_r_e_g_0" noconflict="1"/>
+          <address port="0" state="b28s1" from="b28s0" addr="ni1616_r_e_g_2" noconflict="1"/>
+          <address port="1" state="b28s2" from="b28s1" addr="ni1617_r_e_g_0" noconflict="1"/>
+          <address port="0" state="b28s2" from="b28s1" addr="ni1618_r_e_g_2" noconflict="1"/>
+          <read port="1" state="b28s1"/>
+          <read port="0" state="b28s1"/>
+          <address port="1" state="b28s3" from="b28s2" addr="ni1619_r_e_g_0" noconflict="1"/>
+          <address port="0" state="b28s3" from="b28s2" addr="ni1621_r_e_g_3" noconflict="1"/>
+          <read port="1" state="b28s2"/>
+          <read port="0" state="b28s2"/>
+          <read port="1" state="b28s3"/>
+          <read port="0" state="b28s3"/>
+          <address port="1" state="b31s1" from="b31s0" addr="ni1625_r_e_g_0" noconflict="1"/>
+          <read port="1" state="b31s1"/>
+          <address port="1" state="b34s1" from="b34s0" addr="ni1629_r_e_g_0" noconflict="1"/>
+          <address port="0" state="b34s1" from="b34s0" addr="ni1630_r_e_g_2" noconflict="1"/>
+          <address port="1" state="b34s2" from="b34s1" addr="ni1631_r_e_g_0" noconflict="1"/>
+          <address port="0" state="b34s2" from="b34s1" addr="ni1632_r_e_g_2" noconflict="1"/>
+          <read port="1" state="b34s1"/>
+          <read port="0" state="b34s1"/>
+          <address port="1" state="b34s3" from="b34s2" addr="ni1633_r_e_g_0" noconflict="1"/>
+          <address port="0" state="b34s3" from="b34s2" addr="ni1635_r_e_g_3" noconflict="1"/>
+          <read port="1" state="b34s2"/>
+          <read port="0" state="b34s2"/>
+          <read port="1" state="b34s3"/>
+          <read port="0" state="b34s3"/>
+          <address port="1" state="b37s1" from="b37s0" addr="ni1639_r_e_g_0" noconflict="1"/>
+          <read port="1" state="b37s1"/>
+          <address port="1" state="b40s1" from="b40s0" addr="ni1643_r_e_g_0" noconflict="1"/>
+          <address port="0" state="b40s1" from="b40s0" addr="ni1644_r_e_g_2" noconflict="1"/>
+          <address port="1" state="b40s2" from="b40s1" addr="ni1645_r_e_g_0" noconflict="1"/>
+          <address port="0" state="b40s2" from="b40s1" addr="ni1646_r_e_g_2" noconflict="1"/>
+          <read port="1" state="b40s1"/>
+          <read port="0" state="b40s1"/>
+          <address port="1" state="b40s3" from="b40s2" addr="ni1647_r_e_g_0" noconflict="1"/>
+          <address port="0" state="b40s3" from="b40s2" addr="ni1649_r_e_g_3" noconflict="1"/>
+          <read port="1" state="b40s2"/>
+          <read port="0" state="b40s2"/>
+          <read port="1" state="b40s3"/>
+          <read port="0" state="b40s3"/>
+          <address port="1" state="b43s1" from="b43s0" addr="ni1653_r_e_g_0" noconflict="1"/>
+          <read port="1" state="b43s1"/>
+          <address port="1" state="b46s1" from="b46s0" addr="ni1657_r_e_g_0" noconflict="1"/>
+          <address port="0" state="b46s1" from="b46s0" addr="ni1658_r_e_g_2" noconflict="1"/>
+          <address port="1" state="b46s2" from="b46s1" addr="ni1659_r_e_g_0" noconflict="1"/>
+          <address port="0" state="b46s2" from="b46s1" addr="ni1660_r_e_g_2" noconflict="1"/>
+          <read port="1" state="b46s1"/>
+          <read port="0" state="b46s1"/>
+          <address port="1" state="b46s3" from="b46s2" addr="ni1661_r_e_g_0" noconflict="1"/>
+          <read port="1" state="b46s2"/>
+          <read port="0" state="b46s2"/>
+          <read port="1" state="b46s3"/>
+          <write port="0" state="b50s1" addr="r_r_e_g_2" data="ni1082_stateTemp"/>
+          <address port="1" state="b56s1" from="b56s0" addr="ni1683_r_e_g_0" noconflict="1"/>
+          <read port="1" state="b56s1"/>
+          <write port="0" state="b56s1" addr="r_r_e_g_2" data="ni1119_state"/>
+          <address port="1" state="b62s1" from="b62s0" addr="ni1697_r_e_g_0" noconflict="1"/>
+          <read port="1" state="b62s1"/>
+        </memory>
+        <memory name="stateTemp" res="dualsync" synchronous="1" ports="2" addresses="1" readonly="0">
+          <write port="0" state="b28s3" addr="r_r_e_g_2" data="ni642_stateTemp"/>
+          <write port="0" state="b34s3" addr="r_r_e_g_2" data="ni755_stateTemp"/>
+          <write port="0" state="b40s3" addr="r_r_e_g_2" data="ni868_stateTemp"/>
+          <write port="0" state="b46s3" addr="r_r_e_g_2" data="ni981_stateTemp"/>
+          <address port="1" state="b50s1" from="b50s0" addr="ni1670_r_e_g_0" noconflict="1"/>
+          <read port="1" state="b50s1"/>
+        </memory>
+        <memory name="expandedKey" res="dualsync" synchronous="1" ports="2" addresses="1" readonly="0">
+          <write port="0" state="b4s2" addr="r_r_e_g_1" data="r_streamByte"/>
+          <address port="1" state="b11s1" from="b11s0" addr="ni1499_r_e_g_1" noconflict="1"/>
+          <read port="1" state="b11s1"/>
+          <address port="1" state="b56s1" from="b56s0" addr="ni1684_r_e_g_1" noconflict="1"/>
+          <read port="1" state="b56s1"/>
+        </memory>
+        <memory name="key" res="dualsync" synchronous="1" ports="2" addresses="1" readonly="0">
+          <write port="0" state="b11s1" addr="r_r_e_g_0" data="ni172_key"/>
+          <address port="1" state="b16s1" from="b16s0" addr="ni1513_r_e_g_2" noconflict="1"/>
+          <read port="1" state="b16s1"/>
+        </memory>
+        <memory name="SBox" res="dualsync" synchronous="1" ports="2" addresses="1" global="1">
+          <address port="0" state="b20s2" from="b20s1" addr="ni1551_suif_tmp45" noconflict="1"/>
+          <read port="0" state="b20s2"/>
+          <address port="0" state="b20s5" from="b20s4" addr="ni1554_suif_tmp46" noconflict="1"/>
+          <read port="0" state="b20s5"/>
+          <address port="0" state="b20s8" from="b20s7" addr="ni1557_suif_tmp47" noconflict="1"/>
+          <read port="0" state="b20s8"/>
+          <address port="0" state="b20s11" from="b20s10" addr="ni1560_suif_tmp48" noconflict="1"/>
+          <read port="0" state="b20s11"/>
+          <address port="0" state="b20s14" from="b20s13" addr="ni1563_suif_tmp49" noconflict="1"/>
+          <address port="0" state="b20s15" from="b20s14" addr="r_suif_tmp50" noconflict="1"/>
+          <read port="0" state="b20s14"/>
+          <read port="0" state="b20s15"/>
+          <address port="0" state="b20s18" from="b20s17" addr="ni1569_suif_tmp51" noconflict="1"/>
+          <read port="0" state="b20s18"/>
+          <address port="0" state="b20s21" from="b20s20" addr="ni1572_suif_tmp52" noconflict="1"/>
+          <read port="0" state="b20s21"/>
+          <address port="0" state="b20s25" from="b20s24" addr="ni1576_suif_tmp53" noconflict="1"/>
+          <address port="0" state="b20s26" from="b20s25" addr="r_suif_tmp54" noconflict="1"/>
+          <read port="0" state="b20s25"/>
+          <read port="0" state="b20s26"/>
+          <address port="0" state="b20s30" from="b20s29" addr="ni1583_suif_tmp55" noconflict="1"/>
+          <address port="0" state="b20s31" from="b20s30" addr="r_suif_tmp56" noconflict="1"/>
+          <read port="0" state="b20s30"/>
+          <read port="0" state="b20s31"/>
+          <address port="0" state="b20s35" from="b20s34" addr="ni1590_suif_tmp57" noconflict="1"/>
+          <address port="0" state="b20s36" from="b20s35" addr="r_suif_tmp58" noconflict="1"/>
+          <read port="0" state="b20s35"/>
+          <read port="0" state="b20s36"/>
+          <address port="0" state="b20s39" from="b20s38" addr="ni1596_suif_tmp59" noconflict="1"/>
+          <read port="0" state="b20s39"/>
+          <address port="0" state="b20s42" from="b20s41" addr="ni1599_suif_tmp60" noconflict="1"/>
+          <read port="0" state="b20s42"/>
+        </memory>
+      </info>
+      <variables/>
+      <temps>
+        <temp name="ti573_SBox" width="8"/>
+        <temp name="ti553_SBox" width="8"/>
+        <temp name="ti533_SBox" width="8"/>
+        <temp name="ti513_SBox" width="8"/>
+        <temp name="ti489_SBox" width="8"/>
+        <temp name="ti469_SBox" width="8"/>
+        <temp name="ti445_SBox" width="8"/>
+        <temp name="ti425_SBox" width="8"/>
+        <temp name="ti401_SBox" width="8"/>
+        <temp name="ti381_SBox" width="8"/>
+        <temp name="ti361_SBox" width="8"/>
+        <temp name="ti341_SBox" width="8"/>
+        <temp name="ti326_SBox" width="8"/>
+        <temp name="ti306_SBox" width="8"/>
+        <temp name="ti286_SBox" width="8"/>
+        <temp name="ti266_SBox" width="8"/>
+      </temps>
+    </component>
+  </pe>
+</design>

@@ -1,0 +1,93 @@
+<?xml version='1.0'?>
+<!DOCTYPE fileset PUBLIC "" "">
+<fileset>
+  <file name="BasicStream.sic">
+    <proc name="HWproc" type="void">
+      <io name="HWinput" type="stream" mode="in" ctype="signed" size="1"/>
+      <io name="HWoutput" type="stream" mode="out" ctype="signed" size="1"/>
+      <variable name="nSample" width="1" signed="true"/>
+      <variable name="suif_tmp" width="32" signed="true"/>
+      <loop>
+        <body>
+          <exec op="open" iid="i4" line="34" file="BasicStream_hw.c">
+            <var name="HWinput"/>
+          </exec>
+          <exec op="open" iid="i16" line="35" file="BasicStream_hw.c">
+            <var name="HWoutput"/>
+          </exec>
+          <loop line="38" file="BasicStream_hw.c">
+            <body>
+              <assign name="suif_tmp" iid="i87">
+                <binop op="==" signed="true" float="0" iid="i30">
+                  <cast signed="false" tosigned="true" width="32" float="0" fromfloat="0" iid="i31">
+                    <cast signed="false" tosigned="false" width="32" float="0" fromfloat="0" iid="i32">
+                      <read signed="true" iid="i33">
+                        <var name="HWinput"/>
+                        <assign name="nSample" iid="i88">
+                          <var name="HWinput"/>
+                        </assign>
+                      </read>
+                    </cast>
+                  </cast>
+                  <const value="0" width="32" signed="true" iid="i1243944"/>
+                </binop>
+              </assign>
+              <break iid="i85" cond="!suif_tmp"/>
+              <assign name="nSample" iid="i89" line="44" file="BasicStream_hw.c">
+                <cast signed="false" tosigned="true" width="1" float="0" fromfloat="0" iid="i44">
+                  <unop op="~" signed="false" float="0" iid="i45">
+                    <cast signed="true" tosigned="false" width="1" float="0" fromfloat="0" iid="i46">
+                      <var name="nSample"/>
+                    </cast>
+                  </unop>
+                </cast>
+              </assign>
+              <store target="io" iid="i48" line="45" file="BasicStream_hw.c">
+                <var name="HWoutput"/>
+                <var name="nSample"/>
+              </store>
+            </body>
+            <cond>
+              <true iid="i53">
+                <const value="1" width="32" signed="true" iid="i1244528"/>
+              </true>
+            </cond>
+          </loop>
+          <exec op="readclose" iid="i66" line="48" file="BasicStream_hw.c">
+            <var name="HWinput"/>
+          </exec>
+          <exec op="writeclose" iid="i69" line="49" file="BasicStream_hw.c">
+            <var name="HWoutput"/>
+          </exec>
+        </body>
+        <cond>
+          <true iid="i71">
+            <const value="1" signed="false" iid="i71"/>
+          </true>
+        </cond>
+      </loop>
+      <return iid="i77" line="56" file="BasicStream_hw.c">
+      </return>
+    </proc>
+    <config name="BasicStream_arch" arch="Generic">
+      <signature name="Producer">
+        <io name="HWinput" type="stream" mode="out" ctype="signed" size="1"/>
+      </signature>
+      <signature name="HWproc">
+        <io name="HWinput" type="stream" mode="in" ctype="signed" size="1"/>
+        <io name="HWoutput" type="stream" mode="out" ctype="signed" size="1"/>
+      </signature>
+      <signature name="Consumer">
+        <io name="HWoutput" type="stream" mode="in" ctype="signed" size="1"/>
+      </signature>
+      <process name="Producer" fun="Producer" type="sp" loc="" argc="1">
+      </process>
+      <process name="HWproc" fun="HWproc" type="hp" loc="pe0" argc="2">
+      </process>
+      <process name="Consumer" fun="Consumer" type="sp" loc="" argc="1">
+      </process>
+      <connect src="Producer.HWinput" dst="HWproc.HWinput" size="2" type="stream" name="HWinput" inst="-1" kind=""/>
+      <connect src="HWproc.HWoutput" dst="Consumer.HWoutput" size="2" type="stream" name="HWoutput" inst="-1" kind=""/>
+    </config>
+  </file>
+</fileset>

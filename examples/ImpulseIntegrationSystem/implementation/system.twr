@@ -1,0 +1,646 @@
+--------------------------------------------------------------------------------
+Release 12.3 Trace  (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\12.3\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -e 3 -xml system.twx
+system.ncd system.pcf
+
+Design file:              system.ncd
+Physical constraint file: system.pcf
+Device,package,speed:     xc5vfx70t,ff1136,-1 (PRODUCTION 1.71 2010-09-15, STEPPING level 0)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+WARNING:Timing:3223 - Timing constraint TS_MC_RDEN_SEL_MUX = MAXDELAY FROM 
+   TIMEGRP "TNM_RDEN_SEL_MUX" TO TIMEGRP        "TNM_CLK0" TS_MC_CLK * 4; 
+   ignored during timing analysis.
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
+   information, see the TSI report.  Please consult the Xilinx Command Line 
+   Tools User Guide for information on generating a TSI report.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: NET "Ethernet_MAC/Ethernet_MAC/phy_tx_clk_i" MAXSKEW = 6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net skew is   5.941ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "Ethernet_MAC/Ethernet_MAC/phy_tx_clk_i" PERIOD = 40 ns 
+HIGH 14 ns;
+
+ 131 paths analyzed, 64 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  11.511ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "fpga_0_Ethernet_MAC_PHY_rx_clk_pin_IBUF" MAXSKEW = 6 
+ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net skew is   1.662ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "fpga_0_Ethernet_MAC_PHY_rx_clk_pin_IBUF" PERIOD = 40 ns 
+HIGH 14 ns;
+
+ 143 paths analyzed, 130 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  14.782ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/en_dqs<7>"    
+     MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.529ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/en_dqs<6>"    
+     MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.529ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/en_dqs<5>"    
+     MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.529ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/en_dqs<4>"    
+     MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.529ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/en_dqs<3>"    
+     MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.538ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/en_dqs<2>"    
+     MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.529ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/en_dqs<1>"    
+     MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.529ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/en_dqs<0>"    
+     MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.529ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/
+gen_dqs[7].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.838ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/
+gen_dqs[6].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.838ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/
+gen_dqs[5].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.805ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/
+gen_dqs[4].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.803ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/
+gen_dqs[3].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.803ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/
+gen_dqs[2].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.803ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/
+gen_dqs[1].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.805ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/u_ddr2_top/u_mem_if_top/u_phy_top/u_phy_io/
+gen_dqs[0].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.805ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TSTXOUT_Ethernet_MAC = MAXDELAY FROM TIMEGRP 
+"TXCLK_GRP_Ethernet_MAC" TO         TIMEGRP "PADS" 10 ns;
+
+ 5 paths analyzed, 5 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   2.577ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 
+50%;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   4.000ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_MC_CLK = PERIOD TIMEGRP "mc_clk" 5 ns HIGH 50%;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   3.990ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_MC_RD_DATA_SEL = MAXDELAY FROM TIMEGRP "TNM_RD_DATA_SEL" 
+TO TIMEGRP         "TNM_CLK0" TS_MC_CLK * 4;
+
+ 128 paths analyzed, 128 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   4.646ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_MC_PHY_INIT_DATA_SEL_0 = MAXDELAY FROM TIMEGRP 
+"TNM_PHY_INIT_DATA_SEL" TO         TIMEGRP "TNM_CLK0" TS_MC_CLK * 4;
+
+ 22 paths analyzed, 22 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   4.176ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_MC_PHY_INIT_DATA_SEL_90 = MAXDELAY FROM TIMEGRP 
+"TNM_PHY_INIT_DATA_SEL" TO         TIMEGRP "TNM_CLK90" TS_MC_CLK * 4;
+
+ 274 paths analyzed, 274 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   5.811ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_MC_GATE_DLY = MAXDELAY FROM TIMEGRP "TNM_GATE_DLY" TO 
+TIMEGRP "TNM_CLK0"         TS_MC_CLK * 4;
+
+ 40 paths analyzed, 40 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   2.823ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_MC_RDEN_DLY = MAXDELAY FROM TIMEGRP "TNM_RDEN_DLY" TO 
+TIMEGRP "TNM_CLK0"         TS_MC_CLK * 4;
+
+ 5 paths analyzed, 5 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   1.910ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_MC_CAL_RDEN_DLY = MAXDELAY FROM TIMEGRP 
+"TNM_CAL_RDEN_DLY" TO TIMEGRP         "TNM_CLK0" TS_MC_CLK * 4;
+
+ 5 paths analyzed, 5 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   1.906ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_MC_RDEN_SEL_MUX = MAXDELAY FROM TIMEGRP 
+"TNM_RDEN_SEL_MUX" TO TIMEGRP         "TNM_CLK0" TS_MC_CLK * 4;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_DQ_CE = MAXDELAY FROM TIMEGRP "TNM_DQ_CE_IDDR" TO TIMEGRP 
+"TNM_DQS_FLOPS"         1.9 ns;
+
+ 128 paths analyzed, 64 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   3.700ns.
+ Maximum delay is   1.874ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = 
+PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0" 
+TS_sys_clk_pin         * 1.25 PHASE 2 ns HIGH 50%;
+
+ 630 paths analyzed, 623 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   5.705ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT1 = 
+PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT1" 
+TS_sys_clk_pin         * 1.25 HIGH 50%;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   3.100ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT2 = 
+PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT2" 
+TS_sys_clk_pin         * 1.25 HIGH 50%;
+
+ 50654 paths analyzed, 11051 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   7.931ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT3 = 
+PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT3" 
+TS_sys_clk_pin         * 2 HIGH 50%;
+
+ 2 paths analyzed, 2 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   1.666ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT4 = 
+PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT4" 
+TS_sys_clk_pin         * 0.625 HIGH 50%;
+
+ 11100 paths analyzed, 3924 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   9.858ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: OFFSET = IN 6 ns BEFORE COMP 
+"fpga_0_Ethernet_MAC_PHY_rx_clk_pin";
+
+ 6 paths analyzed, 6 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Offset is  -2.250ns.
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_sys_clk_pin
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_sys_clk_pin                 |     10.000ns|      4.000ns|      9.914ns|            0|            0|            0|        62386|
+| TS_clock_generator_0_clock_gen|      8.000ns|      5.705ns|          N/A|            0|            0|          630|            0|
+| erator_0_SIG_PLL0_CLKOUT0     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|      8.000ns|      3.100ns|          N/A|            0|            0|            0|            0|
+| erator_0_SIG_PLL0_CLKOUT1     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|      8.000ns|      7.931ns|          N/A|            0|            0|        50654|            0|
+| erator_0_SIG_PLL0_CLKOUT2     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|      5.000ns|      1.666ns|          N/A|            0|            0|            2|            0|
+| erator_0_SIG_PLL0_CLKOUT3     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|     16.000ns|      9.858ns|          N/A|            0|            0|        11100|            0|
+| erator_0_SIG_PLL0_CLKOUT4     |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_MC_CLK
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_MC_CLK                      |      5.000ns|      3.990ns|      1.453ns|            0|            0|            0|          474|
+| TS_MC_RD_DATA_SEL             |     20.000ns|      4.646ns|          N/A|            0|            0|          128|            0|
+| TS_MC_PHY_INIT_DATA_SEL_0     |     20.000ns|      4.176ns|          N/A|            0|            0|           22|            0|
+| TS_MC_PHY_INIT_DATA_SEL_90    |     20.000ns|      5.811ns|          N/A|            0|            0|          274|            0|
+| TS_MC_GATE_DLY                |     20.000ns|      2.823ns|          N/A|            0|            0|           40|            0|
+| TS_MC_RDEN_DLY                |     20.000ns|      1.910ns|          N/A|            0|            0|            5|            0|
+| TS_MC_CAL_RDEN_DLY            |     20.000ns|      1.906ns|          N/A|            0|            0|            5|            0|
+| TS_MC_RDEN_SEL_MUX            |     20.000ns|          N/A|          N/A|            0|            0|            0|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock fpga_0_Ethernet_MAC_PHY_rx_clk_pin
+--------------------------------------+------------+------------+---------------------------------------+--------+
+                                      |Max Setup to|Max Hold to |                                       | Clock  |
+Source                                | clk (edge) | clk (edge) |Internal Clock(s)                      | Phase  |
+--------------------------------------+------------+------------+---------------------------------------+--------+
+fpga_0_Ethernet_MAC_PHY_dv_pin        |   -2.272(R)|    2.884(R)|fpga_0_Ethernet_MAC_PHY_rx_clk_pin_IBUF|   0.000|
+fpga_0_Ethernet_MAC_PHY_rx_data_pin<0>|   -2.356(R)|    2.978(R)|fpga_0_Ethernet_MAC_PHY_rx_clk_pin_IBUF|   0.000|
+fpga_0_Ethernet_MAC_PHY_rx_data_pin<1>|   -2.392(R)|    3.016(R)|fpga_0_Ethernet_MAC_PHY_rx_clk_pin_IBUF|   0.000|
+fpga_0_Ethernet_MAC_PHY_rx_data_pin<2>|   -2.403(R)|    3.025(R)|fpga_0_Ethernet_MAC_PHY_rx_clk_pin_IBUF|   0.000|
+fpga_0_Ethernet_MAC_PHY_rx_data_pin<3>|   -2.250(R)|    2.862(R)|fpga_0_Ethernet_MAC_PHY_rx_clk_pin_IBUF|   0.000|
+fpga_0_Ethernet_MAC_PHY_rx_er_pin     |   -2.267(R)|    2.879(R)|fpga_0_Ethernet_MAC_PHY_rx_clk_pin_IBUF|   0.000|
+--------------------------------------+------------+------------+---------------------------------------+--------+
+
+Clock fpga_0_Ethernet_MAC_PHY_tx_clk_pin to Pad
+--------------------------------------+------------+--------------------------------------+--------+
+                                      | clk (edge) |                                      | Clock  |
+Destination                           |   to PAD   |Internal Clock(s)                     | Phase  |
+--------------------------------------+------------+--------------------------------------+--------+
+fpga_0_Ethernet_MAC_PHY_tx_data_pin<0>|    9.331(F)|Ethernet_MAC/Ethernet_MAC/phy_tx_clk_i|  14.000|
+fpga_0_Ethernet_MAC_PHY_tx_data_pin<1>|    9.332(F)|Ethernet_MAC/Ethernet_MAC/phy_tx_clk_i|  14.000|
+fpga_0_Ethernet_MAC_PHY_tx_data_pin<2>|    9.363(F)|Ethernet_MAC/Ethernet_MAC/phy_tx_clk_i|  14.000|
+fpga_0_Ethernet_MAC_PHY_tx_data_pin<3>|    9.359(F)|Ethernet_MAC/Ethernet_MAC/phy_tx_clk_i|  14.000|
+fpga_0_Ethernet_MAC_PHY_tx_en_pin     |    9.207(F)|Ethernet_MAC/Ethernet_MAC/phy_tx_clk_i|  14.000|
+--------------------------------------+------------+--------------------------------------+--------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<0>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<0>|         |    1.802|         |    1.826|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<0>  |         |    1.802|         |    1.826|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<1>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<1>|         |    1.764|         |    1.788|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<1>  |         |    1.764|         |    1.788|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<2>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<2>|         |    1.790|         |    1.814|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<2>  |         |    1.790|         |    1.814|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<3>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<3>|         |    1.667|         |    1.691|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<3>  |         |    1.667|         |    1.691|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<4>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<4>|         |    1.779|         |    1.803|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<4>  |         |    1.779|         |    1.803|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<5>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<5>|         |    1.850|         |    1.874|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<5>  |         |    1.850|         |    1.874|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<6>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<6>|         |    1.792|         |    1.816|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<6>  |         |    1.792|         |    1.816|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<7>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<7>|         |    1.817|         |    1.841|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<7>  |         |    1.817|         |    1.841|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<0>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<0>|         |    1.802|         |    1.826|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<0>  |         |    1.802|         |    1.826|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<1>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<1>|         |    1.764|         |    1.788|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<1>  |         |    1.764|         |    1.788|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<2>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<2>|         |    1.790|         |    1.814|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<2>  |         |    1.790|         |    1.814|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<3>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<3>|         |    1.667|         |    1.691|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<3>  |         |    1.667|         |    1.691|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<4>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<4>|         |    1.779|         |    1.803|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<4>  |         |    1.779|         |    1.803|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<5>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<5>|         |    1.850|         |    1.874|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<5>  |         |    1.850|         |    1.874|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<6>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<6>|         |    1.792|         |    1.816|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<6>  |         |    1.792|         |    1.816|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<7>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_N_pin<7>|         |    1.817|         |    1.841|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<7>  |         |    1.817|         |    1.841|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_Ethernet_MAC_PHY_rx_clk_pin
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+fpga_0_Ethernet_MAC_PHY_rx_clk_pin|         |         |    5.174|    4.239|
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_Ethernet_MAC_PHY_tx_clk_pin
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+fpga_0_Ethernet_MAC_PHY_tx_clk_pin|    3.512|         |    4.029|         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_clk_1_sys_clk_pin
+------------------------+---------+---------+---------+---------+
+                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------+---------+---------+---------+---------+
+fpga_0_clk_1_sys_clk_pin|    9.858|    2.060|    4.279|    3.735|
+------------------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 63273 paths, 18 nets, and 22247 connections
+
+Design statistics:
+   Minimum period:  14.782ns   (Maximum frequency:  67.650MHz)
+   Maximum path delay from/to any node:   5.811ns
+   Maximum net skew:   5.941ns
+   Maximum net delay:   0.838ns
+
+
+Analysis completed Thu Feb 16 11:07:07 2012 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 318 MB
+
+
+

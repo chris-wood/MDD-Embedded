@@ -1,0 +1,10 @@
+for i in AES_sw.c; do cp $i sw; done
+for i in AES.h; do cp $i sw; done
+chmod -R +rw sw
+"C:/Impulse/CoDeveloper3/bin/impulse_export" -software -srcdirsw "-aC:/Impulse/CoDeveloper3/Architectures/xilinx_v5_plb4.xml" AES.xic "export"
+Impulse C Design Exporter
+Copyright 2002-2007, Impulse Accelerated Technologies, Inc.
+All rights reserved.
+Loading C:/Impulse/CoDeveloper3/Architectures/xilinx_v5_plb4.xml ...
+Loading C:/Impulse/CoDeveloper3/Architectures/Xilinx/PPC/PLB/cpu.xml ...
+Loading AES.xic ...

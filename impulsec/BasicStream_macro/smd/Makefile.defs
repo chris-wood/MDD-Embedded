@@ -1,0 +1,10 @@
+IMPULSEC_HOME=C:/Impulse/CoDeveloper3
+IMPULSEC_GCC_HOME=C:/Impulse/CoDeveloper3/MinGW
+SMD_HOME=C:/Impulse/CoDeveloper3/StageMaster
+PROJECT_NAME=BasicStream
+SW_SRC=BasicStream_sw.c
+SW_INC=BasicStream.h
+SMD_FILE=BasicStream.smd
+VHDL_DIR=hw
+VHDL_FILE=BasicStream_comp.vhd
+TARGET=BasicStream.exe

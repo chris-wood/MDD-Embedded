@@ -1,0 +1,1 @@
+ -p virtex5 -lang vhdl$(PROJECT_SEARCHPATHOPT) $(GLOBAL_SEARCHPATHOPT)   bubblesort/executable.elf -msg __xps/ise/xmsgprops.lst -s mti -X C:/Workspace/repo/examples/TestSystem/

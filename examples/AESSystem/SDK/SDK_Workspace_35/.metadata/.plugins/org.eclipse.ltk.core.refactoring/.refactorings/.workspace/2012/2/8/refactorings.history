@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;xilkernel_posix_threads_demo_0/src/co_init_aes.c&apos;" deleteContents="false" description="Delete resource &apos;xilkernel_posix_threads_demo_0/src/co_init_aes.c&apos;" element1="/xilkernel_posix_threads_demo_0/src/co_init_aes.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1330100089510"/>
+</session>

@@ -1,0 +1,78 @@
+Release 13.1 - pr_verify O.40b (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+Mon Jan 24 14:36:24 2011
+
+Command Line: /build/xfndry/O.40b/rtf/bin/lin64/unwrapped/pr_verify -o
+/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/Synth/BramSecond/pr_verify.log
+/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/planAhead/project_1/project_1.
+runs/config_1/config_1_routed.ncd
+/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/planAhead/project_1/project_1.
+runs/config_2/config_2_routed.ncd
+/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/planAhead/project_1/project_1.
+runs/config_3/config_3_routed.ncd
+
+Loading
+/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/planAhead/project_1/project_1.
+runs/config_1/config_1_routed.ncd:  Mon Jan 24 13:29:30 2011
+Loading
+/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/planAhead/project_1/project_1.
+runs/config_2/config_2_routed.ncd:  Mon Jan 24 14:29:47 2011
+Loading
+/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/planAhead/project_1/project_1.
+runs/config_3/config_3_routed.ncd:  Mon Jan 24 14:29:13 2011
+
+----------------------------------------
+Analyzing Designs:
+ 
+/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/planAhead/project_1/project_1.
+runs/config_1/config_1_routed.ncd
+ 
+/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/planAhead/project_1/project_1.
+runs/config_2/config_2_routed.ncd
+
+  Number of matched proxy logic bels          = 22
+  Number of matched external nets             = 23
+  Number of matched global clock nets         = 2
+  Number of matched Reconfigurable Partitions = 0
+
+SUCCESS!
+
+----------------------------------------
+Analyzing Designs:
+ 
+/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/planAhead/project_1/project_1.
+runs/config_2/config_2_routed.ncd
+ 
+/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/planAhead/project_1/project_1.
+runs/config_3/config_3_routed.ncd
+
+  Number of matched proxy logic bels          = 22
+  Number of matched external nets             = 23
+  Number of matched global clock nets         = 2
+  Number of matched Reconfigurable Partitions = 0
+
+SUCCESS!
+
+----------------------------------------
+Analyzing Designs:
+ 
+/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/planAhead/project_1/project_1.
+runs/config_3/config_3_routed.ncd
+ 
+/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/planAhead/project_1/project_1.
+runs/config_1/config_1_routed.ncd
+
+  Number of matched proxy logic bels          = 22
+  Number of matched external nets             = 23
+  Number of matched global clock nets         = 2
+  Number of matched Reconfigurable Partitions = 0
+
+SUCCESS!
+
+/build/xfndry/O.40b/rtf/bin/lin64/unwrapped/pr_verify
+/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/planAhead/project_1/project_1.
+runs/config_1/config_1_routed.ncd
+/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/planAhead/project_1/project_1.
+runs/config_2/config_2_routed.ncd
+/proj/UBM/WorkSpaces/woodsd/HD/PR/v6/xpr_bram_led/planAhead/project_1/project_1.
+runs/config_3/config_3_routed.ncd => PASS

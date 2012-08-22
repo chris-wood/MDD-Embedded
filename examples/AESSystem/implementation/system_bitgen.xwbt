@@ -1,0 +1,7 @@
+INFILE=C:\Workspace\TestSystem\implementation\system.ncd
+OUTFILE=C:\Workspace\TestSystem\implementation\system.bit
+FAMILY=Virtex5
+PART=xc5vfx70t-1ff1136
+WORKINGDIR=C:\Workspace\TestSystem\implementation
+LICENSE=ISE
+USER_INFO=174167273_174167274_174423194

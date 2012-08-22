@@ -1,0 +1,596 @@
+!SESSION 2012-02-08 15:42:21.174 -----------------------------------------------
+eclipse.buildId=Release 12.3 Build SDK_MS3.70d
+java.version=1.6.0_16
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\Workspace\ImpulseSystem\SDK\SDK_Workspace_35\
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-08 15:42:22.049
+!MESSAGE Cannot backup current configuration
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-08 15:42:22.080
+!MESSAGE Could not rename configuration temp file
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-08 15:42:22.080
+!MESSAGE Unable to save configuration file "C:\Xilinx\12.3\ISE_DS\EDK\eclipse\nt\eclipse\configuration\org.eclipse.update\platform.xml.tmp"
+!STACK 0
+java.io.IOException: Unable to save configuration file "C:\Xilinx\12.3\ISE_DS\EDK\eclipse\nt\eclipse\configuration\org.eclipse.update\platform.xml.tmp"
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.save(PlatformConfiguration.java:692)
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.save(PlatformConfiguration.java:576)
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.startup(PlatformConfiguration.java:717)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.getPlatformConfiguration(ConfigurationActivator.java:390)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.initialize(ConfigurationActivator.java:122)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.start(ConfigurationActivator.java:68)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:783)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:774)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:755)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:352)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:280)
+	at org.eclipse.ui.internal.ide.IDEWorkbenchPlugin.start(IDEWorkbenchPlugin.java:348)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:783)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:774)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:755)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:352)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:280)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:408)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:111)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:449)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:211)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:381)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:33)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:454)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:410)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:398)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:105)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClassInternal(Unknown Source)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:99)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-02-08 15:43:51.611
+!MESSAGE Indexed 'xilkernel_bsp_0' (0 sources, 7 headers) in 0.11 sec: 0 declarations; 0 references; 7 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-02-08 15:44:59.268
+!MESSAGE Indexed 'xilkernel_posix_threads_demo_0' (2 sources, 55 headers) in 0.28 sec: 1,361 declarations; 1,180 references; 3 unresolved inclusions; 0 syntax errors; 29 unresolved names (1.13%)
+!SESSION 2012-02-08 15:46:21.236 -----------------------------------------------
+eclipse.buildId=Release 12.3 Build SDK_MS3.70d
+java.version=1.6.0_16
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\Workspace\ImpulseSystem\SDK\SDK_Workspace_35\
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-08 15:46:22.127
+!MESSAGE Cannot backup current configuration
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-08 15:46:22.174
+!MESSAGE Could not rename configuration temp file
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-08 15:46:22.174
+!MESSAGE Unable to save configuration file "C:\Xilinx\12.3\ISE_DS\EDK\eclipse\nt\eclipse\configuration\org.eclipse.update\platform.xml.tmp"
+!STACK 0
+java.io.IOException: Unable to save configuration file "C:\Xilinx\12.3\ISE_DS\EDK\eclipse\nt\eclipse\configuration\org.eclipse.update\platform.xml.tmp"
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.save(PlatformConfiguration.java:692)
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.save(PlatformConfiguration.java:576)
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.startup(PlatformConfiguration.java:717)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.getPlatformConfiguration(ConfigurationActivator.java:390)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.initialize(ConfigurationActivator.java:122)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.start(ConfigurationActivator.java:68)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:783)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:774)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:755)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:352)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:280)
+	at org.eclipse.ui.internal.ide.IDEWorkbenchPlugin.start(IDEWorkbenchPlugin.java:348)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:783)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:774)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:755)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:352)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:280)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:408)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:111)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:449)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:211)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:381)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:33)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:454)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:410)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:398)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:105)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClassInternal(Unknown Source)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:99)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY org.eclipse.core.resources 2 10035 2012-02-08 15:46:22.283
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2012-02-08 22:06:15.343 -----------------------------------------------
+eclipse.buildId=Release 12.3 Build SDK_MS3.70d
+java.version=1.6.0_16
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\Workspace\ImpulseSystem\SDK\SDK_Workspace_35\
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-08 22:06:16.624
+!MESSAGE Cannot backup current configuration
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-08 22:06:16.687
+!MESSAGE Could not rename configuration temp file
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-08 22:06:16.687
+!MESSAGE Unable to save configuration file "C:\Xilinx\12.3\ISE_DS\EDK\eclipse\nt\eclipse\configuration\org.eclipse.update\platform.xml.tmp"
+!STACK 0
+java.io.IOException: Unable to save configuration file "C:\Xilinx\12.3\ISE_DS\EDK\eclipse\nt\eclipse\configuration\org.eclipse.update\platform.xml.tmp"
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.save(PlatformConfiguration.java:692)
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.save(PlatformConfiguration.java:576)
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.startup(PlatformConfiguration.java:717)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.getPlatformConfiguration(ConfigurationActivator.java:390)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.initialize(ConfigurationActivator.java:122)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.start(ConfigurationActivator.java:68)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:783)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:774)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:755)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:352)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:280)
+	at org.eclipse.ui.internal.ide.IDEWorkbenchPlugin.start(IDEWorkbenchPlugin.java:348)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:783)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:774)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:755)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:352)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:280)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:408)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:111)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:449)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:211)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:381)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:33)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:454)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:410)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:398)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:105)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClassInternal(Unknown Source)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:99)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY org.eclipse.ui.navigator 4 0 2012-02-08 22:35:17.515
+!MESSAGE No message.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.actions.CopyFilesAndFoldersOperation.isAccessible(CopyFilesAndFoldersOperation.java:1094)
+	at org.eclipse.ui.actions.CopyFilesAndFoldersOperation.validateImportDestinationInternal(CopyFilesAndFoldersOperation.java:1472)
+	at org.eclipse.ui.actions.CopyFilesAndFoldersOperation.validateImportDestination(CopyFilesAndFoldersOperation.java:1448)
+	at org.eclipse.cdt.internal.ui.navigator.CNavigatorDropAdapterAssistant.validateDrop(Unknown Source)
+	at org.eclipse.ui.navigator.CommonDropAdapter.validateDrop(CommonDropAdapter.java:243)
+	at org.eclipse.jface.viewers.ViewerDropAdapter.doDropValidation(ViewerDropAdapter.java:210)
+	at org.eclipse.jface.viewers.ViewerDropAdapter.dragEnter(ViewerDropAdapter.java:229)
+	at org.eclipse.ui.navigator.CommonDropAdapter.dragEnter(CommonDropAdapter.java:121)
+	at org.eclipse.swt.dnd.DNDListener.handleEvent(DNDListener.java:60)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1027)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1012)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:770)
+	at org.eclipse.swt.dnd.DropTarget.DragEnter(DropTarget.java:297)
+	at org.eclipse.swt.dnd.DropTarget$3.method3(DropTarget.java:243)
+	at org.eclipse.swt.internal.ole.win32.COMObject.callback3(COMObject.java:92)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2410)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3471)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+
+!ENTRY org.eclipse.ui.navigator 4 0 2012-02-08 22:35:17.515
+!MESSAGE No message.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.actions.CopyFilesAndFoldersOperation.isAccessible(CopyFilesAndFoldersOperation.java:1094)
+	at org.eclipse.ui.actions.CopyFilesAndFoldersOperation.validateImportDestinationInternal(CopyFilesAndFoldersOperation.java:1472)
+	at org.eclipse.ui.actions.CopyFilesAndFoldersOperation.validateImportDestination(CopyFilesAndFoldersOperation.java:1448)
+	at org.eclipse.cdt.internal.ui.navigator.CNavigatorDropAdapterAssistant.validateDrop(Unknown Source)
+	at org.eclipse.ui.navigator.CommonDropAdapter.validateDrop(CommonDropAdapter.java:243)
+	at org.eclipse.jface.viewers.ViewerDropAdapter.doDropValidation(ViewerDropAdapter.java:210)
+	at org.eclipse.jface.viewers.ViewerDropAdapter.dragOver(ViewerDropAdapter.java:260)
+	at org.eclipse.swt.dnd.DNDListener.handleEvent(DNDListener.java:80)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1027)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1012)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:770)
+	at org.eclipse.swt.dnd.DropTarget.DragOver(DropTarget.java:366)
+	at org.eclipse.swt.dnd.DropTarget$3.method4(DropTarget.java:250)
+	at org.eclipse.swt.internal.ole.win32.COMObject.callback4(COMObject.java:101)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2410)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3471)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+!SESSION 2012-02-15 09:52:50.089 -----------------------------------------------
+eclipse.buildId=Release 12.3 Build SDK_MS3.70d
+java.version=1.6.0_16
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\Workspace\ImpulseSystem\SDK\SDK_Workspace_35\
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-15 09:52:53.011
+!MESSAGE Cannot backup current configuration
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-15 09:52:53.105
+!MESSAGE Could not rename configuration temp file
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-15 09:52:53.105
+!MESSAGE Unable to save configuration file "C:\Xilinx\12.3\ISE_DS\EDK\eclipse\nt\eclipse\configuration\org.eclipse.update\platform.xml.tmp"
+!STACK 0
+java.io.IOException: Unable to save configuration file "C:\Xilinx\12.3\ISE_DS\EDK\eclipse\nt\eclipse\configuration\org.eclipse.update\platform.xml.tmp"
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.save(PlatformConfiguration.java:692)
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.save(PlatformConfiguration.java:576)
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.startup(PlatformConfiguration.java:717)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.getPlatformConfiguration(ConfigurationActivator.java:390)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.initialize(ConfigurationActivator.java:122)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.start(ConfigurationActivator.java:68)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:783)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:774)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:755)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:352)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:280)
+	at org.eclipse.ui.internal.ide.IDEWorkbenchPlugin.start(IDEWorkbenchPlugin.java:348)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:783)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:774)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:755)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:352)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:280)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:408)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:111)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:449)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:211)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:381)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:33)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:454)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:410)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:398)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:105)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClassInternal(Unknown Source)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:99)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+!SESSION 2012-02-15 14:00:25.020 -----------------------------------------------
+eclipse.buildId=Release 12.3 Build SDK_MS3.70d
+java.version=1.6.0_16
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\Workspace\ImpulseSystem\SDK\SDK_Workspace_35\
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-15 14:00:25.895
+!MESSAGE Cannot backup current configuration
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-15 14:00:25.942
+!MESSAGE Could not rename configuration temp file
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-15 14:00:25.942
+!MESSAGE Unable to save configuration file "C:\Xilinx\12.3\ISE_DS\EDK\eclipse\nt\eclipse\configuration\org.eclipse.update\platform.xml.tmp"
+!STACK 0
+java.io.IOException: Unable to save configuration file "C:\Xilinx\12.3\ISE_DS\EDK\eclipse\nt\eclipse\configuration\org.eclipse.update\platform.xml.tmp"
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.save(PlatformConfiguration.java:692)
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.save(PlatformConfiguration.java:576)
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.startup(PlatformConfiguration.java:717)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.getPlatformConfiguration(ConfigurationActivator.java:390)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.initialize(ConfigurationActivator.java:122)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.start(ConfigurationActivator.java:68)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:783)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:774)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:755)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:352)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:280)
+	at org.eclipse.ui.internal.ide.IDEWorkbenchPlugin.start(IDEWorkbenchPlugin.java:348)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:783)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:774)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:755)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:352)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:280)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:408)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:111)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:449)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:211)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:381)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:33)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:454)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:410)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:398)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:105)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClassInternal(Unknown Source)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:99)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+!SESSION 2012-02-16 11:42:15.257 -----------------------------------------------
+eclipse.buildId=Release 12.3 Build SDK_MS3.70d
+java.version=1.6.0_16
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\Workspace\ImpulseSystem\SDK\SDK_Workspace_35\
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-16 11:42:16.132
+!MESSAGE Cannot backup current configuration
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-16 11:42:16.179
+!MESSAGE Could not rename configuration temp file
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-16 11:42:16.179
+!MESSAGE Unable to save configuration file "C:\Xilinx\12.3\ISE_DS\EDK\eclipse\nt\eclipse\configuration\org.eclipse.update\platform.xml.tmp"
+!STACK 0
+java.io.IOException: Unable to save configuration file "C:\Xilinx\12.3\ISE_DS\EDK\eclipse\nt\eclipse\configuration\org.eclipse.update\platform.xml.tmp"
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.save(PlatformConfiguration.java:692)
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.save(PlatformConfiguration.java:576)
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.startup(PlatformConfiguration.java:717)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.getPlatformConfiguration(ConfigurationActivator.java:390)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.initialize(ConfigurationActivator.java:122)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.start(ConfigurationActivator.java:68)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:783)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:774)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:755)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:352)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:280)
+	at org.eclipse.ui.internal.ide.IDEWorkbenchPlugin.start(IDEWorkbenchPlugin.java:348)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:783)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:774)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:755)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:352)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:280)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:408)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:111)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:449)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:211)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:381)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:33)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:454)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:410)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:398)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:105)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClassInternal(Unknown Source)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:99)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+!SESSION 2012-02-19 14:57:45.452 -----------------------------------------------
+eclipse.buildId=Release 12.3 Build SDK_MS3.70d
+java.version=1.6.0_16
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\Workspace\ImpulseSystem\SDK\SDK_Workspace_35\
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-19 14:57:46.327
+!MESSAGE Cannot backup current configuration
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-19 14:57:46.374
+!MESSAGE Could not rename configuration temp file
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-19 14:57:46.374
+!MESSAGE Unable to save configuration file "C:\Xilinx\12.3\ISE_DS\EDK\eclipse\nt\eclipse\configuration\org.eclipse.update\platform.xml.tmp"
+!STACK 0
+java.io.IOException: Unable to save configuration file "C:\Xilinx\12.3\ISE_DS\EDK\eclipse\nt\eclipse\configuration\org.eclipse.update\platform.xml.tmp"
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.save(PlatformConfiguration.java:692)
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.save(PlatformConfiguration.java:576)
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.startup(PlatformConfiguration.java:717)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.getPlatformConfiguration(ConfigurationActivator.java:390)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.initialize(ConfigurationActivator.java:122)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.start(ConfigurationActivator.java:68)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:783)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:774)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:755)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:352)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:280)
+	at org.eclipse.ui.internal.ide.IDEWorkbenchPlugin.start(IDEWorkbenchPlugin.java:348)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:783)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:774)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:755)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:352)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:280)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:408)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:111)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:449)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:211)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:381)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:33)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:454)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:410)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:398)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:105)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClassInternal(Unknown Source)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:99)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)
+!SESSION 2012-02-20 08:59:55.639 -----------------------------------------------
+eclipse.buildId=Release 12.3 Build SDK_MS3.70d
+java.version=1.6.0_16
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\Workspace\ImpulseSystem\SDK\SDK_Workspace_35\
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-20 08:59:58.592
+!MESSAGE Cannot backup current configuration
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-20 08:59:58.655
+!MESSAGE Could not rename configuration temp file
+
+!ENTRY org.eclipse.update.configurator 4 0 2012-02-20 08:59:58.670
+!MESSAGE Unable to save configuration file "C:\Xilinx\12.3\ISE_DS\EDK\eclipse\nt\eclipse\configuration\org.eclipse.update\platform.xml.tmp"
+!STACK 0
+java.io.IOException: Unable to save configuration file "C:\Xilinx\12.3\ISE_DS\EDK\eclipse\nt\eclipse\configuration\org.eclipse.update\platform.xml.tmp"
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.save(PlatformConfiguration.java:692)
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.save(PlatformConfiguration.java:576)
+	at org.eclipse.update.internal.configurator.PlatformConfiguration.startup(PlatformConfiguration.java:717)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.getPlatformConfiguration(ConfigurationActivator.java:390)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.initialize(ConfigurationActivator.java:122)
+	at org.eclipse.update.internal.configurator.ConfigurationActivator.start(ConfigurationActivator.java:68)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:783)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:774)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:755)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:352)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:280)
+	at org.eclipse.ui.internal.ide.IDEWorkbenchPlugin.start(IDEWorkbenchPlugin.java:348)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:783)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:774)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:755)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:352)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:280)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:408)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:111)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:449)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:211)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:381)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:33)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:454)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:410)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:398)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:105)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClassInternal(Unknown Source)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:99)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1287)

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<DARoots Version="1" Minor="7">
+	<FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+		<Filter Type="EDIFSrcs"/>
+		<File Path="$PDATADIR/sources_1/hd.xml">
+			<FileInfo SFType="HDDb"/>
+		</File>
+		<File Path="$PDATADIR/sources_1/ports.xml">
+			<FileInfo SFType="PortsDb"/>
+		</File>
+		<File Path="$PDATADIR/sources_1/chipscope.xml">
+			<FileInfo SFType="ChipscopeDb"/>
+		</File>
+		<File Path="$PSRCDIR/sources_1/imports/Top.ngc">
+			<FileInfo>
+				<Attr Name="ImportPath" Val="C:/Users/Sam/Downloads/xpr_chris_project/xpr_bram_led/Synth/Top/Top.ngc"/>
+				<Attr Name="ImportTime" Val="1330284452"/>
+			</FileInfo>
+		</File>
+		<Config>
+			<Option Name="DesignMode" Val="GateLvl"/>
+			<Option Name="GateLvlMode" Val="EDIF"/>
+			<Option Name="TopFile" Val="$PSRCDIR/sources_1/imports/Top.ngc"/>
+			<Option Name="HDFlow" Val="TRUE"/>
+			<Option Name="PRFlow" Val="TRUE"/>
+		</Config>
+	</FileSet>
+</DARoots>
+

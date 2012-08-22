@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="ConstraintSystem" num="64" delta="new" >Constraint <arg fmt="%s" index="1">&lt;COMP &quot;out_counter[0]&quot; LOCATE = SITE &quot;AD21&quot; LEVEL 1;&gt; [config_1.pcf(6)]</arg> overrides constraint <arg fmt="%s" index="2">&lt;COMPGRP &quot;pblock_U2_RP_Count.IOB&quot; LOCATE = SITE &quot;IOB_X1Y28:IOB_X1Y81&quot; LEVEL 4;&gt; [config_1.pcf(37)]</arg> on the design object &apos;<arg fmt="%s" index="3">U2_RP_Count/out_counter[0]</arg>&apos;.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="64" delta="new" >Constraint <arg fmt="%s" index="1">&lt;COMP &quot;out_counter[1]&quot; LOCATE = SITE &quot;AH27&quot; LEVEL 1;&gt; [config_1.pcf(7)]</arg> overrides constraint <arg fmt="%s" index="2">&lt;COMPGRP &quot;pblock_U2_RP_Count.IOB&quot; LOCATE = SITE &quot;IOB_X1Y28:IOB_X1Y81&quot; LEVEL 4;&gt; [config_1.pcf(37)]</arg> on the design object &apos;<arg fmt="%s" index="3">U2_RP_Count/out_counter[1]</arg>&apos;.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="64" delta="new" >Constraint <arg fmt="%s" index="1">&lt;COMP &quot;out_counter[2]&quot; LOCATE = SITE &quot;AE21&quot; LEVEL 1;&gt; [config_1.pcf(8)]</arg> overrides constraint <arg fmt="%s" index="2">&lt;COMPGRP &quot;pblock_U2_RP_Count.IOB&quot; LOCATE = SITE &quot;IOB_X1Y28:IOB_X1Y81&quot; LEVEL 4;&gt; [config_1.pcf(37)]</arg> on the design object &apos;<arg fmt="%s" index="3">U2_RP_Count/out_counter[2]</arg>&apos;.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="64" delta="new" >Constraint <arg fmt="%s" index="1">&lt;COMP &quot;out_counter[3]&quot; LOCATE = SITE &quot;AH28&quot; LEVEL 1;&gt; [config_1.pcf(9)]</arg> overrides constraint <arg fmt="%s" index="2">&lt;COMPGRP &quot;pblock_U2_RP_Count.IOB&quot; LOCATE = SITE &quot;IOB_X1Y28:IOB_X1Y81&quot; LEVEL 4;&gt; [config_1.pcf(37)]</arg> on the design object &apos;<arg fmt="%s" index="3">U2_RP_Count/out_counter[3]</arg>&apos;.
+</msg>
+
+<msg type="warning" file="XCad" num="0" delta="new" >Component: <arg fmt="%s" index="1">test_count</arg> is LOC&apos;d at site <arg fmt="%s" index="2">IOB_X1Y40</arg>.
+This site is part of the private area group owned by Partition: <arg fmt="%s" index="3">pblock_U2_RP_Count</arg>.
+This component belongs to Partition: <arg fmt="%s" index="4">Static</arg>.
+</msg>
+
+<msg type="warning" file="XCad" num="0" delta="new" >Component: <arg fmt="%s" index="1">out_bram[7]</arg> is LOC&apos;d at site <arg fmt="%s" index="2">IOB_X1Y81</arg>.
+This site is part of the private area group owned by Partition: <arg fmt="%s" index="3">pblock_U2_RP_Count</arg>.
+This component belongs to Partition: <arg fmt="%s" index="4">Static</arg>.
+</msg>
+
+</messages>
+

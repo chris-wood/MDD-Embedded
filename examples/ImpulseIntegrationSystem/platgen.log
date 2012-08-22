@@ -1,0 +1,269 @@
+Release 12.3 - platgen Xilinx EDK 12.3 Build EDK_MS3.70d
+ (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Command Line: platgen -p xc5vfx70tff1136-1 -lang vhdl -msg
+__xps/ise/xmsgprops.lst system.mhs 
+
+Parse C:/Workspace/ImpulseIntegrationSystem/system.mhs ...
+
+Read MPD definitions ...
+
+Overriding IP level properties ...
+orig_family is virtex5
+INFO:EDK:1560 - IPNAME:ppc440mc_ddr2 INSTANCE:DDR2_SDRAM -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\ppc440mc_ddr2_v3_00_
+   c\data\ppc440mc_ddr2_v2_1_0.mpd line 103 - tcl is overriding PARAMETER
+   C_IODELAY_GRP value to DDR2_SDRAM
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor ppc440_0
+  (0b0000000000-0b0011111111) ppc440_0	
+  (0000000000-0x0fffffff) DDR2_SDRAM	ppc440_0_PPC440MC
+  (0x81000000-0x8100ffff) Ethernet_MAC	plb_v46_0
+  (0x81800000-0x8180ffff) xps_intc_0	plb_v46_0
+  (0x83c00000-0x83c0ffff) xps_timer_0	plb_v46_0
+  (0x84000000-0x8400ffff) RS232_Uart_1	plb_v46_0
+  (0xc0800000-0xc080ffff) plb_helloworldarch_0	plb_v46_0
+  (0xffffe000-0xffffffff) xps_bram_if_cntlr_1	plb_v46_0
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:plb_v46_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:plb_v46_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 6
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:plb_v46_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:plb_v46_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 128
+INFO:EDK:1560 - IPNAME:xps_bram_if_cntlr INSTANCE:xps_bram_if_cntlr_1 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_bram_if_cntlr_v1
+   _00_b\data\xps_bram_if_cntlr_v2_1_0.mpd line 73 - tool is overriding
+   PARAMETER C_SPLB_DWIDTH value to 128
+INFO:EDK:1560 - IPNAME:xps_bram_if_cntlr INSTANCE:xps_bram_if_cntlr_1 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_bram_if_cntlr_v1
+   _00_b\data\xps_bram_if_cntlr_v2_1_0.mpd line 74 - tool is overriding
+   PARAMETER C_SPLB_NUM_MASTERS value to 1
+INFO:EDK:1560 - IPNAME:xps_bram_if_cntlr INSTANCE:xps_bram_if_cntlr_1 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_bram_if_cntlr_v1
+   _00_b\data\xps_bram_if_cntlr_v2_1_0.mpd line 78 - tool is overriding
+   PARAMETER C_SPLB_SMALLEST_MASTER value to 128
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:xps_bram_if_cntlr_1_bram -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x2000
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:xps_bram_if_cntlr_1_bram -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 68 - tool is overriding PARAMETER
+   C_PORT_DWIDTH value to 64
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:xps_bram_if_cntlr_1_bram -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_NUM_WE
+   value to 8
+INFO:EDK:1560 - IPNAME:xps_uartlite INSTANCE:RS232_Uart_1 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_uartlite_v1_01_a
+   \data\xps_uartlite_v2_1_0.mpd line 71 - tool is overriding PARAMETER
+   C_SPLB_DWIDTH value to 128
+INFO:EDK:1560 - IPNAME:xps_ethernetlite INSTANCE:Ethernet_MAC -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_ethernetlite_v4_
+   00_a\data\xps_ethernetlite_v2_1_0.mpd line 74 - tool is overriding PARAMETER
+   C_SPLB_DWIDTH value to 128
+INFO:EDK:1560 - IPNAME:xps_ethernetlite INSTANCE:Ethernet_MAC -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_ethernetlite_v4_
+   00_a\data\xps_ethernetlite_v2_1_0.mpd line 79 - tool is overriding PARAMETER
+   C_SPLB_SMALLEST_MASTER value to 128
+INFO:EDK:1560 - IPNAME:xps_timer INSTANCE:xps_timer_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_timer_v1_02_a\da
+   ta\xps_timer_v2_1_0.mpd line 75 - tool is overriding PARAMETER C_SPLB_DWIDTH
+   value to 128
+INFO:EDK:1560 - IPNAME:xps_timer INSTANCE:xps_timer_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_timer_v1_02_a\da
+   ta\xps_timer_v2_1_0.mpd line 77 - tool is overriding PARAMETER
+   C_SPLB_MID_WIDTH value to 1
+INFO:EDK:1560 - IPNAME:xps_timer INSTANCE:xps_timer_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_timer_v1_02_a\da
+   ta\xps_timer_v2_1_0.mpd line 78 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 1
+INFO:EDK:1560 - IPNAME:xps_intc INSTANCE:xps_intc_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v2_01_a\dat
+   a\xps_intc_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_SPLB_DWIDTH
+   value to 128
+INFO:EDK:1560 - IPNAME:plb_helloworldarch INSTANCE:plb_helloworldarch_0 -
+   C:\Workspace\ImpulseIntegrationSystem\pcores\plb_helloworldarch_v1_00_a\data\
+   plb_helloworldarch_v2_1_0.mpd line 15 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 1
+INFO:EDK:1560 - IPNAME:plb_helloworldarch INSTANCE:plb_helloworldarch_0 -
+   C:\Workspace\ImpulseIntegrationSystem\pcores\plb_helloworldarch_v1_00_a\data\
+   plb_helloworldarch_v2_1_0.mpd line 16 - tool is overriding PARAMETER
+   C_SPLB_MID_WIDTH value to 1
+INFO:EDK:1560 - IPNAME:plb_helloworldarch INSTANCE:plb_helloworldarch_0 -
+   C:\Workspace\ImpulseIntegrationSystem\pcores\plb_helloworldarch_v1_00_a\data\
+   plb_helloworldarch_v2_1_0.mpd line 18 - tool is overriding PARAMETER
+   C_SPLB_DWIDTH value to 128
+
+Checking platform address map ...
+
+Checking platform configuration ...
+INFO:EDK:1563 - IPNAME:xps_ethernetlite INSTANCE:Ethernet_MAC -
+   C:\Workspace\ImpulseIntegrationSystem\system.mhs line 113 - This design
+   requires design constraints to guarantee performance.
+   Please refer to the data sheet for details.  
+   The PLB clock frequency must be greater than or equal to 50 MHz for 100 Mbs
+   Ethernet operation and greater than or equal to 5.0 MHz for 10 Mbs Ethernet
+   operation.
+IPNAME:plb_v46 INSTANCE:plb_v46_0 -
+C:\Workspace\ImpulseIntegrationSystem\system.mhs line 73 - 1 master(s) : 6
+slave(s)
+
+Checking port drivers...
+WARNING:EDK:2099 - PORT:Peripheral_Reset CONNECTOR:sys_periph_reset -
+   C:\Workspace\ImpulseIntegrationSystem\system.mhs line 251 - floating
+   connection!
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+INFO:EDK:1560 - IPNAME:ppc440_virtex5 INSTANCE:ppc440_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\ppc440_virtex5_v1_01
+   _a\data\ppc440_virtex5_v2_1_0.mpd line 122 - tcl is overriding PARAMETER
+   C_PPC440MC_ADDR_BASE value to 0x00000000
+INFO:EDK:1560 - IPNAME:ppc440_virtex5 INSTANCE:ppc440_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\ppc440_virtex5_v1_01
+   _a\data\ppc440_virtex5_v2_1_0.mpd line 123 - tcl is overriding PARAMETER
+   C_PPC440MC_ADDR_HIGH value to 0x0fffffff
+INFO:EDK:1560 - IPNAME:jtagppc_cntlr INSTANCE:jtagppc_cntlr_inst -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\jtagppc_cntlr_v2_01_
+   c\data\jtagppc_cntlr_v2_1_0.mpd line 68 - tcl is overriding PARAMETER
+   C_NUM_PPC_USED value to 1
+INFO:EDK:1560 - IPNAME:xps_intc INSTANCE:xps_intc_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v2_01_a\dat
+   a\xps_intc_v2_1_0.mpd line 77 - tcl is overriding PARAMETER C_NUM_INTR_INPUTS
+   value to 3
+INFO:EDK:1560 - IPNAME:xps_intc INSTANCE:xps_intc_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v2_01_a\dat
+   a\xps_intc_v2_1_0.mpd line 78 - tcl is overriding PARAMETER C_KIND_OF_INTR
+   value to 0b11111111111111111111111111111110
+INFO:EDK:1560 - IPNAME:xps_intc INSTANCE:xps_intc_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v2_01_a\dat
+   a\xps_intc_v2_1_0.mpd line 79 - tcl is overriding PARAMETER C_KIND_OF_EDGE
+   value to 0b11111111111111111111111111111111
+INFO:EDK:1560 - IPNAME:xps_intc INSTANCE:xps_intc_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v2_01_a\dat
+   a\xps_intc_v2_1_0.mpd line 80 - tcl is overriding PARAMETER C_KIND_OF_LVL
+   value to 0b11111111111111111111111111111110
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+Port present in Ethernet_MAC
+
+Running UPDATE Tcl procedures for OPTION PLATGEN_SYSLEVEL_UPDATE_PROC...
+INFO: The Ethernet_MAC core has constraints automatically generated by XPS in
+implementation/ethernet_mac_wrapper/ethernet_mac_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+INFO: The DDR2_SDRAM core has constraints automatically generated by XPS in
+implementation/ddr2_sdram_wrapper/ddr2_sdram_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+
+Modify defaults ...
+
+Creating stub ...
+
+Processing licensed instances ...
+Completion time: 0.00 seconds
+
+Creating hardware output directories ...
+
+Managing hardware (BBD-specified) netlist files ...
+
+Managing cache ...
+
+Elaborating instances ...
+IPNAME:bram_block INSTANCE:xps_bram_if_cntlr_1_bram -
+C:\Workspace\ImpulseIntegrationSystem\system.mhs line 93 - elaborating IP
+IPNAME:clock_generator INSTANCE:clock_generator_0 -
+C:\Workspace\ImpulseIntegrationSystem\system.mhs line 201 - elaborating IP
+ClkGen elaborate status: PASSED
+----------------------------------------
+
+Writing HDL for elaborated instances ...
+
+Inserting wrapper level ...
+Completion time: 0.00 seconds
+
+Constructing platform-level connectivity ...
+Completion time: 1.00 seconds
+
+Writing (top-level) BMM ...
+
+Writing (top-level and wrappers) HDL ...
+
+Generating synthesis project file ...
+
+Running XST synthesis ...
+
+INFO:EDK:2502 - The following instances are synthesized with XST. The MPD option
+   IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
+   synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
+INSTANCE:ppc440_0 - C:\Workspace\ImpulseIntegrationSystem\system.mhs line 52 -
+Running XST synthesis
+INSTANCE:plb_v46_0 - C:\Workspace\ImpulseIntegrationSystem\system.mhs line 73 -
+Running XST synthesis
+INSTANCE:xps_bram_if_cntlr_1 - C:\Workspace\ImpulseIntegrationSystem\system.mhs
+line 81 - Running XST synthesis
+INSTANCE:xps_bram_if_cntlr_1_bram -
+C:\Workspace\ImpulseIntegrationSystem\system.mhs line 93 - Running XST synthesis
+INSTANCE:rs232_uart_1 - C:\Workspace\ImpulseIntegrationSystem\system.mhs line 99
+- Running XST synthesis
+INSTANCE:ethernet_mac - C:\Workspace\ImpulseIntegrationSystem\system.mhs line
+113 - Running XST synthesis
+INSTANCE:ddr2_sdram - C:\Workspace\ImpulseIntegrationSystem\system.mhs line 134
+- Running XST synthesis
+INSTANCE:xps_timer_0 - C:\Workspace\ImpulseIntegrationSystem\system.mhs line 190
+- Running XST synthesis
+INSTANCE:clock_generator_0 - C:\Workspace\ImpulseIntegrationSystem\system.mhs
+line 201 - Running XST synthesis
+INSTANCE:jtagppc_cntlr_inst - C:\Workspace\ImpulseIntegrationSystem\system.mhs
+line 236 - Running XST synthesis
+INSTANCE:proc_sys_reset_0 - C:\Workspace\ImpulseIntegrationSystem\system.mhs
+line 242 - Running XST synthesis
+INSTANCE:xps_intc_0 - C:\Workspace\ImpulseIntegrationSystem\system.mhs line 254
+- Running XST synthesis
+
+Running NGCBUILD ...
+IPNAME:ppc440_0_wrapper INSTANCE:ppc440_0 -
+C:\Workspace\ImpulseIntegrationSystem\system.mhs line 52 - Running NGCBUILD
+IPNAME:rs232_uart_1_wrapper INSTANCE:rs232_uart_1 -
+C:\Workspace\ImpulseIntegrationSystem\system.mhs line 99 - Running NGCBUILD
+IPNAME:ethernet_mac_wrapper INSTANCE:ethernet_mac -
+C:\Workspace\ImpulseIntegrationSystem\system.mhs line 113 - Running NGCBUILD
+IPNAME:ddr2_sdram_wrapper INSTANCE:ddr2_sdram -
+C:\Workspace\ImpulseIntegrationSystem\system.mhs line 134 - Running NGCBUILD
+IPNAME:clock_generator_0_wrapper INSTANCE:clock_generator_0 -
+C:\Workspace\ImpulseIntegrationSystem\system.mhs line 201 - Running NGCBUILD
+IPNAME:xps_intc_0_wrapper INSTANCE:xps_intc_0 -
+C:\Workspace\ImpulseIntegrationSystem\system.mhs line 254 - Running NGCBUILD
+
+Rebuilding cache ...
+
+Total run time: 268.00 seconds

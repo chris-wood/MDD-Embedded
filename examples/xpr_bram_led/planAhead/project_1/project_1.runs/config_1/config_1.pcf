@@ -1,0 +1,82 @@
+//! **************************************************************************
+// Written by: Map M.70d on Sun Feb 26 17:47:09 2012
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "out_counter[0]" LOCATE = SITE "AD21" LEVEL 1;
+COMP "out_counter[1]" LOCATE = SITE "AH27" LEVEL 1;
+COMP "out_counter[2]" LOCATE = SITE "AE21" LEVEL 1;
+COMP "out_counter[3]" LOCATE = SITE "AH28" LEVEL 1;
+COMP "clk_n" LOCATE = SITE "H9" LEVEL 1;
+COMP "clk_p" LOCATE = SITE "J9" LEVEL 1;
+COMP "out_bram[0]" LOCATE = SITE "AD24" LEVEL 1;
+COMP "out_bram[1]" LOCATE = SITE "AE24" LEVEL 1;
+COMP "out_bram[2]" LOCATE = SITE "AG23" LEVEL 1;
+COMP "out_bram[3]" LOCATE = SITE "AB23" LEVEL 1;
+COMP "out_bram[4]" LOCATE = SITE "AE23" LEVEL 1;
+COMP "out_bram[5]" LOCATE = SITE "AE22" LEVEL 1;
+COMP "out_bram[6]" LOCATE = SITE "AC24" LEVEL 1;
+COMP "rst_n" LOCATE = SITE "G26" LEVEL 1;
+COMP "out_bram[7]" LOCATE = SITE "AC22" LEVEL 1;
+COMP "test_count" LOCATE = SITE "AP24" LEVEL 1;
+COMPGRP pblock_U2_RP_Count.SLICE = COMP "U2_RP_Count/count[3]" COMP
+        "U2_RP_Count/count[7]" COMP "U2_RP_Count/count[11]" COMP
+        "U2_RP_Count/count[15]" COMP "U2_RP_Count/count[19]" COMP
+        "U2_RP_Count/count[23]" COMP "U2_RP_Count/count[24]" COMP
+        "U2_RP_Count/OBUF_inst_led_out_0" COMP
+        "U2_RP_Count/OBUF_inst_led_out_1" COMP
+        "U2_RP_Count/OBUF_inst_led_out_2" COMP
+        "U2_RP_Count/OBUF_inst_led_out_3" COMP "U2_RP_Count/N3" COMP
+        "U2_RP_Count/data_out_FSM_FFd2" COMP "U2_RP_Count/rst_n" COMP
+        "U2_RP_Count/count[24]_PWR_1_o_equal_7_o<24>1" COMP
+        "U2_RP_Count/data_out_FSM_FFd1";
+COMPGRP "pblock_U2_RP_Count.SLICE" LOCATE = SITE "SLICE_X48Y80:SLICE_X75Y28"
+        LEVEL 4;
+COMPGRP pblock_U2_RP_Count.IOB = COMP "out_counter[0]" COMP "out_counter[1]"
+        COMP "out_counter[2]" COMP "out_counter[3]";
+COMPGRP "pblock_U2_RP_Count.IOB" LOCATE = SITE "IOB_X1Y28:IOB_X1Y81" LEVEL 4;
+COMPGRP pblock_U1_RP_Bram.SLICE = COMP "U1_RP_Bram/data_out(4)_PROXY" COMP
+        "U1_RP_Bram/addr[1]" COMP "U1_RP_Bram/data_out(7)_PROXY" COMP
+        "U1_RP_Bram/addr[10]" COMP "U1_RP_Bram/addr[7]" COMP
+        "U1_RP_Bram/addr[4]" COMP "U1_RP_Bram/addr[2]" COMP "U1_RP_Bram/en";
+COMPGRP "pblock_U1_RP_Bram.SLICE" LOCATE = SITE
+        "SLICE_X106Y160:SLICE_X117Y199" LEVEL 4;
+COMPGRP pblock_U1_RP_Bram.RAMB36 = COMP "U1_RP_Bram/RAMB36_inst/RAMB36_EXP";
+COMPGRP "pblock_U1_RP_Bram.RAMB36" LOCATE = SITE "RAMB36_X5Y32:RAMB36_X5Y39"
+        LEVEL 4;
+PIN U1_RP_Bram/RAMB36_inst/RAMB36_EXP_pins<62> = BEL
+        "U1_RP_Bram/RAMB36_inst/RAMB36_EXP" PINNAME CLKARDCLKL;
+PIN U1_RP_Bram/RAMB36_inst/RAMB36_EXP_pins<63> = BEL
+        "U1_RP_Bram/RAMB36_inst/RAMB36_EXP" PINNAME CLKARDCLKU;
+TIMEGRP U0_clocks_clkout0 = PIN "U1_RP_Bram/RAMB36_inst/RAMB36_EXP_pins<62>"
+        PIN "U1_RP_Bram/RAMB36_inst/RAMB36_EXP_pins<63>" BEL
+        "U2_RP_Count/count_0" BEL "U2_RP_Count/count_1" BEL
+        "U2_RP_Count/count_2" BEL "U2_RP_Count/count_3" BEL
+        "U2_RP_Count/count_4" BEL "U2_RP_Count/count_5" BEL
+        "U2_RP_Count/count_6" BEL "U2_RP_Count/count_7" BEL
+        "U2_RP_Count/count_8" BEL "U2_RP_Count/count_9" BEL
+        "U2_RP_Count/count_10" BEL "U2_RP_Count/count_11" BEL
+        "U2_RP_Count/count_12" BEL "U2_RP_Count/count_13" BEL
+        "U2_RP_Count/count_14" BEL "U2_RP_Count/count_15" BEL
+        "U2_RP_Count/count_16" BEL "U2_RP_Count/count_17" BEL
+        "U2_RP_Count/count_18" BEL "U2_RP_Count/count_19" BEL
+        "U2_RP_Count/count_20" BEL "U2_RP_Count/count_21" BEL
+        "U2_RP_Count/count_22" BEL "U2_RP_Count/count_23" BEL
+        "U2_RP_Count/count_24" BEL "U2_RP_Count/data_out_FSM_FFd2" BEL
+        "U2_RP_Count/data_out_FSM_FFd1" BEL "U0_clocks/clkout1_buf" BEL
+        "count_0" BEL "count_1" BEL "count_2" BEL "count_3" BEL "count_4" BEL
+        "count_5" BEL "count_6" BEL "count_7" BEL "count_8" BEL "count_9" BEL
+        "count_10" BEL "count_11" BEL "count_12" BEL "count_13" BEL "count_14"
+        BEL "count_15" BEL "count_16" BEL "count_17" BEL "count_18" BEL
+        "count_19" BEL "count_20" BEL "count_21" BEL "count_22" BEL "count_23"
+        BEL "count_24" BEL "count_25" BEL "count_26" BEL "count_27" BEL
+        "count_28" BEL "count_29" BEL "count_30" BEL "count_31" BEL "count_32"
+        BEL "count_33" BEL "count_34" BEL "test_count_r";
+PIN U0_clocks/mmcm_adv_inst_pins<2> = BEL "U0_clocks/mmcm_adv_inst" PINNAME
+        CLKIN1;
+TIMEGRP clk_p = PIN "U0_clocks/mmcm_adv_inst_pins<2>";
+TS_clk_p = PERIOD TIMEGRP "clk_p" 5 ns HIGH 50%;
+TS_U0_clocks_clkout0 = PERIOD TIMEGRP "U0_clocks_clkout0" TS_clk_p / 0.5 HIGH
+        50%;
+SCHEMATIC END;
+

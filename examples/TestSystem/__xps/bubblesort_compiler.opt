@@ -1,0 +1,20 @@
+ppc440_0
+BUBBLESORT_SOURCES = code/co_init.c code/BubbleSort_sw.c 
+BUBBLESORT_HEADERS = code/BubbleSort.h 
+BUBBLESORT_CC = powerpc-eabi-gcc
+BUBBLESORT_CC_SIZE = powerpc-eabi-size
+BUBBLESORT_CC_OPT = -O2
+BUBBLESORT_CFLAGS = 
+BUBBLESORT_CC_SEARCH = # -B
+BUBBLESORT_LIBPATH = -L./ppc440_0/lib/ # -L
+BUBBLESORT_INCLUDES = -I./ppc440_0/include/  -Icode/ # -I
+BUBBLESORT_LFLAGS = # -l
+BUBBLESORT_LINKER_SCRIPT = bubblesort/bubblesort_linker_script.ld
+BUBBLESORT_CC_DEBUG_FLAG =  -g 
+BUBBLESORT_CC_PROFILE_FLAG = # -pg
+BUBBLESORT_CC_GLOBPTR_FLAG= # -msdata=eabi
+BUBBLESORT_CC_INFERRED_FLAGS= -mcpu=440 
+BUBBLESORT_CC_START_ADDR_FLAG=  #  # -Wl,-defsym -Wl,_START_ADDR=
+BUBBLESORT_CC_STACK_SIZE_FLAG=  #  # -Wl,-defsym -Wl,_STACK_SIZE=
+BUBBLESORT_CC_HEAP_SIZE_FLAG=  #  # -Wl,-defsym -Wl,_HEAP_SIZE=
+                  $(BUBBLESORT_CC_INFERRED_FLAGS)  \

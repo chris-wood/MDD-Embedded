@@ -1,0 +1,15 @@
+run
+-ifn Top_xst.prj
+-ifmt mixed
+-ofn Top
+-ofmt NGC
+-p xc6vlx240t-1-ff1156
+-top top
+-keep_hierarchy YES
+-netlist_hierarchy as_optimized
+-glob_opt AllClockNets
+-read_cores YES
+-hierarchy_separator /
+-bus_delimiter <>
+-case maintain
+-iobuf YES

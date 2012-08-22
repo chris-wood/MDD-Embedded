@@ -1,0 +1,800 @@
+Release 12.3 - xst M.70d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "plb_helloworldarch_0_wrapper_xst.prj"
+Verilog Include Directory          : {"C:\Workspace\ImpulseIntegrationSystem\pcores\" "C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+
+---- Target Parameters
+Target Device                      : xc5vfx70tff1136-1
+Output File Name                   : "../implementation/plb_helloworldarch_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : plb_helloworldarch_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation/plb_helloworldarch_0_wrapper}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Workspace/ImpulseIntegrationSystem/pcores/impulse/hdl/vhdl/fifo_dc.vhd" in Library impulse.
+Entity <fifo_sync_dc> compiled.
+Entity <fifo_sync_dc> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Workspace/ImpulseIntegrationSystem/pcores/impulse/hdl/vhdl/fifo.vhd" in Library impulse.
+Entity <fifo> compiled.
+Entity <fifo> (Architecture <rtl>) compiled.
+Entity <sync_fifo> compiled.
+Entity <sync_fifo> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Workspace/ImpulseIntegrationSystem/pcores/impulse/hdl/vhdl/divmod.vhd" in Library impulse.
+Entity <divmod_u> compiled.
+Entity <divmod_u> (Architecture <rtl>) compiled.
+Entity <divmod_s> compiled.
+Entity <divmod_s> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Workspace/ImpulseIntegrationSystem/pcores/impulse/hdl/vhdl/gmem.vhd" in Library impulse.
+Entity <gmem> compiled.
+Entity <gmem> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Workspace/ImpulseIntegrationSystem/pcores/impulse/hdl/vhdl/csignal.vhd" in Library impulse.
+Entity <csignal> compiled.
+Entity <csignal> (Architecture <rtl>) compiled.
+Entity <csignal_nodata> compiled.
+Entity <csignal_nodata> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Workspace/ImpulseIntegrationSystem/pcores/impulse/hdl/vhdl/cregister.vhd" in Library impulse.
+Entity <cregister> compiled.
+Entity <cregister> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Workspace/ImpulseIntegrationSystem/pcores/impulse/hdl/vhdl/stream.vhd" in Library impulse.
+Entity <stream_reg> compiled.
+Entity <stream_reg> (Architecture <rtl>) compiled.
+Entity <stream> compiled.
+Entity <stream> (Architecture <rtl>) compiled.
+Entity <stream_bram> compiled.
+Entity <stream_bram> (Architecture <rtl>) compiled.
+Entity <stream_narrow> compiled.
+Entity <stream_narrow> (Architecture <rtl>) compiled.
+Entity <stream_widen> compiled.
+Entity <stream_widen> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Workspace/ImpulseIntegrationSystem/pcores/impulse/hdl/vhdl/stream_dc.vhd" in Library impulse.
+Entity <stream_dc> compiled.
+Entity <stream_dc> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Workspace/ImpulseIntegrationSystem/pcores/impulse/hdl/vhdl/mem_if.vhd" in Library impulse.
+Entity <impc_mem_expander> compiled.
+Entity <impc_mem_expander> (Architecture <a1>) compiled.
+Entity <impc_mem_level2> compiled.
+Entity <impc_mem_level2> (Architecture <a1>) compiled.
+Package <mem_if_components> compiled.
+Compiling vhdl file "C:/Workspace/ImpulseIntegrationSystem/pcores/impulse/hdl/vhdl/plbdma4.vhd" in Library impulse.
+Entity <plb_dma> compiled.
+Entity <plb_dma> (Architecture <a1>) compiled.
+Compiling vhdl file "C:/Workspace/ImpulseIntegrationSystem/pcores/impulse/hdl/vhdl/plb4_if.vhd" in Library impulse.
+Entity <impulse_plb_ipif> compiled.
+Entity <impulse_plb_ipif> (Architecture <imp>) compiled.
+Entity <plb_to_stream> compiled.
+Entity <plb_to_stream> (Architecture <rtl>) compiled.
+Entity <stream_to_plb> compiled.
+Entity <stream_to_plb> (Architecture <rtl>) compiled.
+Entity <plb_to_signal> compiled.
+Entity <plb_to_signal> (Architecture <rtl>) compiled.
+Entity <signal_to_plb> compiled.
+Entity <signal_to_plb> (Architecture <rtl>) compiled.
+Entity <plb_to_register> compiled.
+Entity <plb_to_register> (Architecture <rtl>) compiled.
+Entity <register_to_plb> compiled.
+Entity <register_to_plb> (Architecture <rtl>) compiled.
+Package <plb_if> compiled.
+Compiling vhdl file "C:/Workspace/ImpulseIntegrationSystem/pcores/impulse/hdl/vhdl/impack.vhd" in Library impulse.
+Package <components> compiled.
+Package body <components> compiled.
+Compiling vhdl file "C:/Workspace/ImpulseIntegrationSystem/pcores/plb_HelloWorldArch_v1_00_a/hdl/vhdl/HelloWorld_comp.vhd" in Library plb_HelloWorldArch_v1_00_a.
+Package <external_components> compiled.
+Entity <DoText> compiled.
+Entity <DoText> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Workspace/ImpulseIntegrationSystem/pcores/plb_HelloWorldArch_v1_00_a/hdl/vhdl/HelloWorld_top.vhd" in Library plb_HelloWorldArch_v1_00_a.
+Entity <HelloWorldArch> compiled.
+Entity <HelloWorldArch> (Architecture <structure>) compiled.
+Compiling vhdl file "C:/Workspace/ImpulseIntegrationSystem/pcores/plb_HelloWorldArch_v1_00_a/hdl/vhdl/plb_HelloWorldArch.vhd" in Library plb_HelloWorldArch_v1_00_a.
+Entity <plb_HelloWorldArch> compiled.
+Entity <plb_HelloWorldArch> (Architecture <impl>) compiled.
+Compiling vhdl file "C:/Workspace/ImpulseIntegrationSystem/hdl/plb_helloworldarch_0_wrapper.vhd" in Library work.
+Entity <plb_helloworldarch_0_wrapper> compiled.
+Entity <plb_helloworldarch_0_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <plb_helloworldarch_0_wrapper> in library <work> (architecture <STRUCTURE>).
+
+Analyzing hierarchy for entity <plb_helloworldarch> in library <plb_HelloWorldArch_v1_00_a> (architecture <impl>) with generics.
+	C_SPLB_AWIDTH = 32
+	C_SPLB_DWIDTH = 128
+	C_SPLB_MID_WIDTH = 1
+	C_SPLB_NUM_MASTERS = 1
+	c_baseaddr = "11000000100000000000000000000000"
+	c_family = "virtex5"
+	c_highaddr = "11000000100000001111111111111111"
+
+Analyzing hierarchy for entity <impulse_plb_ipif> in library <impulse> (architecture <imp>) with generics.
+	C_BASEADDR = "11000000100000000000000000000000"
+	C_HIGHADDR = "11000000100000001111111111111111"
+	C_IPIF_AWIDTH = 5
+	C_SPLB_AWIDTH = 32
+	C_SPLB_DWIDTH = 128
+	C_SPLB_MID_WIDTH = 1
+	C_SPLB_NUM_MASTERS = 1
+
+Analyzing hierarchy for entity <plb_to_stream> in library <impulse> (architecture <rtl>) with generics.
+	C_SPLB_DWIDTH = 128
+	datawidth = 8
+
+Analyzing hierarchy for entity <stream_to_plb> in library <impulse> (architecture <rtl>) with generics.
+	C_SPLB_DWIDTH = 128
+	datawidth = 8
+
+Analyzing hierarchy for entity <HelloWorldArch> in library <plb_HelloWorldArch_v1_00_a> (architecture <structure>).
+
+Analyzing hierarchy for entity <DoText> in library <plb_HelloWorldArch_v1_00_a> (architecture <rtl>).
+
+Analyzing hierarchy for entity <stream> in library <impulse> (architecture <rtl>) with generics.
+	addrwidth = 1
+	datawidth = 8
+
+Analyzing hierarchy for entity <fifo> in library <impulse> (architecture <rtl>) with generics.
+	ADDRESSWIDTH = 1
+	DATAWIDTH = 9
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <plb_helloworldarch_0_wrapper> in library <work> (Architecture <STRUCTURE>).
+Entity <plb_helloworldarch_0_wrapper> analyzed. Unit <plb_helloworldarch_0_wrapper> generated.
+
+Analyzing generic Entity <plb_helloworldarch> in library <plb_HelloWorldArch_v1_00_a> (Architecture <impl>).
+	C_SPLB_AWIDTH = 32
+	C_SPLB_DWIDTH = 128
+	C_SPLB_MID_WIDTH = 1
+	C_SPLB_NUM_MASTERS = 1
+	c_baseaddr = "11000000100000000000000000000000"
+	c_family = "virtex5"
+	c_highaddr = "11000000100000001111111111111111"
+INFO:Xst:1561 - "C:/Workspace/ImpulseIntegrationSystem/pcores/plb_HelloWorldArch_v1_00_a/hdl/vhdl/plb_HelloWorldArch.vhd" line 226: Mux is complete : default of case is discarded
+Entity <plb_helloworldarch> analyzed. Unit <plb_helloworldarch> generated.
+
+Analyzing generic Entity <impulse_plb_ipif> in library <impulse> (Architecture <imp>).
+	C_BASEADDR = "11000000100000000000000000000000"
+	C_HIGHADDR = "11000000100000001111111111111111"
+	C_IPIF_AWIDTH = 5
+	C_SPLB_AWIDTH = 32
+	C_SPLB_DWIDTH = 128
+	C_SPLB_MID_WIDTH = 1
+	C_SPLB_NUM_MASTERS = 1
+INFO:Xst:2679 - Register <MasterMask1> in unit <impulse_plb_ipif> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <impulse_plb_ipif> analyzed. Unit <impulse_plb_ipif> generated.
+
+Analyzing generic Entity <plb_to_stream> in library <impulse> (Architecture <rtl>).
+	C_SPLB_DWIDTH = 128
+	datawidth = 8
+Entity <plb_to_stream> analyzed. Unit <plb_to_stream> generated.
+
+Analyzing generic Entity <stream_to_plb> in library <impulse> (Architecture <rtl>).
+	C_SPLB_DWIDTH = 128
+	datawidth = 8
+Entity <stream_to_plb> analyzed. Unit <stream_to_plb> generated.
+
+Analyzing Entity <HelloWorldArch> in library <plb_HelloWorldArch_v1_00_a> (Architecture <structure>).
+Entity <HelloWorldArch> analyzed. Unit <HelloWorldArch> generated.
+
+Analyzing Entity <DoText> in library <plb_HelloWorldArch_v1_00_a> (Architecture <rtl>).
+Entity <DoText> analyzed. Unit <DoText> generated.
+
+Analyzing generic Entity <stream> in library <impulse> (Architecture <rtl>).
+	addrwidth = 1
+	datawidth = 8
+Entity <stream> analyzed. Unit <stream> generated.
+
+Analyzing generic Entity <fifo> in library <impulse> (Architecture <rtl>).
+	ADDRESSWIDTH = 1
+	DATAWIDTH = 9
+Entity <fifo> analyzed. Unit <fifo> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <MasterMask2> in unit <impulse_plb_ipif> has a constant value of 1 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <impulse_plb_ipif>.
+    Related source file is "C:/Workspace/ImpulseIntegrationSystem/pcores/impulse/hdl/vhdl/plb4_if.vhd".
+WARNING:Xst:646 - Signal <MasterId<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 5-bit register for signal <Bus2IP_raddr>.
+    Found 128-bit register for signal <Sl_rdDBus>.
+    Found 1-bit register for signal <RdCe1>.
+    Found 1-bit register for signal <RdCe2>.
+    Found 1-bit register for signal <Sl_Mbusy_i<0>>.
+    Found 1-bit register for signal <WrCe1>.
+    Summary:
+	inferred 137 D-type flip-flop(s).
+Unit <impulse_plb_ipif> synthesized.
+
+
+Synthesizing Unit <plb_to_stream>.
+    Related source file is "C:/Workspace/ImpulseIntegrationSystem/pcores/impulse/hdl/vhdl/plb4_if.vhd".
+WARNING:Xst:647 - Input <plb_wdata<127:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <plb_read> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <error>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <plb_to_stream> synthesized.
+
+
+Synthesizing Unit <stream_to_plb>.
+    Related source file is "C:/Workspace/ImpulseIntegrationSystem/pcores/impulse/hdl/vhdl/plb4_if.vhd".
+WARNING:Xst:647 - Input <plb_wdata> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <plb_waddr<0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <plb_write> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit register for signal <data>.
+    Found 1-bit register for signal <eos>.
+    Found 1-bit register for signal <error>.
+    Found 1-bit register for signal <valid>.
+    Summary:
+	inferred  35 D-type flip-flop(s).
+Unit <stream_to_plb> synthesized.
+
+
+Synthesizing Unit <DoText>.
+    Related source file is "C:/Workspace/ImpulseIntegrationSystem/pcores/plb_HelloWorldArch_v1_00_a/hdl/vhdl/HelloWorld_comp.vhd".
+WARNING:Xst:647 - Input <sclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <r_suif_tmp> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <r_c> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <newState> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+INFO:Xst:1799 - State finished is never reached in FSM <thisState>.
+INFO:Xst:1799 - State b3s0 is never reached in FSM <thisState>.
+    Found finite state machine <FSM_0> for signal <thisState>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | stateEn                   (positive)           |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | init                                           |
+    | Power Up State     | init                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 8-bit register for signal <r_input_stream>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   8 D-type flip-flop(s).
+Unit <DoText> synthesized.
+
+
+Synthesizing Unit <fifo>.
+    Related source file is "C:/Workspace/ImpulseIntegrationSystem/pcores/impulse/hdl/vhdl/fifo.vhd".
+    Found 2x9-bit dual-port RAM <Mram_mem> for signal <mem>.
+    Found 1-bit xor2 for signal <empty$xor0000> created at line 82.
+    Found 1-bit xor2 for signal <full$xor0000> created at line 81.
+    Found 1-bit register for signal <in_ptr<0>>.
+    Found 1-bit adder for signal <next_ptr<0>>.
+    Found T flip-flop for signal <out_ptr<0>>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 T-type flip-flop(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <fifo> synthesized.
+
+
+Synthesizing Unit <stream>.
+    Related source file is "C:/Workspace/ImpulseIntegrationSystem/pcores/impulse/hdl/vhdl/stream.vhd".
+Unit <stream> synthesized.
+
+
+Synthesizing Unit <HelloWorldArch>.
+    Related source file is "C:/Workspace/ImpulseIntegrationSystem/pcores/plb_HelloWorldArch_v1_00_a/hdl/vhdl/HelloWorld_top.vhd".
+Unit <HelloWorldArch> synthesized.
+
+
+Synthesizing Unit <plb_helloworldarch>.
+    Related source file is "C:/Workspace/ImpulseIntegrationSystem/pcores/plb_HelloWorldArch_v1_00_a/hdl/vhdl/plb_HelloWorldArch.vhd".
+WARNING:Xst:647 - Input <PLB_wrPrim> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_MSize> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdBurst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_SAValid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrPendReq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrPendPri> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_UABus> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdPendReq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdPendPri> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_size> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_busLock> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_BE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_reqPri> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_lockErr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrBurst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_TAttribute> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdPrim> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_type> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <Plb2IP_waddr<2:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Plb2IP_raddr<2:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Plb2IP_CS> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <plb_helloworldarch> synthesized.
+
+
+Synthesizing Unit <plb_helloworldarch_0_wrapper>.
+    Related source file is "C:/Workspace/ImpulseIntegrationSystem/hdl/plb_helloworldarch_0_wrapper.vhd".
+Unit <plb_helloworldarch_0_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 2x9-bit dual-port RAM                                 : 2
+# Adders/Subtractors                                   : 2
+ 1-bit adder                                           : 2
+# Registers                                            : 14
+ 1-bit register                                        : 10
+ 128-bit register                                      : 1
+ 32-bit register                                       : 1
+ 5-bit register                                        : 1
+ 8-bit register                                        : 1
+# Toggle Registers                                     : 2
+ T flip-flop                                           : 2
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <plb_helloworldarch_0/HelloWorldArch_0/DoText0/thisState/FSM> on signal <thisState[1:5]> with one-hot encoding.
+----------------------
+ State    | Encoding
+----------------------
+ init     | 00001
+ b0s0     | 00010
+ b1s0     | 00100
+ b1s1     | 10000
+ b2s0     | 01000
+ b3s0     | unreached
+ finished | unreached
+----------------------
+WARNING:Xst:2404 -  FFs/Latches <data<31:8>> (without init value) have a constant value of 0 in block <stream_to_plb>.
+
+Synthesizing (advanced) Unit <fifo>.
+INFO:Xst:3031 - HDL ADVISOR - The RAM <Mram_mem> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2-word x 9-bit                      |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <_and0000>      | high     |
+    |     addrA          | connected to signal <in_ptr>        |          |
+    |     diA            | connected to signal <din>           |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 2-word x 9-bit                      |          |
+    |     addrB          | connected to signal <out_ptr>       |          |
+    |     doB            | connected to signal <dout>          |          |
+    -----------------------------------------------------------------------
+Unit <fifo> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# RAMs                                                 : 2
+ 2x9-bit dual-port distributed RAM                     : 2
+# Adders/Subtractors                                   : 2
+ 1-bit adder                                           : 2
+# Registers                                            : 161
+ Flip-Flops                                            : 161
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <plb_helloworldarch_0_wrapper> ...
+
+Optimizing unit <impulse_plb_ipif> ...
+
+Optimizing unit <stream_to_plb> ...
+
+Optimizing unit <DoText> ...
+
+Optimizing unit <fifo> ...
+
+Optimizing unit <plb_helloworldarch> ...
+WARNING:Xst:1710 - FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_37> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_38> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_39> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_40> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_41> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_42> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_43> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_44> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_45> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_46> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_47> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_48> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_49> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_50> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_51> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_52> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_53> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_54> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_55> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_56> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_57> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_58> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_59> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_60> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_61> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_62> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_63> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_64> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_65> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_0> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_1> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_2> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_3> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_4> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_5> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_6> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_7> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_8> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_9> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_10> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_11> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_12> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_13> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_14> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_15> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_16> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_17> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_18> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_19> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_20> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_21> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_22> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_23> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_32> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_33> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_34> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_35> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_36> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_99> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_100> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_101> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_102> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_103> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_104> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_105> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_106> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_107> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_108> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_109> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_110> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_111> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_112> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_113> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_114> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_115> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_116> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_117> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_118> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_119> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_120> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_121> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_122> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_123> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_124> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_125> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_126> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_127> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_66> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_67> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_68> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_69> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_70> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_71> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_72> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_73> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_74> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_75> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_76> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_77> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_78> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_79> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_80> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_81> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_82> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_83> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_84> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_85> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_86> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_87> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_88> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_89> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_90> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_91> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_93> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_96> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_97> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_helloworldarch_0/ipif/Sl_rdDBus_98> (without init value) has a constant value of 0 in block <plb_helloworldarch_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <plb_helloworldarch_0/ipif/Bus2IP_raddr_0> of sequential type is unconnected in block <plb_helloworldarch_0_wrapper>.
+WARNING:Xst:2677 - Node <plb_helloworldarch_0/ipif/Bus2IP_raddr_1> of sequential type is unconnected in block <plb_helloworldarch_0_wrapper>.
+WARNING:Xst:2677 - Node <plb_helloworldarch_0/ipif/Bus2IP_raddr_2> of sequential type is unconnected in block <plb_helloworldarch_0_wrapper>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+FlipFlop plb_helloworldarch_0/HelloWorldArch_0/inst0/fifo_1/out_ptr_0_0 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 47
+ Flip-Flops                                            : 47
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/plb_helloworldarch_0_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 401
+
+Cell Usage :
+# BELS                             : 71
+#      GND                         : 1
+#      INV                         : 4
+#      LUT2                        : 4
+#      LUT3                        : 2
+#      LUT4                        : 16
+#      LUT5                        : 7
+#      LUT6                        : 35
+#      MUXF7                       : 2
+# FlipFlops/Latches                : 47
+#      FD                          : 18
+#      FDC                         : 23
+#      FDCE                        : 5
+#      FDP                         : 1
+# RAMS                             : 8
+#      RAM32M                      : 2
+#      RAM32X1D                    : 6
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vfx70tff1136-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              47  out of  44800     0%  
+ Number of Slice LUTs:                   88  out of  44800     0%  
+    Number used as Logic:                68  out of  44800     0%  
+    Number used as Memory:               20  out of  13120     0%  
+       Number used as RAM:               20
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     91
+   Number with an unused Flip Flop:      44  out of     91    48%  
+   Number with an unused LUT:             3  out of     91     3%  
+   Number of fully used LUT-FF pairs:    44  out of     91    48%  
+   Number of unique control sets:         7
+
+IO Utilization: 
+ Number of IOs:                         401
+ Number of bonded IOBs:                   0  out of    640     0%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                            | Load  |
+-----------------------------------+------------------------------------------------------------------+-------+
+PLB_Clk                            | NONE(plb_helloworldarch_0/HelloWorldArch_0/inst0/fifo_1/in_ptr_0)| 55    |
+-----------------------------------+------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+PLB_Rst                            | NONE                   | 29    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 2.871ns (Maximum Frequency: 348.311MHz)
+   Minimum input arrival time before clock: 4.991ns
+   Maximum output required time after clock: 0.471ns
+   Maximum combinational path delay: 1.995ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PLB_Clk'
+  Clock period: 2.871ns (frequency: 348.311MHz)
+  Total number of paths / destination ports: 481 / 79
+-------------------------------------------------------------------------
+Delay:               2.871ns (Levels of Logic = 1)
+  Source:            plb_helloworldarch_0/HelloWorldArch_0/inst0/fifo_1/Mram_mem23 (RAM)
+  Destination:       plb_helloworldarch_0/HelloWorldArch_0/inst1/fifo_1/Mram_mem1 (RAM)
+  Source Clock:      PLB_Clk rising
+  Destination Clock: PLB_Clk rising
+
+  Data Path: plb_helloworldarch_0/HelloWorldArch_0/inst0/fifo_1/Mram_mem23 to plb_helloworldarch_0/HelloWorldArch_0/inst1/fifo_1/Mram_mem1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAM32X1D:WCLK->DPO   15   1.372   0.557  plb_helloworldarch_0/HelloWorldArch_0/inst0/fifo_1/Mram_mem23 (plb_helloworldarch_0/HelloWorldArch_0/inst0/fifo_out<8>)
+     LUT6:I5->O            5   0.094   0.358  plb_helloworldarch_0/HelloWorldArch_0/inst1/fifo_1/_and00001 (plb_helloworldarch_0/HelloWorldArch_0/inst1/fifo_1/_and0000)
+     RAM32M:WE                 0.490          plb_helloworldarch_0/HelloWorldArch_0/inst1/fifo_1/Mram_mem1
+    ----------------------------------------
+    Total                      2.871ns (1.956ns logic, 0.915ns route)
+                                       (68.1% logic, 31.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PLB_Clk'
+  Total number of paths / destination ports: 727 / 32
+-------------------------------------------------------------------------
+Offset:              4.991ns (Levels of Logic = 5)
+  Source:            PLB_PAValid (PAD)
+  Destination:       plb_helloworldarch_0/HelloWorldArch_0/inst1/fifo_1/out_ptr_0_0 (FF)
+  Destination Clock: PLB_Clk rising
+
+  Data Path: PLB_PAValid to plb_helloworldarch_0/HelloWorldArch_0/inst1/fifo_1/out_ptr_0_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT6:I0->O            2   0.094   0.978  plb_helloworldarch_0/ipif/CS018 (plb_helloworldarch_0/ipif/CS018)
+     LUT5:I0->O            5   0.094   0.732  plb_helloworldarch_0/ipif/CS0201 (Sl_addrAck)
+     LUT3:I0->O            4   0.094   0.989  plb_helloworldarch_0/ipif/Bus2IP_CS11 (plb_helloworldarch_0/Plb2IP_WrCE)
+     LUT5:I0->O           12   0.094   0.540  plb_helloworldarch_0/p_Consumer_input_stream_if/error_and00001 (plb_helloworldarch_0/p_Consumer_input_stream_if/error_and0000)
+     LUT4:I3->O            1   0.094   0.336  plb_helloworldarch_0/HelloWorldArch_0/inst1/fifo_1/out_ptr_0_and00001 (plb_helloworldarch_0/HelloWorldArch_0/inst1/fifo_1/out_ptr_0_and0000)
+     FDCE:CE                   0.213          plb_helloworldarch_0/HelloWorldArch_0/inst1/fifo_1/out_ptr_0_0
+    ----------------------------------------
+    Total                      4.991ns (1.416ns logic, 3.575ns route)
+                                       (28.4% logic, 71.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PLB_Clk'
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Offset:              0.471ns (Levels of Logic = 0)
+  Source:            plb_helloworldarch_0/ipif/RdCe1 (FF)
+  Destination:       Sl_rdComp (PAD)
+  Source Clock:      PLB_Clk rising
+
+  Data Path: plb_helloworldarch_0/ipif/RdCe1 to Sl_rdComp
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             17   0.471   0.000  plb_helloworldarch_0/ipif/RdCe1 (plb_helloworldarch_0/ipif/RdCe1)
+    ----------------------------------------
+    Total                      0.471ns (0.471ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 86 / 3
+-------------------------------------------------------------------------
+Delay:               1.995ns (Levels of Logic = 2)
+  Source:            PLB_ABus<26> (PAD)
+  Destination:       Sl_wrDAck (PAD)
+
+  Data Path: PLB_ABus<26> to Sl_wrDAck
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT6:I0->O            2   0.094   1.074  plb_helloworldarch_0/ipif/CS054 (plb_helloworldarch_0/ipif/CS054)
+     LUT6:I0->O            0   0.094   0.000  plb_helloworldarch_0/ipif/WrCe01 (Sl_wrComp)
+    ----------------------------------------
+    Total                      1.995ns (0.921ns logic, 1.074ns route)
+                                       (46.2% logic, 53.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.47 secs
+ 
+--> 
+
+Total memory usage is 182576 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  152 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
+

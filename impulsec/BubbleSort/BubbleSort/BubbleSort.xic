@@ -1,0 +1,425 @@
+<?xml version='1.0'?>
+<!DOCTYPE fileset PUBLIC "" "">
+<fileset>
+  <file name="BubbleSort.sic">
+    <proc name="Sorter" type="void">
+      <io name="input" type="stream" mode="in" ctype="signed" size="32"/>
+      <io name="output" type="stream" mode="out" ctype="signed" size="32"/>
+      <variable name="nSample" width="32" signed="true"/>
+      <memory name="samples" width="32" depth="32" signed="true" bounds="32">
+      </memory>
+      <variable name="index" width="32" signed="true"/>
+      <variable name="innerIndex" width="32" signed="true"/>
+      <variable name="NUM_LOOPS" width="32" signed="false"/>
+      <variable name="counter" width="32" signed="true"/>
+      <variable name="suif_tmp" width="32" signed="true"/>
+      <variable name="suif_tmp0" width="32" signed="true"/>
+      <variable name="suif_tmp1" width="32" signed="true"/>
+      <variable name="suif_tmp2" width="32" signed="true"/>
+      <variable name="suif_tmp3" width="32" signed="true"/>
+      <variable name="suif_tmp4" width="32" signed="true"/>
+      <variable name="suif_tmp5" width="32" signed="true"/>
+      <variable name="suif_tmp6" width="32" signed="true"/>
+      <variable name="suif_tmp7" width="32" signed="true"/>
+      <variable name="suif_tmp00" width="32" signed="true"/>
+      <variable name="suif_tmp_0" width="32" signed="true"/>
+      <variable name="suif_tmp8" width="32" signed="true"/>
+      <assign name="nSample" iid="i298" line="22" file="BubbleSort_hw.c">
+        <const value="0" width="32" signed="true" iid="i4629432"/>
+      </assign>
+      <assign name="NUM_LOOPS" iid="i299" line="26" file="BubbleSort_hw.c">
+        <const value="10000" width="32" signed="false" iid="i4624744"/>
+      </assign>
+      <assign name="counter" iid="i300" line="27" file="BubbleSort_hw.c">
+        <const value="0" width="32" signed="true" iid="i4624672"/>
+      </assign>
+      <assign name="index" iid="i301" line="30" file="BubbleSort_hw.c">
+        <const value="0" width="32" signed="true" iid="i4674928"/>
+      </assign>
+      <loop for="index 0 &lt; 32 1">
+        <body>
+          <assign name="suif_tmp8" iid="i302">
+            <binop op="&lt;" signed="true" float="0" iid="i259">
+              <var name="index"/>
+              <const value="32" width="32" signed="true" iid="i1244072"/>
+            </binop>
+          </assign>
+          <break iid="i263" cond="!suif_tmp8"/>
+          <store iid="i13" line="32" file="BubbleSort_hw.c">
+            <arrayref iid="i14" tsize="32">
+              <const sym="samples" offset="0" iid="i15"/>
+              <var name="index"/>
+            </arrayref>
+            <const value="0" width="32" signed="true" iid="i1244072"/>
+          </store>
+          <assign name="index" iid="i303">
+            <binop op="+" signed="true" float="0" iid="i264">
+              <var name="index"/>
+              <const value="1" width="32" signed="true" iid="i1244072"/>
+            </binop>
+          </assign>
+        </body>
+        <cond>
+          <true iid="i265">
+            <const value="1" width="32" signed="true" iid="i1244648"/>
+          </true>
+        </cond>
+      </loop>
+      <loop line="30" file="BubbleSort_hw.c">
+        <body>
+          <assign name="index" iid="i304" line="38" file="BubbleSort_hw.c">
+            <const value="0" width="32" signed="true" iid="i4622872"/>
+          </assign>
+          <exec op="open" iid="i30" line="39" file="BubbleSort_hw.c">
+            <var name="input"/>
+          </exec>
+          <loop line="41" file="BubbleSort_hw.c">
+            <body>
+              <assign name="suif_tmp" iid="i305">
+                <binop op="==" signed="true" float="0" iid="i45">
+                  <cast signed="false" tosigned="true" width="32" float="0" fromfloat="0" iid="i46">
+                    <cast signed="false" tosigned="false" width="32" float="0" fromfloat="0" iid="i47">
+                      <read signed="true" iid="i48">
+                        <var name="input"/>
+                        <assign name="nSample" iid="i306">
+                          <var name="input"/>
+                        </assign>
+                      </read>
+                    </cast>
+                  </cast>
+                  <const value="0" width="32" signed="true" iid="i1243944"/>
+                </binop>
+              </assign>
+              <break iid="i267" cond="!suif_tmp"/>
+              <assign name="suif_tmp00" iid="i307" line="43" file="BubbleSort_hw.c">
+                <var name="index"/>
+              </assign>
+              <assign name="index" iid="i308">
+                <binop op="+" signed="true" float="0" iid="i60">
+                  <var name="suif_tmp00"/>
+                  <const value="1" width="32" signed="true" iid="i1243944"/>
+                </binop>
+              </assign>
+              <store iid="i62">
+                <arrayref iid="i63" tsize="32">
+                  <const sym="samples" offset="0" iid="i64"/>
+                  <var name="suif_tmp00"/>
+                </arrayref>
+                <var name="nSample"/>
+              </store>
+            </body>
+            <cond>
+              <true iid="i66">
+                <const value="1" width="32" signed="true" iid="i1244528"/>
+              </true>
+            </cond>
+          </loop>
+          <exec op="readclose" iid="i79" line="46" file="BubbleSort_hw.c">
+            <var name="input"/>
+          </exec>
+          <assign name="counter" iid="i309" line="49" file="BubbleSort_hw.c">
+            <const value="0" width="32" signed="true" iid="i4643488"/>
+          </assign>
+          <if>
+            <cond>
+              <true iid="i310">
+                <const value="1" signed="false" iid="i311"/>
+              </true>
+            </cond>
+            <then>
+              <loop>
+                <body>
+                  <assign name="index" iid="i312" line="51" file="BubbleSort_hw.c">
+                    <const value="0" width="32" signed="true" iid="i4668528"/>
+                  </assign>
+                  <assign name="suif_tmp1" iid="i313">
+                    <binop op="&lt;" signed="true" float="0" iid="i269">
+                      <var name="index"/>
+                      <const value="32" width="32" signed="true" iid="i1243880"/>
+                    </binop>
+                  </assign>
+                  <if>
+                    <cond>
+                      <true iid="i272">
+                        <var name="suif_tmp1"/>
+                      </true>
+                    </cond>
+                    <then>
+                      <assign name="suif_tmp_0" iid="i314">
+                        <binop op="==" signed="true" float="0" iid="i103">
+                          <binop op="%" signed="true" float="0" iid="i104">
+                            <var name="counter"/>
+                            <const value="2" width="32" signed="true" iid="i1243176"/>
+                          </binop>
+                          <const value="0" width="32" signed="true" iid="i1243752"/>
+                        </binop>
+                      </assign>
+                      <loop for="index 0 &lt; 32 1">
+                        <body>
+                          <assign name="innerIndex" iid="i315" line="53" file="BubbleSort_hw.c">
+                            <const value="0" width="32" signed="true" iid="i4648264"/>
+                          </assign>
+                          <loop for="innerIndex 0 &lt; 31 1">
+                            <body>
+                              <assign name="suif_tmp3" iid="i316">
+                                <binop op="&lt;" signed="true" float="0" iid="i275">
+                                  <var name="innerIndex"/>
+                                  <const value="31" width="32" signed="true" iid="i1243496"/>
+                                </binop>
+                              </assign>
+                              <break iid="i279" cond="!suif_tmp3"/>
+                              <if line="55" file="BubbleSort_hw.c">
+                                <cond>
+                                  <true iid="i102">
+                                    <var name="suif_tmp_0"/>
+                                  </true>
+                                </cond>
+                                <then>
+                                  <assign name="suif_tmp4" iid="i317" line="57" file="BubbleSort_hw.c">
+                                    <binop op="&lt;" signed="true" float="0" iid="i111">
+                                      <arrayref iid="i113" tsize="32">
+                                        <const sym="samples" offset="0" iid="i114"/>
+                                        <binop op="+" signed="true" float="0" iid="i115">
+                                          <var name="innerIndex"/>
+                                          <const value="1" width="32" signed="true" iid="i1241704"/>
+                                        </binop>
+                                      </arrayref>
+                                      <arrayref iid="i119" tsize="32">
+                                        <const sym="samples" offset="0" iid="i120"/>
+                                        <var name="innerIndex"/>
+                                      </arrayref>
+                                    </binop>
+                                  </assign>
+                                  <if>
+                                    <cond>
+                                      <true iid="i110">
+                                        <var name="suif_tmp4"/>
+                                      </true>
+                                    </cond>
+                                    <then>
+                                      <assign name="nSample" iid="i318" line="59" file="BubbleSort_hw.c">
+                                        <arrayref iid="i125" tsize="32">
+                                          <const sym="samples" offset="0" iid="i126"/>
+                                          <binop op="+" signed="true" float="0" iid="i127">
+                                            <var name="innerIndex"/>
+                                            <const value="1" width="32" signed="true" iid="i1242152"/>
+                                          </binop>
+                                        </arrayref>
+                                      </assign>
+                                      <store iid="i131" line="60" file="BubbleSort_hw.c">
+                                        <arrayref iid="i132" tsize="32">
+                                          <const sym="samples" offset="0" iid="i133"/>
+                                          <binop op="+" signed="true" float="0" iid="i134">
+                                            <var name="innerIndex"/>
+                                            <const value="1" width="32" signed="true" iid="i1242088"/>
+                                          </binop>
+                                        </arrayref>
+                                        <arrayref iid="i137" tsize="32">
+                                          <const sym="samples" offset="0" iid="i138"/>
+                                          <var name="innerIndex"/>
+                                        </arrayref>
+                                      </store>
+                                      <store iid="i141" line="61" file="BubbleSort_hw.c">
+                                        <arrayref iid="i142" tsize="32">
+                                          <const sym="samples" offset="0" iid="i143"/>
+                                          <var name="innerIndex"/>
+                                        </arrayref>
+                                        <var name="nSample"/>
+                                      </store>
+                                    </then>
+                                    <else>
+                                    </else>
+                                  </if>
+                                </then>
+                                <else>
+                                  <assign name="suif_tmp5" iid="i319" line="66" file="BubbleSort_hw.c">
+                                    <binop op="&lt;" signed="true" float="0" iid="i149">
+                                      <arrayref iid="i151" tsize="32">
+                                        <const sym="samples" offset="0" iid="i152"/>
+                                        <var name="innerIndex"/>
+                                      </arrayref>
+                                      <arrayref iid="i155" tsize="32">
+                                        <const sym="samples" offset="0" iid="i156"/>
+                                        <binop op="+" signed="true" float="0" iid="i157">
+                                          <var name="innerIndex"/>
+                                          <const value="1" width="32" signed="true" iid="i1241704"/>
+                                        </binop>
+                                      </arrayref>
+                                    </binop>
+                                  </assign>
+                                  <if>
+                                    <cond>
+                                      <true iid="i148">
+                                        <var name="suif_tmp5"/>
+                                      </true>
+                                    </cond>
+                                    <then>
+                                      <assign name="nSample" iid="i320" line="68" file="BubbleSort_hw.c">
+                                        <arrayref iid="i163" tsize="32">
+                                          <const sym="samples" offset="0" iid="i164"/>
+                                          <binop op="+" signed="true" float="0" iid="i165">
+                                            <var name="innerIndex"/>
+                                            <const value="1" width="32" signed="true" iid="i1242152"/>
+                                          </binop>
+                                        </arrayref>
+                                      </assign>
+                                      <store iid="i169" line="69" file="BubbleSort_hw.c">
+                                        <arrayref iid="i170" tsize="32">
+                                          <const sym="samples" offset="0" iid="i171"/>
+                                          <binop op="+" signed="true" float="0" iid="i172">
+                                            <var name="innerIndex"/>
+                                            <const value="1" width="32" signed="true" iid="i1242088"/>
+                                          </binop>
+                                        </arrayref>
+                                        <arrayref iid="i175" tsize="32">
+                                          <const sym="samples" offset="0" iid="i176"/>
+                                          <var name="innerIndex"/>
+                                        </arrayref>
+                                      </store>
+                                      <store iid="i179" line="70" file="BubbleSort_hw.c">
+                                        <arrayref iid="i180" tsize="32">
+                                          <const sym="samples" offset="0" iid="i181"/>
+                                          <var name="innerIndex"/>
+                                        </arrayref>
+                                        <var name="nSample"/>
+                                      </store>
+                                    </then>
+                                    <else>
+                                    </else>
+                                  </if>
+                                </else>
+                              </if>
+                              <assign name="innerIndex" iid="i321">
+                                <binop op="+" signed="true" float="0" iid="i280">
+                                  <var name="innerIndex"/>
+                                  <const value="1" width="32" signed="true" iid="i1243496"/>
+                                </binop>
+                              </assign>
+                            </body>
+                            <cond>
+                              <true iid="i281">
+                                <const value="1" width="32" signed="true" iid="i1244048"/>
+                              </true>
+                            </cond>
+                          </loop>
+                          <assign name="index" iid="i322" line="53" file="BubbleSort_hw.c">
+                            <binop op="+" signed="true" float="0" iid="i283">
+                              <var name="index"/>
+                              <const value="1" width="32" signed="true" iid="i1243624"/>
+                            </binop>
+                          </assign>
+                          <assign name="suif_tmp2" iid="i323">
+                            <binop op="&lt;" signed="true" float="0" iid="i284">
+                              <var name="index"/>
+                              <const value="32" width="32" signed="true" iid="i1243624"/>
+                            </binop>
+                          </assign>
+                        </body>
+                        <cond>
+                          <true iid="i286">
+                            <var name="suif_tmp2"/>
+                          </true>
+                        </cond>
+                      </loop>
+                    </then>
+                    <else>
+                    </else>
+                  </if>
+                  <assign name="counter" iid="i324" line="49" file="BubbleSort_hw.c">
+                    <binop op="+" signed="true" float="0" iid="i200">
+                      <var name="counter"/>
+                      <const value="1" width="32" signed="true" iid="i1243880"/>
+                    </binop>
+                  </assign>
+                  <assign name="suif_tmp0" iid="i325" line="49" file="BubbleSort_hw.c">
+                    <binop op="&lt;" signed="false" float="0" iid="i204">
+                      <cast signed="true" tosigned="false" width="32" float="0" fromfloat="0" iid="i205">
+                        <var name="counter"/>
+                      </cast>
+                      <const value="10000" width="32" signed="false" iid="i1243880"/>
+                    </binop>
+                  </assign>
+                </body>
+                <cond>
+                  <true iid="i203">
+                    <var name="suif_tmp0"/>
+                  </true>
+                </cond>
+              </loop>
+            </then>
+            <else>
+            </else>
+          </if>
+          <exec op="open" iid="i207" line="78" file="BubbleSort_hw.c">
+            <var name="output"/>
+          </exec>
+          <assign name="index" iid="i326" line="79" file="BubbleSort_hw.c">
+            <const value="0" width="32" signed="true" iid="i4645176"/>
+          </assign>
+          <loop for="index 0 &lt; 32 1">
+            <body>
+              <assign name="suif_tmp6" iid="i327">
+                <binop op="&lt;" signed="true" float="0" iid="i288">
+                  <var name="index"/>
+                  <const value="32" width="32" signed="true" iid="i1243944"/>
+                </binop>
+              </assign>
+              <break iid="i292" cond="!suif_tmp6"/>
+              <assign name="suif_tmp7" iid="i328" line="81" file="BubbleSort_hw.c">
+                <arrayref iid="i227" tsize="32">
+                  <const sym="samples" offset="0" iid="i228"/>
+                  <var name="index"/>
+                </arrayref>
+              </assign>
+              <store target="io" iid="i224">
+                <var name="output"/>
+                <var name="suif_tmp7"/>
+              </store>
+              <assign name="index" iid="i329">
+                <binop op="+" signed="true" float="0" iid="i295">
+                  <var name="index"/>
+                  <const value="1" width="32" signed="true" iid="i1243944"/>
+                </binop>
+              </assign>
+            </body>
+            <cond>
+              <true iid="i296">
+                <const value="1" width="32" signed="true" iid="i1244528"/>
+              </true>
+            </cond>
+          </loop>
+          <exec op="writeclose" iid="i239" line="83" file="BubbleSort_hw.c">
+            <var name="output"/>
+          </exec>
+        </body>
+        <cond>
+          <true iid="i241">
+            <const value="1" signed="false" iid="i241"/>
+          </true>
+        </cond>
+      </loop>
+      <return iid="i247" line="86" file="BubbleSort_hw.c">
+      </return>
+    </proc>
+    <config name="BubbleSort_arch" arch="Generic">
+      <signature name="Producer">
+        <io name="input" type="stream" mode="out" ctype="signed" size="32"/>
+      </signature>
+      <signature name="Sorter">
+        <io name="input" type="stream" mode="in" ctype="signed" size="32"/>
+        <io name="output" type="stream" mode="out" ctype="signed" size="32"/>
+      </signature>
+      <signature name="Consumer">
+        <io name="output" type="stream" mode="in" ctype="signed" size="32"/>
+      </signature>
+      <process name="Producer" fun="Producer" type="sp" loc="" argc="1">
+      </process>
+      <process name="Sorter" fun="Sorter" type="hp" loc="pe0" argc="2">
+      </process>
+      <process name="Consumer" fun="Consumer" type="sp" loc="" argc="1">
+      </process>
+      <connect src="Producer.input" dst="Sorter.input" size="32" type="stream" name="input" inst="-1" kind=""/>
+      <connect src="Sorter.output" dst="Consumer.output" size="32" type="stream" name="output" inst="-1" kind=""/>
+    </config>
+  </file>
+</fileset>

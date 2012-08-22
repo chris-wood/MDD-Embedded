@@ -1,0 +1,593 @@
+<?xml version='1.0'?>
+<!DOCTYPE design>
+<design architecture="C:\Impulse\CoDeveloper3\Architectures\xilinx_v5_plb4.xml" pedirs="0">
+  <stagemaster version="4.4" build="Jul 25 2011"/>
+  <pe loc="pe0" lang="vhdl">
+    <header>
+-- TARGET: VHDL
+    </header>
+    <include>
+library impulse;
+use impulse.components.all;
+    </include>
+    <component name="Sorter">
+      <ports>
+        <port name="input" type="stream" mode="in" size="32"/>
+        <port name="output" type="stream" mode="out" size="32"/>
+      </ports>
+      <variables>
+        <variable name="nSample" width="32" nets="i298 i306 i318 i320"/>
+        <memory name="samples" width="32" depth="32" nets="i13 i62 i113 i119 i125 i131 i137 i141 i151 i155 i163 i169 i175 i179 i227"/>
+        <variable name="index" width="32" nets="i301 i303 i304 i308 i312 i322 i326 i329"/>
+        <variable name="innerIndex" width="32" nets="i315 i321"/>
+        <variable name="NUM_LOOPS" width="32" nets="i299"/>
+        <variable name="counter" width="32" nets="i300 i309 i324"/>
+        <variable name="suif_tmp" width="32" nets="i305"/>
+        <variable name="suif_tmp0" width="32" nets="i325"/>
+        <variable name="suif_tmp1" width="32" nets="i313"/>
+        <variable name="suif_tmp2" width="32" nets="i323"/>
+        <variable name="suif_tmp3" width="32" nets="i316"/>
+        <variable name="suif_tmp4" width="32" nets="i317"/>
+        <variable name="suif_tmp5" width="32" nets="i319"/>
+        <variable name="suif_tmp6" width="32" nets="i327"/>
+        <variable name="suif_tmp7" width="32" nets="i328"/>
+        <variable name="suif_tmp00" width="32" nets="i307"/>
+        <variable name="suif_tmp_0" width="32" nets="i314"/>
+        <variable name="suif_tmp8" width="32" nets="i302"/>
+        <variable name="r_e_g_0" width="5" nets="i115 i127 i157 i165"/>
+        <variable name="r_e_g_1" width="5" nets="i134 i172"/>
+      </variables>
+      <control>
+        <state name="init">
+          <transition dst="b0s0"/>
+        </state>
+        <state name="b0s0">
+          <transition dst="b1s0"/>
+        </state>
+        <state name="b1s0">
+          <transition dst="b1s0" cond="ni302_suif_tmp8"/>
+          <transition dst="b2s0" cond="!ni302_suif_tmp8"/>
+        </state>
+        <state name="b2s0">
+          <transition dst="b3s0"/>
+        </state>
+        <state name="b3s0" enable="input.rd_accept">
+          <transition dst="b4s0" cond="!ni305_suif_tmp"/>
+          <transition dst="b3s1"/>
+        </state>
+        <state name="b3s1">
+          <transition dst="b3s2"/>
+        </state>
+        <state name="b3s2">
+          <transition dst="b3s0"/>
+        </state>
+        <state name="b4s0" enable="input.eos">
+          <transition dst="b5s0"/>
+        </state>
+        <state name="b5s0">
+          <transition dst="b6s0" cond="ni313_suif_tmp1"/>
+          <transition dst="b14s0" cond="!ni313_suif_tmp1"/>
+        </state>
+        <state name="b6s0">
+          <transition dst="b7s0"/>
+        </state>
+        <state name="b7s0">
+          <transition dst="b8s0" cond="r_suif_tmp_0"/>
+          <transition dst="b10s0" cond="!r_suif_tmp_0"/>
+        </state>
+        <state name="b8s0">
+          <transition dst="b8s1"/>
+        </state>
+        <state name="b8s1">
+          <transition dst="b9s0" cond="ni317_suif_tmp4"/>
+          <transition dst="b12s0" cond="!ni317_suif_tmp4"/>
+        </state>
+        <state name="b9s0">
+          <transition dst="b9s1"/>
+        </state>
+        <state name="b9s1">
+          <transition dst="b9s2"/>
+        </state>
+        <state name="b9s2">
+          <transition dst="b12s0"/>
+        </state>
+        <state name="b10s0">
+          <transition dst="b10s1"/>
+        </state>
+        <state name="b10s1">
+          <transition dst="b11s0" cond="ni319_suif_tmp5"/>
+          <transition dst="b12s0" cond="!ni319_suif_tmp5"/>
+        </state>
+        <state name="b11s0">
+          <transition dst="b11s1"/>
+        </state>
+        <state name="b11s1">
+          <transition dst="b11s2"/>
+        </state>
+        <state name="b11s2">
+          <transition dst="b12s0"/>
+        </state>
+        <state name="b12s0">
+          <transition dst="b8s0" cond="r_suif_tmp_0 ni316_suif_tmp3"/>
+          <transition dst="b10s0" cond="!r_suif_tmp_0 ni316_suif_tmp3"/>
+          <transition dst="b13s0" cond="!ni316_suif_tmp3"/>
+        </state>
+        <state name="b13s0">
+          <transition dst="b7s0" cond="ni323_suif_tmp2"/>
+          <transition dst="b14s0" cond="!ni323_suif_tmp2"/>
+        </state>
+        <state name="b14s0">
+          <transition dst="b5s0" cond="ni325_suif_tmp0"/>
+          <transition dst="b15s0" cond="!ni325_suif_tmp0"/>
+        </state>
+        <state name="b15s0">
+          <transition dst="b16s0"/>
+        </state>
+        <state name="b16s0">
+          <transition dst="b16s1"/>
+        </state>
+        <state name="b16s1" enable="output.wr_accept">
+          <transition dst="b16s0" cond="ni327_suif_tmp6"/>
+          <transition dst="b17s0" cond="!ni327_suif_tmp6"/>
+        </state>
+        <state name="b17s0" enable="output.wr_accept">
+          <transition dst="b2s0"/>
+        </state>
+        <state name="b18s0">
+          <transition dst="finished"/>
+        </state>
+        <state name="finished"/>
+      </control>
+      <blocks>
+        <datapath block="b0" states="b0s0">
+          <eq dst="ni298_nSample">
+            <const value="0" width="32"/>
+          </eq>
+          <eq dst="ni299_NUM_LOOPS">
+            <const value="10000" width="32"/>
+          </eq>
+          <eq dst="ni300_counter">
+            <const value="0" width="32"/>
+          </eq>
+          <eq dst="ni301_index">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_nSample" src="ni298_nSample" line="22" file="BubbleSort_hw.c"/>
+          <assign dst="r_NUM_LOOPS" src="ni299_NUM_LOOPS" line="26" file="BubbleSort_hw.c"/>
+          <assign dst="r_counter" src="ni300_counter" line="27" file="BubbleSort_hw.c"/>
+          <assign dst="r_index" src="ni301_index" line="30" file="BubbleSort_hw.c"/>
+        </datapath>
+        <datapath block="b1" states="b1s0">
+          <eq dst="ni13_samples">
+            <const value="0" width="32"/>
+          </eq>
+          <store src="ni13_samples" mem="samples" port="0" index="t_0" line="32" file="BubbleSort_hw.c"/>
+          <eq dst="t_0">
+            <slice start="0" width="5">
+              <var name="r_index"/>
+            </slice>
+          </eq>
+          <eq dst="ni303_index">
+            <call name="add" width="32">
+              <var name="r_index"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni302_suif_tmp8">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_s" width="1">
+                <var name="ni303_index"/>
+                <const value="32" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_index" src="ni303_index"/>
+          <assign dst="r_suif_tmp8" src="ni302_suif_tmp8"/>
+        </datapath>
+        <datapath block="b2" states="b2s0">
+          <eq dst="ni304_index">
+            <const value="0" width="32"/>
+          </eq>
+          <exec op="open" name="input" line="39" file="BubbleSort_hw.c"/>
+          <assign dst="r_index" src="ni304_index" line="38" file="BubbleSort_hw.c"/>
+        </datapath>
+        <datapath block="b3" states="b3s0">
+          <read name="input"/>
+          <eq dst="ni305_suif_tmp">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="eq" width="1">
+                <cat width="2">
+                  <const value="0" width="1"/>
+                  <var name="input.eos"/>
+                </cat>
+                <const value="0" width="2"/>
+              </call>
+            </cat>
+          </eq>
+          <break cond="!ni305_suif_tmp"/>
+          <assign dst="r_suif_tmp" src="ni305_suif_tmp"/>
+        </datapath>
+        <datapath states="b3s1">
+          <eq dst="ni306_nSample">
+            <var name="r_input"/>
+          </eq>
+          <eq dst="ni307_suif_tmp00">
+            <var name="r_index"/>
+          </eq>
+          <eq dst="ni308_index">
+            <call name="add" width="32">
+              <var name="ni307_suif_tmp00"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <assign dst="r_nSample" src="ni306_nSample"/>
+          <assign dst="r_suif_tmp00" src="ni307_suif_tmp00" line="43" file="BubbleSort_hw.c"/>
+          <assign dst="r_index" src="ni308_index"/>
+        </datapath>
+        <datapath states="b3s2">
+          <eq dst="ni62_samples">
+            <var name="r_nSample"/>
+          </eq>
+          <store src="r_nSample" mem="samples" port="0" index="t_1"/>
+          <eq dst="t_1">
+            <slice start="0" width="5">
+              <var name="r_suif_tmp00"/>
+            </slice>
+          </eq>
+        </datapath>
+        <datapath block="b4" states="b4s0">
+          <exec op="readclose" name="input" line="46" file="BubbleSort_hw.c"/>
+          <eq dst="ni309_counter">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_counter" src="ni309_counter" line="49" file="BubbleSort_hw.c"/>
+        </datapath>
+        <datapath block="b5" states="b5s0">
+          <eq dst="ni312_index">
+            <const value="0" width="32"/>
+          </eq>
+          <eq dst="ni313_suif_tmp1">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_s" width="1">
+                <var name="ni312_index"/>
+                <const value="32" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_index" src="ni312_index" line="51" file="BubbleSort_hw.c"/>
+          <assign dst="r_suif_tmp1" src="ni313_suif_tmp1"/>
+        </datapath>
+        <datapath block="b6" states="b6s0">
+          <eq dst="ni314_suif_tmp_0">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="eq" width="1">
+                <binop op="and" width="32">
+                  <var name="r_counter"/>
+                  <const value="1" width="32"/>
+                </binop>
+                <const value="0" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp_0" src="ni314_suif_tmp_0"/>
+        </datapath>
+        <datapath block="b7" states="b7s0">
+          <eq dst="ni315_innerIndex">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_innerIndex" src="ni315_innerIndex" line="53" file="BubbleSort_hw.c"/>
+        </datapath>
+        <datapath block="b8" states="b8s0">
+          <assign dst="r_r_e_g_0" src="ni115_r_e_g_0"/>
+          <eq dst="ni115_r_e_g_0">
+            <call name="add" width="5">
+              <slice start="0" width="5">
+                <var name="r_innerIndex"/>
+              </slice>
+              <const value="1" width="5"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b8s1">
+          <load mem="samples" port="1" index="r_r_e_g_0" net="ni113_samples"/>
+          <eq dst="ti119_samples">
+            <slice start="0" width="5">
+              <var name="r_innerIndex"/>
+            </slice>
+          </eq>
+          <load mem="samples" port="0" index="ti119_samples" net="ni119_samples"/>
+          <eq dst="ni317_suif_tmp4">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_s" width="1">
+                <var name="ni113_samples"/>
+                <var name="ni119_samples"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp4" src="ni317_suif_tmp4" line="57" file="BubbleSort_hw.c"/>
+        </datapath>
+        <datapath block="b9" states="b9s0">
+          <assign dst="r_r_e_g_0" src="ni127_r_e_g_0"/>
+          <eq dst="ni127_r_e_g_0">
+            <call name="add" width="5">
+              <slice start="0" width="5">
+                <var name="r_innerIndex"/>
+              </slice>
+              <const value="1" width="5"/>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_1" src="ni134_r_e_g_1"/>
+          <eq dst="ni134_r_e_g_1">
+            <call name="add" width="5">
+              <slice start="0" width="5">
+                <var name="r_innerIndex"/>
+              </slice>
+              <const value="1" width="5"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b9s1">
+          <load mem="samples" port="1" index="r_r_e_g_0" net="ni125_samples"/>
+          <eq dst="ni318_nSample">
+            <var name="ni125_samples"/>
+          </eq>
+          <eq dst="ti137_samples">
+            <slice start="0" width="5">
+              <var name="r_innerIndex"/>
+            </slice>
+          </eq>
+          <load mem="samples" port="0" index="ti137_samples" net="ni137_samples"/>
+          <eq dst="ni131_samples">
+            <var name="ni137_samples"/>
+          </eq>
+          <store src="ni137_samples" mem="samples" port="0" index="r_r_e_g_1" line="60" file="BubbleSort_hw.c"/>
+          <assign dst="r_nSample" src="ni318_nSample" line="59" file="BubbleSort_hw.c"/>
+        </datapath>
+        <datapath states="b9s2">
+          <eq dst="ni141_samples">
+            <var name="r_nSample"/>
+          </eq>
+          <store src="r_nSample" mem="samples" port="0" index="t_2" line="61" file="BubbleSort_hw.c"/>
+          <eq dst="t_2">
+            <slice start="0" width="5">
+              <var name="r_innerIndex"/>
+            </slice>
+          </eq>
+        </datapath>
+        <datapath block="b10" states="b10s0">
+          <assign dst="r_r_e_g_0" src="ni157_r_e_g_0"/>
+          <eq dst="ni157_r_e_g_0">
+            <call name="add" width="5">
+              <slice start="0" width="5">
+                <var name="r_innerIndex"/>
+              </slice>
+              <const value="1" width="5"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b10s1">
+          <eq dst="ti151_samples">
+            <slice start="0" width="5">
+              <var name="r_innerIndex"/>
+            </slice>
+          </eq>
+          <load mem="samples" port="1" index="ti151_samples" net="ni151_samples"/>
+          <load mem="samples" port="0" index="r_r_e_g_0" net="ni155_samples"/>
+          <eq dst="ni319_suif_tmp5">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_s" width="1">
+                <var name="ni151_samples"/>
+                <var name="ni155_samples"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp5" src="ni319_suif_tmp5" line="66" file="BubbleSort_hw.c"/>
+        </datapath>
+        <datapath block="b11" states="b11s0">
+          <assign dst="r_r_e_g_0" src="ni165_r_e_g_0"/>
+          <eq dst="ni165_r_e_g_0">
+            <call name="add" width="5">
+              <slice start="0" width="5">
+                <var name="r_innerIndex"/>
+              </slice>
+              <const value="1" width="5"/>
+            </call>
+          </eq>
+          <assign dst="r_r_e_g_1" src="ni172_r_e_g_1"/>
+          <eq dst="ni172_r_e_g_1">
+            <call name="add" width="5">
+              <slice start="0" width="5">
+                <var name="r_innerIndex"/>
+              </slice>
+              <const value="1" width="5"/>
+            </call>
+          </eq>
+        </datapath>
+        <datapath states="b11s1">
+          <load mem="samples" port="1" index="r_r_e_g_0" net="ni163_samples"/>
+          <eq dst="ni320_nSample">
+            <var name="ni163_samples"/>
+          </eq>
+          <eq dst="ti175_samples">
+            <slice start="0" width="5">
+              <var name="r_innerIndex"/>
+            </slice>
+          </eq>
+          <load mem="samples" port="0" index="ti175_samples" net="ni175_samples"/>
+          <eq dst="ni169_samples">
+            <var name="ni175_samples"/>
+          </eq>
+          <store src="ni175_samples" mem="samples" port="0" index="r_r_e_g_1" line="69" file="BubbleSort_hw.c"/>
+          <assign dst="r_nSample" src="ni320_nSample" line="68" file="BubbleSort_hw.c"/>
+        </datapath>
+        <datapath states="b11s2">
+          <eq dst="ni179_samples">
+            <var name="r_nSample"/>
+          </eq>
+          <store src="r_nSample" mem="samples" port="0" index="t_3" line="70" file="BubbleSort_hw.c"/>
+          <eq dst="t_3">
+            <slice start="0" width="5">
+              <var name="r_innerIndex"/>
+            </slice>
+          </eq>
+        </datapath>
+        <datapath block="b12" states="b12s0">
+          <eq dst="ni321_innerIndex">
+            <call name="add" width="32">
+              <var name="r_innerIndex"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni316_suif_tmp3">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_s" width="1">
+                <var name="ni321_innerIndex"/>
+                <const value="31" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_innerIndex" src="ni321_innerIndex"/>
+          <assign dst="r_suif_tmp3" src="ni316_suif_tmp3"/>
+        </datapath>
+        <datapath block="b13" states="b13s0">
+          <eq dst="ni322_index">
+            <call name="add" width="32">
+              <var name="r_index"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni323_suif_tmp2">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_s" width="1">
+                <var name="ni322_index"/>
+                <const value="32" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_index" src="ni322_index" line="53" file="BubbleSort_hw.c"/>
+          <assign dst="r_suif_tmp2" src="ni323_suif_tmp2"/>
+        </datapath>
+        <datapath block="b14" states="b14s0">
+          <eq dst="ni324_counter">
+            <call name="add" width="32">
+              <var name="r_counter"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni325_suif_tmp0">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_u" width="1">
+                <var name="ni324_counter"/>
+                <const value="10000" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_counter" src="ni324_counter" line="49" file="BubbleSort_hw.c"/>
+          <assign dst="r_suif_tmp0" src="ni325_suif_tmp0" line="49" file="BubbleSort_hw.c"/>
+        </datapath>
+        <datapath block="b15" states="b15s0">
+          <exec op="open" name="output" line="78" file="BubbleSort_hw.c"/>
+          <eq dst="ni326_index">
+            <const value="0" width="32"/>
+          </eq>
+          <assign dst="r_index" src="ni326_index" line="79" file="BubbleSort_hw.c"/>
+        </datapath>
+        <datapath block="b16" states="b16s0"/>
+        <datapath states="b16s1">
+          <eq dst="ti227_samples">
+            <slice start="0" width="5">
+              <var name="r_index"/>
+            </slice>
+          </eq>
+          <load mem="samples" port="1" index="ti227_samples" net="ni227_samples"/>
+          <eq dst="ni328_suif_tmp7">
+            <var name="ni227_samples"/>
+          </eq>
+          <write name="output" val="ni328_suif_tmp7"/>
+          <eq dst="ni329_index">
+            <call name="add" width="32">
+              <var name="r_index"/>
+              <const value="1" width="32"/>
+            </call>
+          </eq>
+          <eq dst="ni327_suif_tmp6">
+            <cat width="32">
+              <const value="0" width="31"/>
+              <call name="cmp_less_s" width="1">
+                <var name="ni329_index"/>
+                <const value="32" width="32"/>
+              </call>
+            </cat>
+          </eq>
+          <assign dst="r_suif_tmp7" src="ni328_suif_tmp7" line="81" file="BubbleSort_hw.c"/>
+          <assign dst="r_index" src="ni329_index"/>
+          <assign dst="r_suif_tmp6" src="ni327_suif_tmp6"/>
+        </datapath>
+        <datapath block="b17" states="b17s0">
+          <exec op="writeclose" name="output" line="83" file="BubbleSort_hw.c"/>
+        </datapath>
+        <datapath block="b18" states="b18s0"/>
+        <datapath/>
+      </blocks>
+      <info>
+        <stream name="input">
+          <open state="b2s0"/>
+          <read state="b3s0"/>
+          <readclose state="b4s0"/>
+        </stream>
+        <stream name="output">
+          <open state="b15s0"/>
+          <write state="b16s1" data="ni328_suif_tmp7"/>
+          <writeclose state="b17s0"/>
+        </stream>
+        <memory name="samples" res="dualsync" synchronous="1" ports="2" addresses="1" maystall="1" readonly="0">
+          <write port="0" state="b1s0" addr="r_index" data="ni13_samples"/>
+          <write port="0" state="b3s2" addr="r_suif_tmp00" data="r_nSample"/>
+          <address port="1" state="b8s1" from="b8s0" addr="ni115_r_e_g_0" noconflict="1"/>
+          <address port="0" state="b8s1" from="b8s0" addr="r_innerIndex" noconflict="1"/>
+          <read port="1" state="b8s1"/>
+          <read port="0" state="b8s1"/>
+          <address port="1" state="b9s1" from="b9s0" addr="ni127_r_e_g_0" noconflict="1"/>
+          <address port="0" state="b9s1" from="b9s0" addr="r_innerIndex" noconflict="1"/>
+          <read port="1" state="b9s1"/>
+          <read port="0" state="b9s1"/>
+          <write port="0" state="b9s1" addr="r_r_e_g_1" data="ni137_samples"/>
+          <write port="0" state="b9s2" addr="r_innerIndex" data="r_nSample"/>
+          <address port="1" state="b10s1" from="b10s0" addr="r_innerIndex" noconflict="1"/>
+          <address port="0" state="b10s1" from="b10s0" addr="ni157_r_e_g_0" noconflict="1"/>
+          <read port="1" state="b10s1"/>
+          <read port="0" state="b10s1"/>
+          <address port="1" state="b11s1" from="b11s0" addr="ni165_r_e_g_0" noconflict="1"/>
+          <address port="0" state="b11s1" from="b11s0" addr="r_innerIndex" noconflict="1"/>
+          <read port="1" state="b11s1"/>
+          <read port="0" state="b11s1"/>
+          <write port="0" state="b11s1" addr="r_r_e_g_1" data="ni175_samples"/>
+          <write port="0" state="b11s2" addr="r_innerIndex" data="r_nSample"/>
+          <address port="1" state="b16s1" from="b16s0" addr="r_index" noconflict="1"/>
+          <read port="1" state="b16s1"/>
+        </memory>
+      </info>
+      <variables/>
+      <temps>
+        <temp name="ti227_samples" width="5"/>
+        <temp name="t_3" width="5"/>
+        <temp name="ti175_samples" width="5"/>
+        <temp name="ti151_samples" width="5"/>
+        <temp name="t_2" width="5"/>
+        <temp name="ti137_samples" width="5"/>
+        <temp name="ti119_samples" width="5"/>
+        <temp name="t_1" width="5"/>
+        <temp name="t_0" width="5"/>
+      </temps>
+    </component>
+  </pe>
+</design>

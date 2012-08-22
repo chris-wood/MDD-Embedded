@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Compat Version="1" Minor="3">
+	<CompatParts>
+	</CompatParts>
+	<ConfigModes>
+		<Mode Id="JTAG"/>
+	</ConfigModes>
+	<PortProps>
+		<Port Name="out_counter[3]" OffChipTerm="NONE"/>
+		<Port Name="out_counter[2]" OffChipTerm="NONE"/>
+		<Port Name="out_counter[1]" OffChipTerm="NONE"/>
+		<Port Name="out_counter[0]" OffChipTerm="NONE"/>
+		<Port Name="out_bram[7]" OffChipTerm="NONE"/>
+		<Port Name="out_bram[6]" OffChipTerm="NONE"/>
+		<Port Name="out_bram[5]" OffChipTerm="NONE"/>
+		<Port Name="out_bram[4]" OffChipTerm="NONE"/>
+		<Port Name="out_bram[3]" OffChipTerm="NONE"/>
+		<Port Name="out_bram[2]" OffChipTerm="NONE"/>
+		<Port Name="out_bram[1]" OffChipTerm="NONE"/>
+		<Port Name="out_bram[0]" OffChipTerm="NONE"/>
+		<Port Name="clk_p" OffChipTerm="NONE"/>
+		<Port Name="clk_n" OffChipTerm="NONE"/>
+		<Port Name="rst_n" OffChipTerm="NONE"/>
+		<Port Name="test_count" OffChipTerm="NONE"/>
+	</PortProps>
+</Compat>
+

@@ -1,0 +1,19 @@
+# _Makefile.defs - created by CoDeveloper version 3.70.c.5
+CO_INC=C:\Impulse\CoDeveloper3\Include
+LIB_DIR=C:\Impulse\CoDeveloper3\Libraries
+IMPULSE_LIB=ImpulseC
+HW_EXPORT_DIR=export
+HW_TARGET_DIR=hw
+SW_EXPORT_DIR=export
+SW_TARGET_DIR=sw
+HW_SRC=HelloWorld_hw.c
+SW_SRC=HelloWorld.c HelloWorld_sw.c
+EXE_SRC=HelloWorld_hw.c HelloWorld.c HelloWorld_sw.c
+EXE=HelloWorld.exe
+SMD_EXE=HelloWorld.exe
+ARCH_ID=xilinx_v5_plb4
+GENRTL_EXE=impulse_genvhdl.exe
+HDL_FILE_EXT=vhd
+A_FLAGS_OPT= -no_port_bus_connect 
+SM_FLAGS_OPT= 
+DEBUG=-g

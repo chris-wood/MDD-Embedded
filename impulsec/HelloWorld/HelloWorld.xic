@@ -1,0 +1,85 @@
+<?xml version='1.0'?>
+<!DOCTYPE fileset PUBLIC "" "">
+<fileset>
+  <file name="HelloWorld.sic">
+    <proc name="DoText" type="void">
+      <io name="input_stream" type="stream" mode="in" ctype="signed" size="8"/>
+      <io name="output_stream" type="stream" mode="out" ctype="signed" size="8"/>
+      <variable name="c" width="8" signed="true"/>
+      <variable name="suif_tmp" width="32" signed="true"/>
+      <loop>
+        <body>
+          <exec op="open" iid="i4" line="36" file="HelloWorld_hw.c">
+            <var name="input_stream"/>
+          </exec>
+          <exec op="open" iid="i16" line="38" file="HelloWorld_hw.c">
+            <var name="output_stream"/>
+          </exec>
+          <loop line="40" file="HelloWorld_hw.c">
+            <body>
+              <assign name="suif_tmp" iid="i83">
+                <binop op="==" signed="true" float="0" iid="i30">
+                  <cast signed="false" tosigned="true" width="32" float="0" fromfloat="0" iid="i31">
+                    <cast signed="false" tosigned="false" width="32" float="0" fromfloat="0" iid="i32">
+                      <read signed="true" iid="i33">
+                        <var name="input_stream"/>
+                        <assign name="c" iid="i84">
+                          <var name="input_stream"/>
+                        </assign>
+                      </read>
+                    </cast>
+                  </cast>
+                  <const value="0" width="32" signed="true" iid="i1243944"/>
+                </binop>
+              </assign>
+              <break iid="i81" cond="!suif_tmp"/>
+              <store target="io" iid="i44" line="45" file="HelloWorld_hw.c">
+                <var name="output_stream"/>
+                <var name="c"/>
+              </store>
+            </body>
+            <cond>
+              <true iid="i49">
+                <const value="1" width="32" signed="true" iid="i1244528"/>
+              </true>
+            </cond>
+          </loop>
+          <exec op="readclose" iid="i62" line="48" file="HelloWorld_hw.c">
+            <var name="input_stream"/>
+          </exec>
+          <exec op="writeclose" iid="i65" line="49" file="HelloWorld_hw.c">
+            <var name="output_stream"/>
+          </exec>
+        </body>
+        <cond>
+          <true iid="i67">
+            <const value="1" signed="false" iid="i67"/>
+          </true>
+        </cond>
+      </loop>
+      <return iid="i73" line="54" file="HelloWorld_hw.c">
+      </return>
+    </proc>
+    <config name="HelloWorldArch" arch="generic">
+      <signature name="Producer">
+        <io name="output_stream" type="stream" mode="out" ctype="signed" size="8"/>
+        <param name="iparam" size="32"/>
+      </signature>
+      <signature name="DoText">
+        <io name="input_stream" type="stream" mode="in" ctype="signed" size="8"/>
+        <io name="output_stream" type="stream" mode="out" ctype="signed" size="8"/>
+      </signature>
+      <signature name="Consumer">
+        <io name="input_stream" type="stream" mode="in" ctype="signed" size="8"/>
+      </signature>
+      <process name="Producer" fun="Producer" type="sp" loc="" argc="2">
+      </process>
+      <process name="DoText" fun="DoText" type="hp" loc="PE0" argc="2">
+      </process>
+      <process name="Consumer" fun="Consumer" type="sp" loc="" argc="1">
+      </process>
+      <connect src="Producer.output_stream" dst="DoText.input_stream" size="2" type="stream" name="Stream1" inst="-1" kind=""/>
+      <connect src="DoText.output_stream" dst="Consumer.input_stream" size="2" type="stream" name="Stream2" inst="-1" kind=""/>
+    </config>
+  </file>
+</fileset>

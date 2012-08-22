@@ -1,0 +1,959 @@
+Release 12.3 - xst M.70d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "plb_bubblesort_arch_2_wrapper_xst.prj"
+Verilog Include Directory          : {"C:\Workspace\TestSystem\pcores\" "C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+
+---- Target Parameters
+Target Device                      : xc5vfx70tff1136-1
+Output File Name                   : "../implementation/plb_bubblesort_arch_2_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : plb_bubblesort_arch_2_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation/plb_bubblesort_arch_2_wrapper}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Workspace/TestSystem/pcores/impulse/hdl/vhdl/fifo_dc.vhd" in Library impulse.
+Entity <fifo_sync_dc> compiled.
+Entity <fifo_sync_dc> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Workspace/TestSystem/pcores/impulse/hdl/vhdl/fifo.vhd" in Library impulse.
+Entity <fifo> compiled.
+Entity <fifo> (Architecture <rtl>) compiled.
+Entity <sync_fifo> compiled.
+Entity <sync_fifo> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Workspace/TestSystem/pcores/impulse/hdl/vhdl/divmod.vhd" in Library impulse.
+Entity <divmod_u> compiled.
+Entity <divmod_u> (Architecture <rtl>) compiled.
+Entity <divmod_s> compiled.
+Entity <divmod_s> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Workspace/TestSystem/pcores/impulse/hdl/vhdl/gmem.vhd" in Library impulse.
+Entity <gmem> compiled.
+Entity <gmem> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Workspace/TestSystem/pcores/impulse/hdl/vhdl/csignal.vhd" in Library impulse.
+Entity <csignal> compiled.
+Entity <csignal> (Architecture <rtl>) compiled.
+Entity <csignal_nodata> compiled.
+Entity <csignal_nodata> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Workspace/TestSystem/pcores/impulse/hdl/vhdl/cregister.vhd" in Library impulse.
+Entity <cregister> compiled.
+Entity <cregister> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Workspace/TestSystem/pcores/impulse/hdl/vhdl/stream.vhd" in Library impulse.
+Entity <stream_reg> compiled.
+Entity <stream_reg> (Architecture <rtl>) compiled.
+Entity <stream> compiled.
+Entity <stream> (Architecture <rtl>) compiled.
+Entity <stream_bram> compiled.
+Entity <stream_bram> (Architecture <rtl>) compiled.
+Entity <stream_narrow> compiled.
+Entity <stream_narrow> (Architecture <rtl>) compiled.
+Entity <stream_widen> compiled.
+Entity <stream_widen> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Workspace/TestSystem/pcores/impulse/hdl/vhdl/stream_dc.vhd" in Library impulse.
+Entity <stream_dc> compiled.
+Entity <stream_dc> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Workspace/TestSystem/pcores/impulse/hdl/vhdl/mem_if.vhd" in Library impulse.
+Entity <impc_mem_expander> compiled.
+Entity <impc_mem_expander> (Architecture <a1>) compiled.
+Entity <impc_mem_level2> compiled.
+Entity <impc_mem_level2> (Architecture <a1>) compiled.
+Package <mem_if_components> compiled.
+Compiling vhdl file "C:/Workspace/TestSystem/pcores/impulse/hdl/vhdl/plbdma4.vhd" in Library impulse.
+Entity <plb_dma> compiled.
+Entity <plb_dma> (Architecture <a1>) compiled.
+Compiling vhdl file "C:/Workspace/TestSystem/pcores/impulse/hdl/vhdl/plb4_if.vhd" in Library impulse.
+Entity <impulse_plb_ipif> compiled.
+Entity <impulse_plb_ipif> (Architecture <imp>) compiled.
+Entity <plb_to_stream> compiled.
+Entity <plb_to_stream> (Architecture <rtl>) compiled.
+Entity <stream_to_plb> compiled.
+Entity <stream_to_plb> (Architecture <rtl>) compiled.
+Entity <plb_to_signal> compiled.
+Entity <plb_to_signal> (Architecture <rtl>) compiled.
+Entity <signal_to_plb> compiled.
+Entity <signal_to_plb> (Architecture <rtl>) compiled.
+Entity <plb_to_register> compiled.
+Entity <plb_to_register> (Architecture <rtl>) compiled.
+Entity <register_to_plb> compiled.
+Entity <register_to_plb> (Architecture <rtl>) compiled.
+Package <plb_if> compiled.
+Compiling vhdl file "C:/Workspace/TestSystem/pcores/impulse/hdl/vhdl/impack.vhd" in Library impulse.
+Package <components> compiled.
+Package body <components> compiled.
+Compiling vhdl file "C:/Workspace/TestSystem/pcores/plb_BubbleSort_arch_v1_00_a/hdl/vhdl/BubbleSort_comp.vhd" in Library plb_BubbleSort_arch_v1_00_a.
+Package <external_components> compiled.
+Entity <Sorter_samples_RAM> compiled.
+Entity <Sorter_samples_RAM> (Architecture <dualsync>) compiled.
+Entity <Sorter> compiled.
+Entity <Sorter> (Architecture <rtl>) compiled.
+Compiling vhdl file "C:/Workspace/TestSystem/pcores/plb_BubbleSort_arch_v1_00_a/hdl/vhdl/BubbleSort_top.vhd" in Library plb_BubbleSort_arch_v1_00_a.
+Entity <BubbleSort_arch> compiled.
+Entity <BubbleSort_arch> (Architecture <structure>) compiled.
+Compiling vhdl file "C:/Workspace/TestSystem/pcores/plb_BubbleSort_arch_v1_00_a/hdl/vhdl/plb_BubbleSort_arch.vhd" in Library plb_BubbleSort_arch_v1_00_a.
+Entity <plb_BubbleSort_arch> compiled.
+Entity <plb_BubbleSort_arch> (Architecture <impl>) compiled.
+Compiling vhdl file "C:/Workspace/TestSystem/hdl/plb_bubblesort_arch_2_wrapper.vhd" in Library work.
+Entity <plb_bubblesort_arch_2_wrapper> compiled.
+Entity <plb_bubblesort_arch_2_wrapper> (Architecture <STRUCTURE>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <plb_bubblesort_arch_2_wrapper> in library <work> (architecture <STRUCTURE>).
+
+Analyzing hierarchy for entity <plb_bubblesort_arch> in library <plb_BubbleSort_arch_v1_00_a> (architecture <impl>) with generics.
+	C_SPLB_AWIDTH = 32
+	C_SPLB_DWIDTH = 128
+	C_SPLB_MID_WIDTH = 1
+	C_SPLB_NUM_MASTERS = 1
+	c_baseaddr = "11000100000001000000000000000000"
+	c_family = "virtex5"
+	c_highaddr = "11000100000001001111111111111111"
+
+Analyzing hierarchy for entity <impulse_plb_ipif> in library <impulse> (architecture <imp>) with generics.
+	C_BASEADDR = "11000100000001000000000000000000"
+	C_HIGHADDR = "11000100000001001111111111111111"
+	C_IPIF_AWIDTH = 5
+	C_SPLB_AWIDTH = 32
+	C_SPLB_DWIDTH = 128
+	C_SPLB_MID_WIDTH = 1
+	C_SPLB_NUM_MASTERS = 1
+
+Analyzing hierarchy for entity <plb_to_stream> in library <impulse> (architecture <rtl>) with generics.
+	C_SPLB_DWIDTH = 128
+	datawidth = 32
+
+Analyzing hierarchy for entity <stream_to_plb> in library <impulse> (architecture <rtl>) with generics.
+	C_SPLB_DWIDTH = 128
+	datawidth = 32
+
+Analyzing hierarchy for entity <BubbleSort_arch> in library <plb_BubbleSort_arch_v1_00_a> (architecture <structure>).
+
+Analyzing hierarchy for entity <Sorter> in library <plb_BubbleSort_arch_v1_00_a> (architecture <rtl>).
+
+Analyzing hierarchy for entity <stream> in library <impulse> (architecture <rtl>) with generics.
+	addrwidth = 5
+	datawidth = 32
+
+Analyzing hierarchy for entity <Sorter_samples_RAM> in library <plb_BubbleSort_arch_v1_00_a> (architecture <dualsync>).
+
+Analyzing hierarchy for entity <fifo> in library <impulse> (architecture <rtl>) with generics.
+	ADDRESSWIDTH = 5
+	DATAWIDTH = 33
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <plb_bubblesort_arch_2_wrapper> in library <work> (Architecture <STRUCTURE>).
+Entity <plb_bubblesort_arch_2_wrapper> analyzed. Unit <plb_bubblesort_arch_2_wrapper> generated.
+
+Analyzing generic Entity <plb_bubblesort_arch> in library <plb_BubbleSort_arch_v1_00_a> (Architecture <impl>).
+	C_SPLB_AWIDTH = 32
+	C_SPLB_DWIDTH = 128
+	C_SPLB_MID_WIDTH = 1
+	C_SPLB_NUM_MASTERS = 1
+	c_baseaddr = "11000100000001000000000000000000"
+	c_family = "virtex5"
+	c_highaddr = "11000100000001001111111111111111"
+INFO:Xst:1561 - "C:/Workspace/TestSystem/pcores/plb_BubbleSort_arch_v1_00_a/hdl/vhdl/plb_BubbleSort_arch.vhd" line 226: Mux is complete : default of case is discarded
+Entity <plb_bubblesort_arch> analyzed. Unit <plb_bubblesort_arch> generated.
+
+Analyzing generic Entity <impulse_plb_ipif> in library <impulse> (Architecture <imp>).
+	C_BASEADDR = "11000100000001000000000000000000"
+	C_HIGHADDR = "11000100000001001111111111111111"
+	C_IPIF_AWIDTH = 5
+	C_SPLB_AWIDTH = 32
+	C_SPLB_DWIDTH = 128
+	C_SPLB_MID_WIDTH = 1
+	C_SPLB_NUM_MASTERS = 1
+INFO:Xst:2679 - Register <MasterMask1> in unit <impulse_plb_ipif> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <impulse_plb_ipif> analyzed. Unit <impulse_plb_ipif> generated.
+
+Analyzing generic Entity <plb_to_stream> in library <impulse> (Architecture <rtl>).
+	C_SPLB_DWIDTH = 128
+	datawidth = 32
+Entity <plb_to_stream> analyzed. Unit <plb_to_stream> generated.
+
+Analyzing generic Entity <stream_to_plb> in library <impulse> (Architecture <rtl>).
+	C_SPLB_DWIDTH = 128
+	datawidth = 32
+Entity <stream_to_plb> analyzed. Unit <stream_to_plb> generated.
+
+Analyzing Entity <BubbleSort_arch> in library <plb_BubbleSort_arch_v1_00_a> (Architecture <structure>).
+Entity <BubbleSort_arch> analyzed. Unit <BubbleSort_arch> generated.
+
+Analyzing Entity <Sorter> in library <plb_BubbleSort_arch_v1_00_a> (Architecture <rtl>).
+INFO:Xst:2679 - Register <r_NUM_LOOPS> in unit <Sorter> has a constant value of 00000000000000000010011100010000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <r_suif_tmp1> in unit <Sorter> has a constant value of 00000000000000000000000000000001 during circuit operation. The register is replaced by logic.
+Entity <Sorter> analyzed. Unit <Sorter> generated.
+
+Analyzing Entity <Sorter_samples_RAM> in library <plb_BubbleSort_arch_v1_00_a> (Architecture <dualsync>).
+Entity <Sorter_samples_RAM> analyzed. Unit <Sorter_samples_RAM> generated.
+
+Analyzing generic Entity <stream> in library <impulse> (Architecture <rtl>).
+	addrwidth = 5
+	datawidth = 32
+Entity <stream> analyzed. Unit <stream> generated.
+
+Analyzing generic Entity <fifo> in library <impulse> (Architecture <rtl>).
+	ADDRESSWIDTH = 5
+	DATAWIDTH = 33
+Entity <fifo> analyzed. Unit <fifo> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <MasterMask2> in unit <impulse_plb_ipif> has a constant value of 1 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <impulse_plb_ipif>.
+    Related source file is "C:/Workspace/TestSystem/pcores/impulse/hdl/vhdl/plb4_if.vhd".
+WARNING:Xst:646 - Signal <MasterId<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 5-bit register for signal <Bus2IP_raddr>.
+    Found 128-bit register for signal <Sl_rdDBus>.
+    Found 1-bit register for signal <RdCe1>.
+    Found 1-bit register for signal <RdCe2>.
+    Found 1-bit register for signal <Sl_Mbusy_i<0>>.
+    Found 1-bit register for signal <WrCe1>.
+    Summary:
+	inferred 137 D-type flip-flop(s).
+Unit <impulse_plb_ipif> synthesized.
+
+
+Synthesizing Unit <plb_to_stream>.
+    Related source file is "C:/Workspace/TestSystem/pcores/impulse/hdl/vhdl/plb4_if.vhd".
+WARNING:Xst:647 - Input <plb_wdata<127:32>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <plb_read> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <error>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <plb_to_stream> synthesized.
+
+
+Synthesizing Unit <stream_to_plb>.
+    Related source file is "C:/Workspace/TestSystem/pcores/impulse/hdl/vhdl/plb4_if.vhd".
+WARNING:Xst:647 - Input <plb_wdata> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <plb_waddr<0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <plb_write> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit register for signal <data>.
+    Found 1-bit register for signal <eos>.
+    Found 1-bit register for signal <error>.
+    Found 1-bit register for signal <valid>.
+    Summary:
+	inferred  35 D-type flip-flop(s).
+Unit <stream_to_plb> synthesized.
+
+
+Synthesizing Unit <Sorter_samples_RAM>.
+    Related source file is "C:/Workspace/TestSystem/pcores/plb_BubbleSort_arch_v1_00_a/hdl/vhdl/BubbleSort_comp.vhd".
+WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32x32-bit dual-port RAM <Mram_mem> for signal <mem>.
+    Found 32x32-bit dual-port RAM <Mram_mem_ren> for signal <mem>.
+    Found 5-bit register for signal <raddr>.
+    Found 5-bit register for signal <raddr2>.
+    Summary:
+	inferred   2 RAM(s).
+	inferred  10 D-type flip-flop(s).
+Unit <Sorter_samples_RAM> synthesized.
+
+
+Synthesizing Unit <fifo>.
+    Related source file is "C:/Workspace/TestSystem/pcores/impulse/hdl/vhdl/fifo.vhd".
+    Found 32x33-bit dual-port RAM <Mram_mem> for signal <mem>.
+    Found 5-bit comparator equal for signal <empty$cmp_eq0000> created at line 82.
+    Found 5-bit comparator equal for signal <full$cmp_eq0000> created at line 81.
+    Found 5-bit up counter for signal <in_ptr>.
+    Found 5-bit adder for signal <next_ptr>.
+    Found 5-bit up counter for signal <out_ptr>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Counter(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <fifo> synthesized.
+
+
+Synthesizing Unit <Sorter>.
+    Related source file is "C:/Workspace/TestSystem/pcores/plb_BubbleSort_arch_v1_00_a/hdl/vhdl/BubbleSort_comp.vhd".
+WARNING:Xst:647 - Input <sclk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <ti227_samples> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ti175_samples> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ti151_samples> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ti137_samples> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ti119_samples> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <t_3> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <t_2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <t_1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <t_0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <r_suif_tmp_0<31:1>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <r_suif_tmp8> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <r_suif_tmp7> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <r_suif_tmp6> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <r_suif_tmp5> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <r_suif_tmp4> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <r_suif_tmp3> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <r_suif_tmp2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <r_suif_tmp1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <r_suif_tmp00<31:5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <r_suif_tmp0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <r_suif_tmp> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <r_r_e_g_0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <r_NUM_LOOPS> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ni62_samples> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ni179_samples> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ni169_samples> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ni141_samples> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ni131_samples> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+INFO:Xst:1799 - State finished is never reached in FSM <thisState>.
+INFO:Xst:1799 - State b18s0 is never reached in FSM <thisState>.
+    Found finite state machine <FSM_0> for signal <thisState>.
+    -----------------------------------------------------------------------
+    | States             | 28                                             |
+    | Transitions        | 38                                             |
+    | Inputs             | 9                                              |
+    | Outputs            | 29                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | stateEn                   (positive)           |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | init                                           |
+    | Power Up State     | init                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <newState>.
+    Found 5-bit adder for signal <ni115_r_e_g_0$add0000> created at line 325.
+    Found 32-bit comparator less for signal <ni302_suif_tmp8$cmp_lt0000> created at line 415.
+    Found 32-bit adder for signal <ni303_index$add0000> created at line 325.
+    Found 32-bit adder for signal <ni308_index>.
+    Found 32-bit comparator less for signal <ni316_suif_tmp3$cmp_lt0000> created at line 415.
+    Found 32-bit comparator less for signal <ni317_suif_tmp4$cmp_lt0000> created at line 415.
+    Found 32-bit comparator less for signal <ni319_suif_tmp5$cmp_lt0000> created at line 415.
+    Found 32-bit adder for signal <ni321_innerIndex$add0001> created at line 325.
+    Found 32-bit comparator less for signal <ni323_suif_tmp2$cmp_lt0000> created at line 415.
+    Found 32-bit adder for signal <ni324_counter$add0001> created at line 325.
+    Found 32-bit comparator less for signal <ni325_suif_tmp0$cmp_lt0000> created at line 391.
+    Found 32-bit comparator less for signal <ni327_suif_tmp6$cmp_lt0000> created at line 415.
+    Found 32-bit register for signal <r2_samples>.
+    Found 32-bit register for signal <r_counter>.
+    Found 32-bit register for signal <r_index>.
+    Found 32-bit register for signal <r_innerIndex>.
+    Found 32-bit register for signal <r_input>.
+    Found 32-bit register for signal <r_nSample>.
+    Found 5-bit register for signal <r_r_e_g_1>.
+    Found 32-bit register for signal <r_samples>.
+    Found 32-bit register for signal <r_suif_tmp00>.
+    Found 32-bit register for signal <r_suif_tmp_0>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred 294 D-type flip-flop(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred   7 Comparator(s).
+Unit <Sorter> synthesized.
+
+
+Synthesizing Unit <stream>.
+    Related source file is "C:/Workspace/TestSystem/pcores/impulse/hdl/vhdl/stream.vhd".
+Unit <stream> synthesized.
+
+
+Synthesizing Unit <BubbleSort_arch>.
+    Related source file is "C:/Workspace/TestSystem/pcores/plb_BubbleSort_arch_v1_00_a/hdl/vhdl/BubbleSort_top.vhd".
+Unit <BubbleSort_arch> synthesized.
+
+
+Synthesizing Unit <plb_bubblesort_arch>.
+    Related source file is "C:/Workspace/TestSystem/pcores/plb_BubbleSort_arch_v1_00_a/hdl/vhdl/plb_BubbleSort_arch.vhd".
+WARNING:Xst:647 - Input <PLB_wrPrim> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_MSize> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdBurst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_SAValid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrPendReq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrPendPri> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_UABus> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdPendReq> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdPendPri> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_size> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_busLock> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_BE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_reqPri> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_lockErr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_wrBurst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_TAttribute> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_rdPrim> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PLB_type> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <Plb2IP_waddr<2:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Plb2IP_raddr<2:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Plb2IP_CS> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <plb_bubblesort_arch> synthesized.
+
+
+Synthesizing Unit <plb_bubblesort_arch_2_wrapper>.
+    Related source file is "C:/Workspace/TestSystem/hdl/plb_bubblesort_arch_2_wrapper.vhd".
+Unit <plb_bubblesort_arch_2_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 32x32-bit dual-port RAM                               : 2
+ 32x33-bit dual-port RAM                               : 2
+# Adders/Subtractors                                   : 7
+ 32-bit adder                                          : 4
+ 5-bit adder                                           : 3
+# Counters                                             : 4
+ 5-bit up counter                                      : 4
+# Registers                                            : 24
+ 1-bit register                                        : 9
+ 128-bit register                                      : 1
+ 32-bit register                                       : 10
+ 5-bit register                                        : 4
+# Comparators                                          : 11
+ 32-bit comparator less                                : 7
+ 5-bit comparator equal                                : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/thisState/FSM> on signal <thisState[1:28]> with one-hot encoding.
+------------------------------------------
+ State    | Encoding
+------------------------------------------
+ init     | 0000000000000000000000000001
+ b0s0     | 0000000000000000000000000010
+ b1s0     | 0000000000000000000000000100
+ b2s0     | 0000000000000000000000001000
+ b3s0     | 0000000000000000000000010000
+ b3s1     | 0000000000000000000001000000
+ b3s2     | 0000000000000000000010000000
+ b4s0     | 0000000000000000000000100000
+ b5s0     | 0000000000000000000100000000
+ b6s0     | 0000000000000000001000000000
+ b7s0     | 0000000000000000010000000000
+ b8s0     | 0000000000000000100000000000
+ b8s1     | 0000000000000010000000000000
+ b9s0     | 0000000000000100000000000000
+ b9s1     | 0000000000010000000000000000
+ b9s2     | 0000000000100000000000000000
+ b10s0    | 0000000000000001000000000000
+ b10s1    | 0000000001000000000000000000
+ b11s0    | 0000000010000000000000000000
+ b11s1    | 0000000100000000000000000000
+ b11s2    | 0000001000000000000000000000
+ b12s0    | 0000000000001000000000000000
+ b13s0    | 0000010000000000000000000000
+ b14s0    | 0000100000000000000000000000
+ b15s0    | 0001000000000000000000000000
+ b16s0    | 0010000000000000000000000000
+ b16s1    | 0100000000000000000000000000
+ b17s0    | 1000000000000000000000000000
+ b18s0    | unreached
+ finished | unreached
+------------------------------------------
+WARNING:Xst:2404 -  FFs/Latches <r_suif_tmp_0<31:1>> (without init value) have a constant value of 0 in block <Sorter>.
+
+Synthesizing (advanced) Unit <Sorter_samples_RAM>.
+INFO:Xst:3041 - The RAM <Mram_mem_ren>, combined with <Mram_mem>, will be implemented as a BLOCK RAM, absorbing the following register(s): <raddr> <raddr2>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <we>            | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <din>           |          |
+    |     doA            | connected to signal <dout>          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <addr2>         |          |
+    |     doB            | connected to signal <dout2>         |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <Sorter_samples_RAM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <fifo>.
+INFO:Xst:3031 - HDL ADVISOR - The RAM <Mram_mem> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 33-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <_and0000>      | high     |
+    |     addrA          | connected to signal <in_ptr>        |          |
+    |     diA            | connected to signal <din>           |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 33-bit                    |          |
+    |     addrB          | connected to signal <out_ptr>       |          |
+    |     doB            | connected to signal <dout>          |          |
+    -----------------------------------------------------------------------
+Unit <fifo> synthesized (advanced).
+WARNING:Xst:2677 - Node <r_suif_tmp00_5> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_6> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_7> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_8> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_9> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_10> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_11> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_12> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_13> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_14> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_15> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_16> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_17> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_18> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_19> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_20> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_21> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_22> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_23> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_24> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_25> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_26> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_27> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_28> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_29> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_30> of sequential type is unconnected in block <Sorter>.
+WARNING:Xst:2677 - Node <r_suif_tmp00_31> of sequential type is unconnected in block <Sorter>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# RAMs                                                 : 3
+ 32x32-bit dual-port block RAM                         : 1
+ 32x33-bit dual-port distributed RAM                   : 2
+# Adders/Subtractors                                   : 7
+ 32-bit adder                                          : 4
+ 5-bit adder                                           : 3
+# Counters                                             : 4
+ 5-bit up counter                                      : 4
+# Registers                                            : 409
+ Flip-Flops                                            : 409
+# Comparators                                          : 11
+ 32-bit comparator less                                : 7
+ 5-bit comparator equal                                : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <plb_bubblesort_arch_2_wrapper> ...
+
+Optimizing unit <impulse_plb_ipif> ...
+
+Optimizing unit <stream_to_plb> ...
+
+Optimizing unit <fifo> ...
+
+Optimizing unit <Sorter> ...
+
+Optimizing unit <plb_bubblesort_arch> ...
+WARNING:Xst:1710 - FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_55> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_56> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_57> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_58> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_59> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_60> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_61> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_62> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_63> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_64> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_65> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_66> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_67> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_68> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_69> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_70> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_71> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_72> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_73> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_74> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_75> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_76> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_77> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_32> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_33> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_34> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_35> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_36> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_37> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_38> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_39> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_40> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_41> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_42> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_43> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_44> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_45> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_46> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_47> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_48> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_49> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_50> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_51> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_52> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_53> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_54> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_105> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_106> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_107> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_108> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_109> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_110> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_111> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_112> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_113> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_114> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_115> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_116> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_117> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_118> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_119> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_120> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_121> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_122> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_123> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_124> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_125> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_126> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_127> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_78> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_79> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_80> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_81> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_82> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_83> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_84> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_85> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_86> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_87> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_88> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_89> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_90> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_91> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_93> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_96> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_97> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_98> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_99> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_100> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_101> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_102> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_103> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <plb_bubblesort_arch_2/ipif/Sl_rdDBus_104> (without init value) has a constant value of 0 in block <plb_bubblesort_arch_2_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <plb_bubblesort_arch_2/ipif/Bus2IP_raddr_0> of sequential type is unconnected in block <plb_bubblesort_arch_2_wrapper>.
+WARNING:Xst:2677 - Node <plb_bubblesort_arch_2/ipif/Bus2IP_raddr_1> of sequential type is unconnected in block <plb_bubblesort_arch_2_wrapper>.
+WARNING:Xst:2677 - Node <plb_bubblesort_arch_2/ipif/Bus2IP_raddr_2> of sequential type is unconnected in block <plb_bubblesort_arch_2_wrapper>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+FlipFlop plb_bubblesort_arch_2/BubbleSort_arch_0/inst0/fifo_1/out_ptr_3 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 362
+ Flip-Flops                                            : 362
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/plb_bubblesort_arch_2_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 401
+
+Cell Usage :
+# BELS                             : 883
+#      GND                         : 1
+#      INV                         : 10
+#      LUT1                        : 124
+#      LUT2                        : 24
+#      LUT3                        : 85
+#      LUT4                        : 83
+#      LUT5                        : 85
+#      LUT6                        : 183
+#      MUXCY                       : 159
+#      VCC                         : 1
+#      XORCY                       : 128
+# FlipFlops/Latches                : 362
+#      FD                          : 135
+#      FDC                         : 39
+#      FDCE                        : 52
+#      FDE                         : 134
+#      FDP                         : 1
+#      FDPE                        : 1
+# RAMS                             : 17
+#      RAM32M                      : 10
+#      RAM32X1D                    : 6
+#      RAMB36_EXP                  : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vfx70tff1136-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             362  out of  44800     0%  
+ Number of Slice LUTs:                  646  out of  44800     1%  
+    Number used as Logic:               594  out of  44800     1%  
+    Number used as Memory:               52  out of  13120     0%  
+       Number used as RAM:               52
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    773
+   Number with an unused Flip Flop:     411  out of    773    53%  
+   Number with an unused LUT:           127  out of    773    16%  
+   Number of fully used LUT-FF pairs:   235  out of    773    30%  
+   Number of unique control sets:        16
+
+IO Utilization: 
+ Number of IOs:                         401
+ Number of bonded IOBs:                   0  out of    640     0%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of    148     0%  
+    Number using Block RAM only:          1
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                            | Load  |
+-----------------------------------+------------------------------------------------------------------+-------+
+PLB_Clk                            | NONE(plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/r_nSample_0)| 379   |
+-----------------------------------+------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+PLB_Rst                            | NONE                   | 93    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 5.233ns (Maximum Frequency: 191.095MHz)
+   Minimum input arrival time before clock: 5.157ns
+   Maximum output required time after clock: 0.471ns
+   Maximum combinational path delay: 2.490ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PLB_Clk'
+  Clock period: 5.233ns (frequency: 191.095MHz)
+  Total number of paths / destination ports: 31067 / 763
+-------------------------------------------------------------------------
+Delay:               5.233ns (Levels of Logic = 19)
+  Source:            plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/ram_0/Mram_mem_ren (RAM)
+  Destination:       plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/thisState_FSM_FFd9 (FF)
+  Source Clock:      PLB_Clk rising
+  Destination Clock: PLB_Clk rising
+
+  Data Path: plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/ram_0/Mram_mem_ren to plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/thisState_FSM_FFd9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB36_EXP:REGCLKBL->DOB0    2   2.180   0.485  plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/ram_0/Mram_mem_ren (plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/p_samples_dout2<0>)
+     LUT3:I2->O            4   0.094   0.805  plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/p_samples_imm2<0>1 (plb_bubblesort_arch_2/BubbleSort_arch_0/p_Sorter_output_data<0>)
+     LUT4:I0->O            1   0.094   0.000  plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_lut<0> (plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_lut<0>)
+     MUXCY:S->O            1   0.372   0.000  plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<0> (plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<0>)
+     MUXCY:CI->O           1   0.026   0.000  plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<1> (plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<1>)
+     MUXCY:CI->O           1   0.026   0.000  plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<2> (plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<2>)
+     MUXCY:CI->O           1   0.026   0.000  plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<3> (plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<3>)
+     MUXCY:CI->O           1   0.026   0.000  plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<4> (plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<4>)
+     MUXCY:CI->O           1   0.026   0.000  plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<5> (plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           1   0.026   0.000  plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<6> (plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<6>)
+     MUXCY:CI->O           1   0.026   0.000  plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<7> (plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<7>)
+     MUXCY:CI->O           1   0.026   0.000  plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<8> (plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<8>)
+     MUXCY:CI->O           1   0.026   0.000  plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<9> (plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<9>)
+     MUXCY:CI->O           1   0.026   0.000  plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<10> (plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<10>)
+     MUXCY:CI->O           1   0.026   0.000  plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<11> (plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<11>)
+     MUXCY:CI->O           1   0.026   0.000  plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<12> (plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<12>)
+     MUXCY:CI->O           1   0.026   0.000  plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<13> (plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<13>)
+     MUXCY:CI->O           1   0.026   0.000  plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<14> (plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<14>)
+     MUXCY:CI->O           3   0.254   0.491  plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<15> (plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/Mcompar_ni319_suif_tmp5_cmp_lt0000_cy<15>)
+     LUT2:I1->O            1   0.094   0.000  plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/thisState_FSM_FFd9-In1 (plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/thisState_FSM_FFd9-In)
+     FDCE:D                   -0.018          plb_bubblesort_arch_2/BubbleSort_arch_0/Sorter0/thisState_FSM_FFd9
+    ----------------------------------------
+    Total                      5.233ns (3.452ns logic, 1.781ns route)
+                                       (66.0% logic, 34.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PLB_Clk'
+  Total number of paths / destination ports: 1953 / 94
+-------------------------------------------------------------------------
+Offset:              5.157ns (Levels of Logic = 6)
+  Source:            PLB_ABus<13> (PAD)
+  Destination:       plb_bubblesort_arch_2/p_Consumer_output_if/valid (FF)
+  Destination Clock: PLB_Clk rising
+
+  Data Path: PLB_ABus<13> to plb_bubblesort_arch_2/p_Consumer_output_if/valid
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT5:I0->O            1   0.094   0.973  plb_bubblesort_arch_2/ipif/CS07 (plb_bubblesort_arch_2/ipif/CS07)
+     LUT6:I1->O            5   0.094   0.732  plb_bubblesort_arch_2/ipif/CS0198 (Sl_addrAck)
+     LUT3:I0->O            4   0.094   0.592  plb_bubblesort_arch_2/ipif/Bus2IP_CS11 (plb_bubblesort_arch_2/Plb2IP_WrCE)
+     LUT5:I3->O            4   0.094   0.592  plb_bubblesort_arch_2/p_Consumer_output_if/error_and00001 (plb_bubblesort_arch_2/p_Consumer_output_if/error_and0000)
+     LUT3:I1->O            7   0.094   0.513  plb_bubblesort_arch_2/BubbleSort_arch_0/inst1/fifo_1/out_ptr_and00001 (plb_bubblesort_arch_2/BubbleSort_arch_0/inst1/fifo_1/out_ptr_and0000)
+     LUT6:I5->O            2   0.094   0.341  plb_bubblesort_arch_2/p_Consumer_output_if/valid_not00011 (plb_bubblesort_arch_2/p_Consumer_output_if/valid_not0001)
+     FDCE:CE                   0.213          plb_bubblesort_arch_2/p_Consumer_output_if/valid
+    ----------------------------------------
+    Total                      5.157ns (1.414ns logic, 3.743ns route)
+                                       (27.4% logic, 72.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PLB_Clk'
+  Total number of paths / destination ports: 38 / 38
+-------------------------------------------------------------------------
+Offset:              0.471ns (Levels of Logic = 0)
+  Source:            plb_bubblesort_arch_2/ipif/RdCe1 (FF)
+  Destination:       Sl_rdComp (PAD)
+  Source Clock:      PLB_Clk rising
+
+  Data Path: plb_bubblesort_arch_2/ipif/RdCe1 to Sl_rdComp
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             40   0.471   0.000  plb_bubblesort_arch_2/ipif/RdCe1 (plb_bubblesort_arch_2/ipif/RdCe1)
+    ----------------------------------------
+    Total                      0.471ns (0.471ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 86 / 3
+-------------------------------------------------------------------------
+Delay:               2.490ns (Levels of Logic = 3)
+  Source:            PLB_ABus<13> (PAD)
+  Destination:       Sl_wrDAck (PAD)
+
+  Data Path: PLB_ABus<13> to Sl_wrDAck
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT5:I0->O            1   0.094   0.973  plb_bubblesort_arch_2/ipif/CS07 (plb_bubblesort_arch_2/ipif/CS07)
+     LUT6:I1->O            5   0.094   0.598  plb_bubblesort_arch_2/ipif/CS0198 (Sl_addrAck)
+     LUT2:I0->O            0   0.094   0.000  plb_bubblesort_arch_2/ipif/WrCe01 (Sl_wrComp)
+    ----------------------------------------
+    Total                      2.490ns (0.919ns logic, 1.571ns route)
+                                       (36.9% logic, 63.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 13.38 secs
+ 
+--> 
+
+Total memory usage is 189744 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  181 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
+

@@ -1,0 +1,5 @@
+#
+#Wed Feb 08 15:43:51 EST 2012
+PROCESSOR=ppc440_0
+REPOSITORIES=
+HWSPEC=../hw_platform_0/system.xml

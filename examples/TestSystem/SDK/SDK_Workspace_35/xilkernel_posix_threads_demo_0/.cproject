@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?>
+
+<cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+<storageModule moduleId="org.eclipse.cdt.core.settings">
+<cconfiguration id="xilinx.gnu.ppc.exe.debug.1131464246">
+<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="xilinx.gnu.ppc.exe.debug.1131464246" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+<externalSettings/>
+<extensions>
+<extension id="com.xilinx.sdk.managedbuilder.XELF.ppc" point="org.eclipse.cdt.core.BinaryParser"/>
+<extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+</extensions>
+</storageModule>
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+<configuration artifactExtension="elf" artifactName="xilkernel_posix_threads_demo_0" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="rm -rf" description="" id="xilinx.gnu.ppc.exe.debug.1131464246" name="Debug" parent="xilinx.gnu.ppc.exe.debug">
+<folderInfo id="xilinx.gnu.ppc.exe.debug.1131464246." name="/" resourcePath="">
+<toolChain id="xilinx.gnu.ppc.exe.debug.toolchain.1124664807" name="Xilinx PowerPC GNU Toolchain" superClass="xilinx.gnu.ppc.exe.debug.toolchain">
+<targetPlatform binaryParser="com.xilinx.sdk.managedbuilder.XELF.ppc" id="xilinx.ppc.target.gnu.base.debug.135006579" isAbstract="false" name="Debug Platform" superClass="xilinx.ppc.target.gnu.base.debug"/>
+<builder buildPath="${workspace_loc:/xilkernel_posix_threads_demo_0/Debug}" id="xilinx.gnu.ppc.toolchain.builder.debug.1065185283" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="GNU make" superClass="xilinx.gnu.ppc.toolchain.builder.debug"/>
+<tool id="xilinx.gnu.ppc.c.toolchain.assembler.debug.1115072347" name="PowerPC gcc assembler" superClass="xilinx.gnu.ppc.c.toolchain.assembler.debug">
+<inputType id="xilinx.gnu.assembler.input.653587561" superClass="xilinx.gnu.assembler.input"/>
+</tool>
+<tool id="xilinx.gnu.ppc.c.toolchain.compiler.debug.399420606" name="PowerPC gcc compiler" superClass="xilinx.gnu.ppc.c.toolchain.compiler.debug">
+<option defaultValue="gnu.c.optimization.level.none" id="xilinx.gnu.compiler.option.optimization.level.1765787584" name="Optimization Level" superClass="xilinx.gnu.compiler.option.optimization.level" valueType="enumerated"/>
+<option id="xilinx.gnu.compiler.option.debugging.level.1975122887" name="Debug Level" superClass="xilinx.gnu.compiler.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+<option id="xilinx.gnu.ppc.compiler.inferred.ppc440.33907754" name="Compile for PPC440" superClass="xilinx.gnu.ppc.compiler.inferred.ppc440" value="true" valueType="boolean"/>
+<option id="xilinx.gnu.compiler.inferred.swplatform.includes.556833040" name="Software Platform Include Path" superClass="xilinx.gnu.compiler.inferred.swplatform.includes" valueType="includePath">
+<listOptionValue builtIn="false" value="../../xilkernel_bsp_0/ppc440_0/include"/>
+</option>
+<option id="xilinx.gnu.compiler.inferred.swplatform.flags.626561351" name="Software Platform Inferred Flags" superClass="xilinx.gnu.compiler.inferred.swplatform.flags" value="-D __XMK__" valueType="string"/>
+<option id="xilinx.gnu.compiler.dircategory.includes.1797646100" superClass="xilinx.gnu.compiler.dircategory.includes" valueType="includePath">
+<listOptionValue builtIn="false" value="&quot;C:\Workspace\TestSystem\code&quot;"/>
+<listOptionValue builtIn="false" value="&quot;C:\Workspace\TestSystem\drivers\plb_BubbleSort_arch_v1_00_a\src&quot;"/>
+<listOptionValue builtIn="false" value="&quot;C:\Workspace\TestSystem\ppc440_0\include&quot;"/>
+</option>
+<inputType id="xilinx.gnu.ppc.c.compiler.input.911996793" name="C source files" superClass="xilinx.gnu.ppc.c.compiler.input"/>
+</tool>
+<tool id="xilinx.gnu.ppc.cxx.toolchain.compiler.debug.614248062" name="PowerPC g++ compiler" superClass="xilinx.gnu.ppc.cxx.toolchain.compiler.debug">
+<option defaultValue="gnu.c.optimization.level.none" id="xilinx.gnu.compiler.option.optimization.level.700316732" name="Optimization Level" superClass="xilinx.gnu.compiler.option.optimization.level" valueType="enumerated"/>
+<option id="xilinx.gnu.compiler.option.debugging.level.585130024" name="Debug Level" superClass="xilinx.gnu.compiler.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
+<option id="xilinx.gnu.ppc.compiler.inferred.ppc440.140239472" name="Compile for PPC440" superClass="xilinx.gnu.ppc.compiler.inferred.ppc440" value="true" valueType="boolean"/>
+<option id="xilinx.gnu.compiler.inferred.swplatform.includes.1535820478" name="Software Platform Include Path" superClass="xilinx.gnu.compiler.inferred.swplatform.includes" valueType="includePath">
+<listOptionValue builtIn="false" value="../../xilkernel_bsp_0/ppc440_0/include"/>
+</option>
+<option id="xilinx.gnu.compiler.inferred.swplatform.flags.1786037421" name="Software Platform Inferred Flags" superClass="xilinx.gnu.compiler.inferred.swplatform.flags" value="-D __XMK__" valueType="string"/>
+</tool>
+<tool id="xilinx.gnu.ppc.toolchain.archiver.1117872821" name="PowerPC archiver" superClass="xilinx.gnu.ppc.toolchain.archiver"/>
+<tool id="xilinx.gnu.ppc.c.toolchain.linker.debug.1724889814" name="PowerPC gcc linker" superClass="xilinx.gnu.ppc.c.toolchain.linker.debug">
+<option id="xilinx.gnu.ppc.linker.inferred.ppc440.303775028" name="Link with libraries compiled for PPC440" superClass="xilinx.gnu.ppc.linker.inferred.ppc440" value="true" valueType="boolean"/>
+<option id="xilinx.gnu.linker.inferred.swplatform.lpath.1368844613" name="Software Platform Library Path" superClass="xilinx.gnu.linker.inferred.swplatform.lpath" valueType="libPaths">
+<listOptionValue builtIn="false" value="../../xilkernel_bsp_0/ppc440_0/lib"/>
+</option>
+<option id="xilinx.gnu.linker.inferred.swplatform.flags.659582856" name="Software Platform Inferred Flags" superClass="xilinx.gnu.linker.inferred.swplatform.flags" valueType="libs">
+<listOptionValue builtIn="false" value="-lxilkernel"/>
+</option>
+<option id="xilinx.gnu.c.linker.option.lscript.1016465777" name="Linker Script" superClass="xilinx.gnu.c.linker.option.lscript" value="../src/lscript.ld" valueType="string"/>
+<option id="xilinx.gnu.c.link.option.paths.592324970" superClass="xilinx.gnu.c.link.option.paths" valueType="libPaths">
+<listOptionValue builtIn="false" value="&quot;C:\Workspace\TestSystem\drivers\plb_BubbleSort_arch_v1_00_a\src&quot;"/>
+</option>
+<inputType id="xilinx.gnu.linker.input.46148040" superClass="xilinx.gnu.linker.input">
+<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+</inputType>
+</tool>
+<tool id="xilinx.gnu.ppc.cxx.toolchain.linker.debug.11923079" name="PowerPC g++ linker" superClass="xilinx.gnu.ppc.cxx.toolchain.linker.debug">
+<option id="xilinx.gnu.ppc.linker.inferred.ppc440.2096639903" name="Link with libraries compiled for PPC440" superClass="xilinx.gnu.ppc.linker.inferred.ppc440" value="true" valueType="boolean"/>
+<option id="xilinx.gnu.linker.inferred.swplatform.lpath.1097224505" name="Software Platform Library Path" superClass="xilinx.gnu.linker.inferred.swplatform.lpath" valueType="libPaths">
+<listOptionValue builtIn="false" value="../../xilkernel_bsp_0/ppc440_0/lib"/>
+</option>
+<option id="xilinx.gnu.linker.inferred.swplatform.flags.1545731365" name="Software Platform Inferred Flags" superClass="xilinx.gnu.linker.inferred.swplatform.flags" valueType="libs">
+<listOptionValue builtIn="false" value="-lxilkernel"/>
+</option>
+<option id="xilinx.gnu.c.linker.option.lscript.1449624427" name="Linker Script" superClass="xilinx.gnu.c.linker.option.lscript" value="../src/lscript.ld" valueType="string"/>
+</tool>
+<tool id="xilinx.gnu.ppc.size.debug.1447020598" name="PowerPC Print Size" superClass="xilinx.gnu.ppc.size.debug"/>
+<tool id="xilinx.elfcheck.ppc.debug.311264388" name="Xilinx ELF Check" superClass="xilinx.elfcheck.ppc.debug">
+<option id="xilinx.elfcheck.option.hwspec.1256565381" name="Hardware Specification" superClass="xilinx.elfcheck.option.hwspec" value="-hw ../../hw_platform_0/system.xml" valueType="string"/>
+<option id="xilinx.elfcheck.option.procname.1742314729" name="Processor Name" superClass="xilinx.elfcheck.option.procname" value="-pe ppc440_0" valueType="string"/>
+</tool>
+</toolChain>
+</folderInfo>
+</configuration>
+</storageModule>
+<storageModule moduleId="scannerConfiguration">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+<profile id="com.xilinx.managedbuilder.ui.MBGCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="mb-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.xilinx.managedbuilder.ui.PPCGCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="powerpc-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.xilinx.managedbuilder.ui.ARMGCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/${specs_file}&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'g++ -E -P -v -dD &quot;${plugin_state_location}/specs.cpp&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/specs.c&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</storageModule>
+<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+<storageModule moduleId="org.eclipse.cdt.core.language.mapping"/>
+</cconfiguration>
+<cconfiguration id="xilinx.gnu.ppc.exe.release.1180927083">
+<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="xilinx.gnu.ppc.exe.release.1180927083" moduleId="org.eclipse.cdt.core.settings" name="Release">
+<externalSettings/>
+<extensions>
+<extension id="com.xilinx.sdk.managedbuilder.XELF.ppc" point="org.eclipse.cdt.core.BinaryParser"/>
+<extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+</extensions>
+</storageModule>
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+<configuration artifactExtension="elf" artifactName="xilkernel_posix_threads_demo_0" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="rm -rf" description="" id="xilinx.gnu.ppc.exe.release.1180927083" name="Release" parent="xilinx.gnu.ppc.exe.release">
+<folderInfo id="xilinx.gnu.ppc.exe.release.1180927083." name="/" resourcePath="">
+<toolChain id="xilinx.gnu.ppc.exe.release.toolchain.380953648" name="Xilinx PowerPC GNU Toolchain" superClass="xilinx.gnu.ppc.exe.release.toolchain">
+<targetPlatform binaryParser="com.xilinx.sdk.managedbuilder.XELF.ppc" id="xilinx.ppc.target.gnu.base.release.1905722825" isAbstract="false" name="Debug Platform" superClass="xilinx.ppc.target.gnu.base.release"/>
+<builder buildPath="${workspace_loc:/xilkernel_posix_threads_demo_0/Release}" id="xilinx.gnu.ppc.toolchain.builder.release.923789813" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="GNU make" superClass="xilinx.gnu.ppc.toolchain.builder.release"/>
+<tool id="xilinx.gnu.ppc.c.toolchain.assembler.release.1730139020" name="PowerPC gcc assembler" superClass="xilinx.gnu.ppc.c.toolchain.assembler.release">
+<inputType id="xilinx.gnu.assembler.input.1881561134" superClass="xilinx.gnu.assembler.input"/>
+</tool>
+<tool id="xilinx.gnu.ppc.c.toolchain.compiler.release.1986959842" name="PowerPC gcc compiler" superClass="xilinx.gnu.ppc.c.toolchain.compiler.release">
+<option defaultValue="gnu.c.optimization.level.most" id="xilinx.gnu.compiler.option.optimization.level.50809937" name="Optimization Level" superClass="xilinx.gnu.compiler.option.optimization.level" valueType="enumerated"/>
+<option id="xilinx.gnu.compiler.option.debugging.level.292190135" name="Debug Level" superClass="xilinx.gnu.compiler.option.debugging.level" value="gnu.c.debugging.level.none" valueType="enumerated"/>
+<option id="xilinx.gnu.ppc.compiler.inferred.ppc440.1586962925" name="Compile for PPC440" superClass="xilinx.gnu.ppc.compiler.inferred.ppc440" value="true" valueType="boolean"/>
+<option id="xilinx.gnu.compiler.inferred.swplatform.includes.178129839" name="Software Platform Include Path" superClass="xilinx.gnu.compiler.inferred.swplatform.includes" valueType="includePath">
+<listOptionValue builtIn="false" value="../../xilkernel_bsp_0/ppc440_0/include"/>
+</option>
+<option id="xilinx.gnu.compiler.inferred.swplatform.flags.1627414036" name="Software Platform Inferred Flags" superClass="xilinx.gnu.compiler.inferred.swplatform.flags" value="-D __XMK__" valueType="string"/>
+<inputType id="xilinx.gnu.ppc.c.compiler.input.1826566383" name="C source files" superClass="xilinx.gnu.ppc.c.compiler.input"/>
+</tool>
+<tool id="xilinx.gnu.ppc.cxx.toolchain.compiler.release.1694914156" name="PowerPC g++ compiler" superClass="xilinx.gnu.ppc.cxx.toolchain.compiler.release">
+<option defaultValue="gnu.c.optimization.level.most" id="xilinx.gnu.compiler.option.optimization.level.1095767554" name="Optimization Level" superClass="xilinx.gnu.compiler.option.optimization.level" valueType="enumerated"/>
+<option id="xilinx.gnu.compiler.option.debugging.level.569091886" name="Debug Level" superClass="xilinx.gnu.compiler.option.debugging.level" value="gnu.c.debugging.level.none" valueType="enumerated"/>
+<option id="xilinx.gnu.ppc.compiler.inferred.ppc440.882768631" name="Compile for PPC440" superClass="xilinx.gnu.ppc.compiler.inferred.ppc440" value="true" valueType="boolean"/>
+<option id="xilinx.gnu.compiler.inferred.swplatform.includes.1612172464" name="Software Platform Include Path" superClass="xilinx.gnu.compiler.inferred.swplatform.includes" valueType="includePath">
+<listOptionValue builtIn="false" value="../../xilkernel_bsp_0/ppc440_0/include"/>
+</option>
+<option id="xilinx.gnu.compiler.inferred.swplatform.flags.889967385" name="Software Platform Inferred Flags" superClass="xilinx.gnu.compiler.inferred.swplatform.flags" value="-D __XMK__" valueType="string"/>
+</tool>
+<tool id="xilinx.gnu.ppc.toolchain.archiver.1118593291" name="PowerPC archiver" superClass="xilinx.gnu.ppc.toolchain.archiver"/>
+<tool id="xilinx.gnu.ppc.c.toolchain.linker.release.1451826048" name="PowerPC gcc linker" superClass="xilinx.gnu.ppc.c.toolchain.linker.release">
+<option id="xilinx.gnu.ppc.linker.inferred.ppc440.1794528921" name="Link with libraries compiled for PPC440" superClass="xilinx.gnu.ppc.linker.inferred.ppc440" value="true" valueType="boolean"/>
+<option id="xilinx.gnu.linker.inferred.swplatform.lpath.1498483569" name="Software Platform Library Path" superClass="xilinx.gnu.linker.inferred.swplatform.lpath" valueType="libPaths">
+<listOptionValue builtIn="false" value="../../xilkernel_bsp_0/ppc440_0/lib"/>
+</option>
+<option id="xilinx.gnu.linker.inferred.swplatform.flags.1017107173" name="Software Platform Inferred Flags" superClass="xilinx.gnu.linker.inferred.swplatform.flags" valueType="libs">
+<listOptionValue builtIn="false" value="-lxilkernel"/>
+</option>
+<option id="xilinx.gnu.c.linker.option.lscript.94532504" name="Linker Script" superClass="xilinx.gnu.c.linker.option.lscript" value="../src/lscript.ld" valueType="string"/>
+<inputType id="xilinx.gnu.linker.input.307452048" superClass="xilinx.gnu.linker.input">
+<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+</inputType>
+</tool>
+<tool id="xilinx.gnu.ppc.cxx.toolchain.linker.release.1500660639" name="PowerPC g++ linker" superClass="xilinx.gnu.ppc.cxx.toolchain.linker.release">
+<option id="xilinx.gnu.ppc.linker.inferred.ppc440.983177670" name="Link with libraries compiled for PPC440" superClass="xilinx.gnu.ppc.linker.inferred.ppc440" value="true" valueType="boolean"/>
+<option id="xilinx.gnu.linker.inferred.swplatform.lpath.2017505573" name="Software Platform Library Path" superClass="xilinx.gnu.linker.inferred.swplatform.lpath" valueType="libPaths">
+<listOptionValue builtIn="false" value="../../xilkernel_bsp_0/ppc440_0/lib"/>
+</option>
+<option id="xilinx.gnu.linker.inferred.swplatform.flags.943992407" name="Software Platform Inferred Flags" superClass="xilinx.gnu.linker.inferred.swplatform.flags" valueType="libs">
+<listOptionValue builtIn="false" value="-lxilkernel"/>
+</option>
+<option id="xilinx.gnu.c.linker.option.lscript.223924525" name="Linker Script" superClass="xilinx.gnu.c.linker.option.lscript" value="../src/lscript.ld" valueType="string"/>
+</tool>
+<tool id="xilinx.gnu.ppc.size.release.1446505100" name="PowerPC Print Size" superClass="xilinx.gnu.ppc.size.release"/>
+<tool id="xilinx.elfcheck.ppc.release.76584981" name="Xilinx ELF Check" superClass="xilinx.elfcheck.ppc.release">
+<option id="xilinx.elfcheck.option.hwspec.96654363" name="Hardware Specification" superClass="xilinx.elfcheck.option.hwspec" value="-hw ../../hw_platform_0/system.xml" valueType="string"/>
+<option id="xilinx.elfcheck.option.procname.1219694345" name="Processor Name" superClass="xilinx.elfcheck.option.procname" value="-pe ppc440_0" valueType="string"/>
+</tool>
+</toolChain>
+</folderInfo>
+</configuration>
+</storageModule>
+<storageModule moduleId="scannerConfiguration">
+<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+<profile id="com.xilinx.managedbuilder.ui.MBGCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="mb-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.xilinx.managedbuilder.ui.PPCGCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="powerpc-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="com.xilinx.managedbuilder.ui.ARMGCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="arm-eabi-gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerFileProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="makefileGenerator">
+<runAction arguments="-f ${project_name}_scd.mk" command="make" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.cpp" command="g++" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/specs.c" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/${specs_file}&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileCPP">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'g++ -E -P -v -dD &quot;${plugin_state_location}/specs.cpp&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+<profile id="org.eclipse.cdt.managedbuilder.core.GCCWinManagedMakePerProjectProfileC">
+<buildOutputProvider>
+<openAction enabled="true" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-c 'gcc -E -P -v -dD &quot;${plugin_state_location}/specs.c&quot;'" command="sh" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</storageModule>
+<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+<storageModule moduleId="org.eclipse.cdt.core.language.mapping"/>
+</cconfiguration>
+</storageModule>
+<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+<project id="xilkernel_posix_threads_demo_0.xilinx.gnu.ppc.exe.1165621347" name="Xilinx PowerPC Executable" projectType="xilinx.gnu.ppc.exe"/>
+</storageModule>
+</cproject>

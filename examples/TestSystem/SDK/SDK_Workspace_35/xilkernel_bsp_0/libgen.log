@@ -1,0 +1,20 @@
+Release 12.3 - libgen Xilinx EDK 12.3 Build EDK_MS3.70d
+ (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../hw_platform_0/system.xml -pe ppc440_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'make -s include "COMPILER=powerpc-eabi-gcc"
+"ARCHIVER=powerpc-eabi-ar" "COMPILER_FLAGS=-mcpu=440  -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+
+Running libs - 'make -s libs "COMPILER=powerpc-eabi-gcc"
+"ARCHIVER=powerpc-eabi-ar" "COMPILER_FLAGS=-mcpu=440  -O2 -c"
+"EXTRA_COMPILER_FLAGS=-g"'.
+Running execs_generate.

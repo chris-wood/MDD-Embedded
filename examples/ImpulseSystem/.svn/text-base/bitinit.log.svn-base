@@ -1,0 +1,136 @@
+
+bitinit version Xilinx EDK 12.3 Build EDK_MS3.70d
+Copyright (c) Xilinx Inc. 2002.
+
+Parsing MHS File system.mhs...
+
+Overriding IP level properties ...
+INFO:EDK:1560 - IPNAME:ppc440mc_ddr2 INSTANCE:DDR2_SDRAM -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\ppc440mc_ddr2_v3_00_
+   c\data\ppc440mc_ddr2_v2_1_0.mpd line 103 - tcl is overriding PARAMETER
+   C_IODELAY_GRP value to DDR2_SDRAM
+
+Computing clock values...
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor ppc440_0
+  (0b0000000000-0b0011111111) ppc440_0	
+  (0000000000-0x0fffffff) DDR2_SDRAM	ppc440_0_PPC440MC
+  (0x81400000-0x8140ffff) Push_Buttons_5Bit	plb_v46_0
+  (0x81420000-0x8142ffff) LEDs_Positions	plb_v46_0
+  (0x81440000-0x8144ffff) LEDs_8Bit	plb_v46_0
+  (0x81600000-0x8160ffff) IIC_EEPROM	plb_v46_0
+  (0x81800000-0x8180ffff) xps_intc_0	plb_v46_0
+  (0x83c00000-0x83c0ffff) xps_timer_0	plb_v46_0
+  (0x83d00000-0x83dfffff) SRAM	plb_v46_0
+  (0x84000000-0x8400ffff) RS232_Uart_1	plb_v46_0
+  (0xc7800000-0xc780ffff) plb_basicstream_arch_0	plb_v46_0
+  (0xffffe000-0xffffffff) xps_bram_if_cntlr_1	plb_v46_0
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:plb_v46_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 69 - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:plb_v46_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 70 - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 10
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:plb_v46_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_PLBV46_MID_WIDTH
+   value to 1
+INFO:EDK:1560 - IPNAME:plb_v46 INSTANCE:plb_v46_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\plb_v46_v1_05_a\data
+   \plb_v46_v2_1_0.mpd line 73 - tool is overriding PARAMETER C_PLBV46_DWIDTH
+   value to 128
+INFO:EDK:1560 - IPNAME:xps_bram_if_cntlr INSTANCE:xps_bram_if_cntlr_1 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_bram_if_cntlr_v1
+   _00_b\data\xps_bram_if_cntlr_v2_1_0.mpd line 73 - tool is overriding
+   PARAMETER C_SPLB_DWIDTH value to 128
+INFO:EDK:1560 - IPNAME:xps_bram_if_cntlr INSTANCE:xps_bram_if_cntlr_1 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_bram_if_cntlr_v1
+   _00_b\data\xps_bram_if_cntlr_v2_1_0.mpd line 74 - tool is overriding
+   PARAMETER C_SPLB_NUM_MASTERS value to 1
+INFO:EDK:1560 - IPNAME:xps_bram_if_cntlr INSTANCE:xps_bram_if_cntlr_1 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_bram_if_cntlr_v1
+   _00_b\data\xps_bram_if_cntlr_v2_1_0.mpd line 78 - tool is overriding
+   PARAMETER C_SPLB_SMALLEST_MASTER value to 128
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:xps_bram_if_cntlr_1_bram -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 67 - tool is overriding PARAMETER C_MEMSIZE
+   value to 0x2000
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:xps_bram_if_cntlr_1_bram -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 68 - tool is overriding PARAMETER
+   C_PORT_DWIDTH value to 64
+INFO:EDK:1560 - IPNAME:bram_block INSTANCE:xps_bram_if_cntlr_1_bram -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\bram_block_v1_00_a\d
+   ata\bram_block_v2_1_0.mpd line 70 - tool is overriding PARAMETER C_NUM_WE
+   value to 8
+INFO:EDK:1560 - IPNAME:xps_uartlite INSTANCE:RS232_Uart_1 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_uartlite_v1_01_a
+   \data\xps_uartlite_v2_1_0.mpd line 71 - tool is overriding PARAMETER
+   C_SPLB_DWIDTH value to 128
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:LEDs_Positions -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 69 - tool is overriding PARAMETER C_SPLB_DWIDTH
+   value to 128
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:Push_Buttons_5Bit -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 69 - tool is overriding PARAMETER C_SPLB_DWIDTH
+   value to 128
+INFO:EDK:1560 - IPNAME:xps_iic INSTANCE:IIC_EEPROM -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_iic_v2_03_a\data
+   \xps_iic_v2_1_0.mpd line 77 - tool is overriding PARAMETER C_SPLB_DWIDTH
+   value to 128
+INFO:EDK:1560 - IPNAME:xps_mch_emc INSTANCE:SRAM -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_mch_emc_v3_01_a\
+   data\xps_mch_emc_v2_1_0.mpd line 80 - tool is overriding PARAMETER
+   C_SPLB_DWIDTH value to 128
+INFO:EDK:1560 - IPNAME:xps_mch_emc INSTANCE:SRAM -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_mch_emc_v3_01_a\
+   data\xps_mch_emc_v2_1_0.mpd line 82 - tool is overriding PARAMETER
+   C_SPLB_SMALLEST_MASTER value to 128
+INFO:EDK:1560 - IPNAME:xps_gpio INSTANCE:LEDs_8Bit -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_gpio_v2_00_a\dat
+   a\xps_gpio_v2_1_0.mpd line 69 - tool is overriding PARAMETER C_SPLB_DWIDTH
+   value to 128
+INFO:EDK:1560 - IPNAME:xps_timer INSTANCE:xps_timer_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_timer_v1_02_a\da
+   ta\xps_timer_v2_1_0.mpd line 75 - tool is overriding PARAMETER C_SPLB_DWIDTH
+   value to 128
+INFO:EDK:1560 - IPNAME:xps_timer INSTANCE:xps_timer_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_timer_v1_02_a\da
+   ta\xps_timer_v2_1_0.mpd line 77 - tool is overriding PARAMETER
+   C_SPLB_MID_WIDTH value to 1
+INFO:EDK:1560 - IPNAME:xps_timer INSTANCE:xps_timer_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_timer_v1_02_a\da
+   ta\xps_timer_v2_1_0.mpd line 78 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 1
+INFO:EDK:1560 - IPNAME:xps_intc INSTANCE:xps_intc_0 -
+   C:\Xilinx\12.3\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\xps_intc_v2_01_a\dat
+   a\xps_intc_v2_1_0.mpd line 71 - tool is overriding PARAMETER C_SPLB_DWIDTH
+   value to 128
+INFO:EDK:1560 - IPNAME:plb_basicstream_arch INSTANCE:plb_basicstream_arch_0 -
+   C:\Workspace\ImpulseSystem\pcores\plb_basicstream_arch_v1_00_a\data\plb_basic
+   stream_arch_v2_1_0.mpd line 15 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 1
+INFO:EDK:1560 - IPNAME:plb_basicstream_arch INSTANCE:plb_basicstream_arch_0 -
+   C:\Workspace\ImpulseSystem\pcores\plb_basicstream_arch_v1_00_a\data\plb_basic
+   stream_arch_v2_1_0.mpd line 16 - tool is overriding PARAMETER
+   C_SPLB_MID_WIDTH value to 1
+INFO:EDK:1560 - IPNAME:plb_basicstream_arch INSTANCE:plb_basicstream_arch_0 -
+   C:\Workspace\ImpulseSystem\pcores\plb_basicstream_arch_v1_00_a\data\plb_basic
+   stream_arch_v2_1_0.mpd line 18 - tool is overriding PARAMETER C_SPLB_DWIDTH
+   value to 128
+
+Checking platform address map ...
+
+Initializing Memory...
+Running Data2Mem with the following command:
+data2mem -bm "implementation/system_bd" -p xc5vfx70tff1136-1 -bt
+"implementation/system.bit"  -bd "TestApp_Memory_ppc440_0/executable.elf" tag
+ppc440_0  -o b implementation/download.bit 
+Memory Initialization completed successfully.
+

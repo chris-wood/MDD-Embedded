@@ -1,0 +1,78 @@
+#------------------------------------------------------------------------------
+# Timing Constraints for Static Logic
+#------------------------------------------------------------------------------
+
+NET "clk_p" TNM_NET = "clk_p";
+TIMESPEC TS_clk_p = PERIOD "clk_p" 5 ns;
+
+#------------------------------------------------------------------------------
+# IO Pad Location Constraints for ML605 board
+#
+#  GPIO_LEDs
+#   GPIO_LED_0 LOC = "AC22"
+#   GPIO_LED_1 LOC = "AC24"
+#   GPIO_LED_2 LOC = "AE22"
+#   GPIO_LED_4 LOC = "AE23"
+#   GPIO_LED_4 LOC = "AB23"
+#   GPIO_LED_5 LOC = "AG23"
+#   GPIO_LED_6 LOC = "AE24"
+#   GPIO_LED_7 LOC = "AD24"
+#
+#  GPIO_LED
+#   GPIO_LED_C LOC = "AP24"
+#   GPIO_LED_E LOC = "AE21"
+#   GPIO_LED_N LOC = "AH27"
+#   GPIO_LED_S LOC = "AH28"
+#   GPIO_LED_W LOC = "AD21"
+#
+#  GPIO_SW
+#   GPIO_SW_C  LOC = "G26"
+#------------------------------------------------------------------------------
+
+NET "clk_p" IOSTANDARD = LVDS_25;
+NET "U0_clocks/clk_p" LOC = J9;
+NET "U0_clocks/clk_n" LOC = H9;
+
+NET "rst_n" IOSTANDARD = LVCMOS25;
+NET "rst_n" PULLUP;
+NET "rst_n" LOC = G26;
+
+NET "out_counter[0]" IOSTANDARD = LVCMOS25;
+NET "out_counter[1]" IOSTANDARD = LVCMOS25;
+NET "out_counter[2]" IOSTANDARD = LVCMOS25;
+NET "out_counter[3]" IOSTANDARD = LVCMOS25;
+NET "out_counter[0]" LOC = AD21;
+NET "out_counter[1]" LOC = AH27;
+NET "out_counter[2]" LOC = AE21;
+NET "out_counter[3]" LOC = AH28;
+
+NET "test_count" IOSTANDARD = LVCMOS25;
+NET "test_count" LOC = AP24;
+
+NET "out_bram[0]" IOSTANDARD = LVCMOS25;
+NET "out_bram[1]" IOSTANDARD = LVCMOS25;
+NET "out_bram[2]" IOSTANDARD = LVCMOS25;
+NET "out_bram[3]" IOSTANDARD = LVCMOS25;
+NET "out_bram[4]" IOSTANDARD = LVCMOS25;
+NET "out_bram[5]" IOSTANDARD = LVCMOS25;
+NET "out_bram[6]" IOSTANDARD = LVCMOS25;
+NET "out_bram[7]" IOSTANDARD = LVCMOS25;
+NET "out_bram[0]" LOC = AD24;
+NET "out_bram[1]" LOC = AE24;
+NET "out_bram[2]" LOC = AG23;
+NET "out_bram[3]" LOC = AB23;
+NET "out_bram[4]" LOC = AE23;
+NET "out_bram[5]" LOC = AE22;
+NET "out_bram[6]" LOC = AC24;
+NET "out_bram[7]" LOC = AC22;
+
+##Define AGs
+INST "U1_RP_Bram" AREA_GROUP = "pblock_U1_RP_Bram";
+AREA_GROUP "pblock_U1_RP_Bram" RANGE=SLICE_X46Y80:SLICE_X55Y99;
+AREA_GROUP "pblock_U1_RP_Bram" RANGE=RAMB36_X3Y16:RAMB36_X3Y19;
+
+INST "U2_RP_Count" AREA_GROUP = "pblock_U2_RP_Count";
+AREA_GROUP "pblock_U2_RP_Count" RANGE=SLICE_X56Y20:SLICE_X67Y99;
+AREA_GROUP "pblock_U2_RP_Count" RANGE=ILOGIC_X1Y20:ILOGIC_X1Y99;
+AREA_GROUP "pblock_U2_RP_Count" RANGE=IOB_X1Y20:IOB_X1Y99;
+AREA_GROUP "pblock_U2_RP_Count" RANGE=OLOGIC_X1Y20:OLOGIC_X1Y99;
